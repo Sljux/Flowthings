@@ -101,20 +101,24 @@ public class API {
     
     static func POST(path: String, parameters: [String:AnyObject], success:(body: JSON?) -> (), failure:(error: ErrorType) -> ()){
         
+        
         API.req.URL = API.url(path)
         API.req.HTTPMethod = "POST"
+
         do {
-            try API.req.HTTPBody = JSON(parameters).rawData()
+            try API.req.HTTPBody = NSJSONSerialization.dataWithJSONObject(parameters, options: NSJSONWritingOptions(rawValue: 0))
+
+        
+            //try API.req.HTTPBody = JSON(parameters).rawData()
         }
         catch {
             //handle bad parsing
         }
         
-        let req = NSMutableURLRequest()
         
         
-        Alamofire.request(req).responseJSON() {
-            request,response,data,error in
+        Alamofire.request(API.req).responseJSON() {
+            _,_,json,error in
             
             if let err = error {
                 print("ERROR")
@@ -123,7 +127,7 @@ public class API {
                 return
             }
             
-            let json = JSON(data!)
+            let json = JSON(json!)
             
             if let err = json["head"]["errors"].array {
                 print("ERROR")
@@ -148,8 +152,7 @@ public class API {
         }
         
         API.req.URL = url
-        let req = NSMutableURLRequest()
-        Alamofire.request(req).responseJSON() {
+        Alamofire.request(API.req).responseJSON() {
             request,response,data,error in
             if error == nil {
                 var json = JSON(data!)
