@@ -117,27 +117,27 @@ public class API {
         
         
         
-//        Alamofire.request(API.req).responseJSON() {
-//            _,_,json,error in
-//            
-//            if let err = error {
-//                print("ERROR")
-//                print(err)
-//                failure(error: err)
-//                return
-//            }
-//            
-//            let json = JSON(json!)
-//            
-//            if let err = json["head"]["errors"].array {
-//                print("ERROR")
-//                print(err, json)
-//                return
-//            }
-//            
-//            print("SUCCESS", json)
-//            success(body: json)
-//        }
+        Alamofire.request(API.req).responseJSON() {
+            _,_,json,error in
+            
+            if let err = error {
+                print("ERROR")
+                print(err)
+                failure(error: err)
+                return
+            }
+            
+            let json = JSON(json!)
+            
+            if let err = json["head"]["errors"].array {
+                print("ERROR")
+                print(err, json)
+                return
+            }
+            
+            print("SUCCESS", json)
+            success(body: json)
+        }
         
         
     }
@@ -151,22 +151,22 @@ public class API {
             return
         }
         
-//        API.req.URL = url
-//        Alamofire.request(API.req).responseJSON() {
-//            _,_,_,_ in
-//            if error == nil {
-//                var json = JSON(data!)
-//                
-//                if let _ = json["body"].array {
-//                    success(body: json["body"])
-//                }
-//                else{
-//                    failure(error: Error.MissingBody)
-//                }
-//            } else {
-//                failure(error: error)
-//            }
-//        }
+        API.req.URL = url
+        Alamofire.request(API.req).responseJSON() {
+            _,_,data,error in
+            if error == nil {
+                var json = JSON(data!)
+                
+                if let _ = json["body"].array {
+                    success(body: json["body"])
+                }
+                else{
+                    failure(error: Error.MissingBody)
+                }
+            } else {
+                failure(error: error)
+            }
+        }
     }
     
 }
