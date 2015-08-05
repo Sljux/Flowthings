@@ -110,7 +110,10 @@ public class API {
             //handle bad parsing
         }
         
-        Alamofire.request(API.req).responseJSON() {
+        let req = NSMutableURLRequest()
+        
+        
+        Alamofire.request(req).responseJSON() {
             request,response,data,error in
             
             if let err = error {
