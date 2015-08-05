@@ -110,27 +110,27 @@ public class API {
             //handle bad parsing
         }
         
-//        Alamofire.request(API.req).responseJSON() {
-//            request,response,data,error in
-//            
-//            if let err = error {
-//                print("ERROR")
-//                print(err)
-//                failure(error: err)
-//                return
-//            }
-//            
-//            let json = JSON(data!)
-//            
-//            if let err = json["head"]["errors"].array {
-//                print("ERROR")
-//                print(err, json)
-//                return
-//            }
-//            
-//            print("SUCCESS", json)
-//            success(body: json)
-//        }
+        Alamofire.request(API.req).responseJSON() {
+            request,response,data,error in
+            
+            if let err = error {
+                print("ERROR")
+                print(err)
+                failure(error: err)
+                return
+            }
+            
+            let json = JSON(data!)
+            
+            if let err = json["head"]["errors"].array {
+                print("ERROR")
+                print(err, json)
+                return
+            }
+            
+            print("SUCCESS", json)
+            success(body: json)
+        }
         
         
     }
