@@ -1,0 +1,11 @@
+# Websocket - web sockets
+github "tidwall/SwiftWebSocket"
+
+# Alamofire - net
+github "Alamofire/Alamofire" "swift-2.0"
+
+# SwifyJSON - json parsing
+github "SwiftyJSON/SwiftyJSON" "xcode7"
+
+# Haneke - cache layer
+# github "Haneke/HanekeSwift"
