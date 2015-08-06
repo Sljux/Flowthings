@@ -24,11 +24,10 @@
 		8DBBDE571B6716300065CD3B /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE4F1B6716300065CD3B /* Flow.swift */; };
 		8DBBDE581B6716300065CD3B /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE501B6716300065CD3B /* Track.swift */; };
 		8DBBDE591B6716300065CD3B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE511B6716300065CD3B /* Group.swift */; };
-		8DBBDE5A1B6716300065CD3B /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE521B6716300065CD3B /* APIController.swift */; };
 		8DBBDE5B1B6716300065CD3B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE531B6716300065CD3B /* Location.swift */; };
-		8DBBDE5D1B6719B70065CD3B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBBDE5C1B6719B70065CD3B /* Alamofire.framework */; };
 		8DBBDE5F1B6719BA0065CD3B /* SwiftWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBBDE5E1B6719BA0065CD3B /* SwiftWebSocket.framework */; };
 		8DBBDE611B6719BD0065CD3B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBBDE601B6719BD0065CD3B /* SwiftyJSON.framework */; };
+		8DBC11161B72DDE00065FA37 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC11151B72DDE00065FA37 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,11 +61,10 @@
 		8DBBDE4F1B6716300065CD3B /* Flow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		8DBBDE501B6716300065CD3B /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		8DBBDE511B6716300065CD3B /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
-		8DBBDE521B6716300065CD3B /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		8DBBDE531B6716300065CD3B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		8DBBDE5C1B6719B70065CD3B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		8DBBDE5E1B6719BA0065CD3B /* SwiftWebSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftWebSocket.framework; path = Carthage/Build/iOS/SwiftWebSocket.framework; sourceTree = "<group>"; };
 		8DBBDE601B6719BD0065CD3B /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		8DBC11151B72DDE00065FA37 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +72,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DBBDE5D1B6719B70065CD3B /* Alamofire.framework in Frameworks */,
 				8DBBDE5F1B6719BA0065CD3B /* SwiftWebSocket.framework in Frameworks */,
 				8DBBDE611B6719BD0065CD3B /* SwiftyJSON.framework in Frameworks */,
+				8DBC11161B72DDE00065FA37 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,9 +92,9 @@
 		8DBBDE261B6715D60065CD3B = {
 			isa = PBXGroup;
 			children = (
+				8DBC11151B72DDE00065FA37 /* Alamofire.framework */,
 				8DBBDE601B6719BD0065CD3B /* SwiftyJSON.framework */,
 				8DBBDE5E1B6719BA0065CD3B /* SwiftWebSocket.framework */,
-				8DBBDE5C1B6719B70065CD3B /* Alamofire.framework */,
 				8DBBDE321B6715D60065CD3B /* Flowthings */,
 				8DBBDE3E1B6715D60065CD3B /* FlowthingsTests */,
 				8DBBDE311B6715D60065CD3B /* Products */,
@@ -129,7 +127,6 @@
 				8D0E03691B7278B900D44014 /* Elem.swift */,
 				8D0E03671B7278AF00D44014 /* Error.swift */,
 				8DBBDE511B6716300065CD3B /* Group.swift */,
-				8DBBDE521B6716300065CD3B /* APIController.swift */,
 				8DBBDE531B6716300065CD3B /* Location.swift */,
 				8DBBDE331B6715D60065CD3B /* Flowthings.h */,
 				8DBBDE351B6715D60065CD3B /* Info.plist */,
@@ -281,7 +278,6 @@
 				8DBBDE541B6716300065CD3B /* Creds.swift in Sources */,
 				8D0E035E1B72779200D44014 /* API.swift in Sources */,
 				8DBBDE5B1B6716300065CD3B /* Location.swift in Sources */,
-				8DBBDE5A1B6716300065CD3B /* APIController.swift in Sources */,
 				8D0E03621B72782F00D44014 /* Identity.swift in Sources */,
 				8D0E036A1B7278B900D44014 /* Elem.swift in Sources */,
 				8DBBDE561B6716300065CD3B /* Drop.swift in Sources */,

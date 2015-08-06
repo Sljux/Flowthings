@@ -37,32 +37,32 @@ public class WSS : WebSocket {
 //
 //    }
     
-    func fetchSessionID(req: NSMutableURLRequest){
-    
-        Alamofire.request(req).responseJSON() {
-            request,response,data,error in
-            if error == nil {
-                let json = JSON(data!)
-                
-                if let sessID = json["body"]["id"].string {
-                    self.id = sessID
-                    //super.init(WSS.wsSessionURLBase + "/" + sessID + "/ws")
-                    return
-                }
-                print("Could Not connect to Web Socket")
-                return
-            } else {
-                if let message = error?.description{
-                    print(message)
-                }
-                else{
-                    print("Could Not connect to Web Socket ")
-                }
-                return
-            }
-            
-        }
-    }
+//    func fetchSessionID(req: NSMutableURLRequest){
+//    
+//        Alamofire.request(req).responseJSON() {
+//            request,response,data,error in
+//            if error == nil {
+//                let json = JSON(data!)
+//                
+//                if let sessID = json["body"]["id"].string {
+//                    self.id = sessID
+//                    //super.init(WSS.wsSessionURLBase + "/" + sessID + "/ws")
+//                    return
+//                }
+//                print("Could Not connect to Web Socket")
+//                return
+//            } else {
+//                if let message = error?.description{
+//                    print(message)
+//                }
+//                else{
+//                    print("Could Not connect to Web Socket ")
+//                }
+//                return
+//            }
+//            
+//        }
+//    }
 
     func sendFromDictionary(message: [String:String]){
         //let jsonMessage = JSON(message)

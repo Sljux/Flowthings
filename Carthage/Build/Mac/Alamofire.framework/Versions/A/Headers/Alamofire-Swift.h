@@ -87,6 +87,7 @@ typedef int swift_int3  __attribute__((__ext_vector_type__(3)));
 typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import Foundation;
+@import Foundation.NSURLSession;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -101,14 +102,19 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 @property (nonatomic, readonly, copy) NSString * __nonnull URLString;
 @end
 
+@class NSMutableURLRequest;
 
 @interface NSURLRequest (SWIFT_EXTENSION(Alamofire))
-@property (nonatomic, readonly) NSURLRequest * __nonnull URLRequest;
+@property (nonatomic, readonly) NSMutableURLRequest * __nonnull URLRequest;
 @end
 
 
 @interface NSURLRequest (SWIFT_EXTENSION(Alamofire))
 @property (nonatomic, readonly, copy) NSString * __nonnull URLString;
+@end
+
+
+@interface NSURLSession (SWIFT_EXTENSION(Alamofire))
 @end
 
 #pragma clang diagnostic pop

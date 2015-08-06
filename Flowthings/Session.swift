@@ -41,19 +41,18 @@ class Session {
         req.HTTPMethod = "POST"
         
         Alamofire.request(req).responseJSON() {
-            request,response,data,error in
-            if error == nil {
-                let json = JSON(data!)
-                
-                if let sessID = json["body"]["id"].string {
-                    Session.id = sessID
-                    completion(sessionID: sessID)
-                }
-                
-                completion(sessionID: nil)
-            } else {
-                completion(sessionID: nil)
-            }
+            request,response,data in
+//                let json = JSON(data)
+//                
+//                if let sessID = json["body"]["id"].string {
+//                    Session.id = sessID
+//                    completion(sessionID: sessID)
+//                }
+//                
+//                completion(sessionID: nil)
+//            } else {
+//                completion(sessionID: nil)
+//            }
         }
         
     }

@@ -1,3 +1,3 @@
-github "Alamofire/Alamofire" "ae07d613f0b6b1f88724b7a5457effedc6207fcd"
+github "Alamofire/Alamofire" "1a12318dcf6b6918687dd3babe28e521e8b8842c"
 github "tidwall/SwiftWebSocket" "v1.1.0"
-github "SwiftyJSON/SwiftyJSON" "999ae8340492d6e9b42f28f332cbd591509de079"
+github "SwiftyJSON/SwiftyJSON" "45ca854ce75948858f65e31fbc58cbf214669250"

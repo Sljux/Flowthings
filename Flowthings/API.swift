@@ -106,38 +106,16 @@ public class API {
         API.req.HTTPMethod = "POST"
 
         do {
-            try API.req.HTTPBody = NSJSONSerialization.dataWithJSONObject(parameters, options: NSJSONWritingOptions(rawValue: 0))
+            //try API.req.HTTPBody = NSJSONSerialization.dataWithJSONObject(parameters, options: NSJSONWritingOptions(rawValue: 0))
 
         
-            //try API.req.HTTPBody = JSON(parameters).rawData()
+            try API.req.HTTPBody = JSON(parameters).rawData()
         }
         catch {
             //handle bad parsing
         }
         
         
-        
-        Alamofire.request(API.req).responseJSON() {
-            _,_,json,error in
-            
-            if let err = error {
-                print("ERROR")
-                print(err)
-                failure(error: err)
-                return
-            }
-            
-            let json = JSON(json!)
-            
-            if let err = json["head"]["errors"].array {
-                print("ERROR")
-                print(err, json)
-                return
-            }
-            
-            print("SUCCESS", json)
-            success(body: json)
-        }
         
         
     }
@@ -152,21 +130,45 @@ public class API {
         }
         
         API.req.URL = url
-        Alamofire.request(API.req).responseJSON() {
-            _,_,data,error in
-            if error == nil {
-                var json = JSON(data!)
-                
-                if let _ = json["body"].array {
-                    success(body: json["body"])
-                }
-                else{
-                    failure(error: Error.MissingBody)
-                }
-            } else {
-                failure(error: error)
-            }
-        }
+        
+        
+        //failure(error: Error.MissingBody)
     }
     
+    func fetchRequest(success:(body: JSON?) -> ()?, failure:(error: ErrorType?) -> ()?) {
+        
+        Alamofire.request(API.req).responseJSON() {
+            _,_,result in
+            
+            guard result.isSuccess else {
+                
+                print(result.error)
+                print(result.data)
+
+                return
+            }
+            
+            guard let json_value = result.value else {
+                print("empty value")
+                return
+            }
+            
+            let json = JSON(json_value)
+            
+            if let err = json["head"]["errors"].array?.count {
+                if err > 0 {
+                    print("ERROR")
+                    print(err, json)
+                    return
+                }
+            }
+            
+            print("SUCCESS", json)
+            success(body: json["body"])
+            
+        }
+        
+    }
+
+
 }
