@@ -22,5 +22,9 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>NSPrincipalClass</key>
 	<string></string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please set NSLocationWhenInUseUsageDescription  text in plist file</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Please set NSLocationAlwaysUsageDescription text in plist file</string>
 </dict>
 </plist>

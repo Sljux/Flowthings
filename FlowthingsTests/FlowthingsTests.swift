@@ -7,13 +7,44 @@
 //
 
 import XCTest
-//@testable import Flowthings
+@testable import Flowthings
 
 class FlowthingsTests: XCTestCase {
     
+    var api : API = Flowthings(accountID: "ceco", tokenID: "6GMlrMISkC95NsTvadZKetBrgo4G0TKW").api
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        /*
+        var model = [ "path" : "/ceco/framework/test1/",
+        "description" : "framework testing flow",
+        ]
+        
+        api.flow.create(model,
+        success:{
+        body in
+        },
+        failure:{
+        error in
+        })
+        */
+//        var location = Location()
+//        
+//        location.setCurent()
+//        
+//        let model = [ "path" : "/ceco/framework/test/",
+//            "location" : location.dict,
+//            "elems" : ["name" : "test", "status": "feel good"]]
+//        
+//        api.drop.create(model as! [String : AnyObject],
+//            success:{
+//                body in
+//            },
+//            failure:{
+//                error in
+//        })
+
     }
     
     override func tearDown() {

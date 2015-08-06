@@ -114,10 +114,6 @@ public class API {
         catch {
             //handle bad parsing
         }
-        
-        
-        
-        
     }
 
     func GET(path: String, success:(body: JSON?) -> ()?, failure:(error: ErrorType?) -> ()?){
@@ -131,11 +127,20 @@ public class API {
         
         API.req.URL = url
         
+        fetchRequest(
+        success: {
+            data in
+            return
+        },
+        failure: {
+            error in
+            return
+        })
         
         //failure(error: Error.MissingBody)
     }
     
-    func fetchRequest(success:(body: JSON?) -> ()?, failure:(error: ErrorType?) -> ()?) {
+    func fetchRequest(success success:(body: JSON?) -> ()?, failure:(error: ErrorType?) -> ()?) {
         
         Alamofire.request(API.req).responseJSON() {
             _,_,result in
