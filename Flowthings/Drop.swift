@@ -9,9 +9,15 @@
 import Foundation
 import CoreLocation
 import SwiftyJSON
+import Alamofire
 
 
 struct Drop {
+
+    enum DropErrors {
+        case BadConnection
+    
+    }
     
     var path : String?
     //The path of the Flow where the Drop is to be written, optional if the flowId is provided in the url of the POST.
@@ -69,20 +75,38 @@ struct Drop {
         
     }
     
-    func create(model: [String:AnyObject], success: (body: JSON?)->(), failure: (error:ErrorType)->())  {
+    func create(model: [String:AnyObject], success: (result: Result<AnyObject>)->(), failure: (result: Result<AnyObject>)->())  {
         
-        API.POST("/drop/", parameters: model,
-            success: {
-                json in
-                success(body: json)
-            },
-            failure: {
-                error in
-                failure(error: error)
-        })
+//        API.POST("/drop/", parameters: model,
+//            success: {
+//                result in
+//                success(result: result)
+//            },
+//            failure: {
+//                result in
+//                failure(result: result)
+//        })
         
     }
-    func read(){}
+    
+    func read(flowID flowID: String, dropID: String, success: (body: JSON)->(), failure: (error: DropError)->()){
+        
+//        let path = "/drop/" + flowID + "/" + dropID
+//
+//        API.GET(path, parameters: nil,
+//            success: {
+//                body in
+//                if let json = body {
+//                    success(body: json)
+//                }
+//                
+//            }, failure: {
+//                error in
+//                    failure(error: error)
+//        })
+    
+    }
+    
     func find(){}
     func multiFind(){}
     func update(){}

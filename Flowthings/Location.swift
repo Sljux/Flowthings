@@ -143,14 +143,18 @@ class CurrentLocationManager: NSObject, CLLocationManagerDelegate {
         locationManager = CLLocationManager()
         locationManager!.delegate = self
         
+        //Work around XCTAssert bugs - NSBundle.mainBundle() alternative
+        let bundle = NSBundle(forClass: self.dynamicType)
+        
         //check for description key and ask permissions
-        if (NSBundle.mainBundle().objectForInfoDictionaryKey("NSLocationWhenInUseUsageDescription") != nil) {
+        if (bundle.objectForInfoDictionaryKey("NSLocationWhenInUseUsageDescription") != nil) {
             locationManager!.requestWhenInUseAuthorization()
-        } else if (NSBundle.mainBundle().objectForInfoDictionaryKey("NSLocationAlwaysUsageDescription") != nil) {
+        } else if (bundle.objectForInfoDictionaryKey("NSLocationAlwaysUsageDescription") != nil) {
             locationManager!.requestAlwaysAuthorization()
         } else {
             fatalError("To use location in iOS8 you need to define either NSLocationWhenInUseUsageDescription or NSLocationAlwaysUsageDescription in the app bundle's Info.plist file")
         }
+        
         
     }
 }

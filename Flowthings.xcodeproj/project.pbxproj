@@ -14,6 +14,7 @@
 		8D0E03661B72784700D44014 /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03651B72784700D44014 /* Share.swift */; };
 		8D0E03681B7278AF00D44014 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03671B7278AF00D44014 /* Error.swift */; };
 		8D0E036A1B7278B900D44014 /* Elem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03691B7278B900D44014 /* Elem.swift */; };
+		8D22AC4A1B738FA0004CC348 /* LocationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D22AC491B738FA0004CC348 /* LocationSpec.swift */; };
 		8DBBDE341B6715D60065CD3B /* Flowthings.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DBBDE331B6715D60065CD3B /* Flowthings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DBBDE3B1B6715D60065CD3B /* Flowthings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBBDE301B6715D60065CD3B /* Flowthings.framework */; };
 		8DBBDE401B6715D60065CD3B /* FlowthingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE3F1B6715D60065CD3B /* FlowthingsTests.swift */; };
@@ -26,8 +27,9 @@
 		8DBBDE591B6716300065CD3B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE511B6716300065CD3B /* Group.swift */; };
 		8DBBDE5B1B6716300065CD3B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE531B6716300065CD3B /* Location.swift */; };
 		8DBBDE5F1B6719BA0065CD3B /* SwiftWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBBDE5E1B6719BA0065CD3B /* SwiftWebSocket.framework */; };
-		8DBBDE611B6719BD0065CD3B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBBDE601B6719BD0065CD3B /* SwiftyJSON.framework */; };
 		8DBC11161B72DDE00065FA37 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC11151B72DDE00065FA37 /* Alamofire.framework */; };
+		8DBC114E1B736ED40065FA37 /* DropAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBC114D1B736ED40065FA37 /* DropAPISpec.swift */; };
+		8DD624C51B73D3F300A4BAFE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD624C41B73D3F300A4BAFE /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,7 @@
 		8D0E03651B72784700D44014 /* Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
 		8D0E03671B7278AF00D44014 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		8D0E03691B7278B900D44014 /* Elem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elem.swift; sourceTree = "<group>"; };
+		8D22AC491B738FA0004CC348 /* LocationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSpec.swift; sourceTree = "<group>"; };
 		8DBBDE301B6715D60065CD3B /* Flowthings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Flowthings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBBDE331B6715D60065CD3B /* Flowthings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flowthings.h; sourceTree = "<group>"; };
 		8DBBDE351B6715D60065CD3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,8 +66,9 @@
 		8DBBDE511B6716300065CD3B /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		8DBBDE531B6716300065CD3B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		8DBBDE5E1B6719BA0065CD3B /* SwiftWebSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftWebSocket.framework; path = Carthage/Build/iOS/SwiftWebSocket.framework; sourceTree = "<group>"; };
-		8DBBDE601B6719BD0065CD3B /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		8DBC11151B72DDE00065FA37 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		8DBC114D1B736ED40065FA37 /* DropAPISpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropAPISpec.swift; sourceTree = "<group>"; };
+		8DD624C41B73D3F300A4BAFE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +77,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DBBDE5F1B6719BA0065CD3B /* SwiftWebSocket.framework in Frameworks */,
-				8DBBDE611B6719BD0065CD3B /* SwiftyJSON.framework in Frameworks */,
 				8DBC11161B72DDE00065FA37 /* Alamofire.framework in Frameworks */,
+				8DD624C51B73D3F300A4BAFE /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,8 +96,8 @@
 		8DBBDE261B6715D60065CD3B = {
 			isa = PBXGroup;
 			children = (
+				8DD624C41B73D3F300A4BAFE /* SwiftyJSON.framework */,
 				8DBC11151B72DDE00065FA37 /* Alamofire.framework */,
-				8DBBDE601B6719BD0065CD3B /* SwiftyJSON.framework */,
 				8DBBDE5E1B6719BA0065CD3B /* SwiftWebSocket.framework */,
 				8DBBDE321B6715D60065CD3B /* Flowthings */,
 				8DBBDE3E1B6715D60065CD3B /* FlowthingsTests */,
@@ -139,6 +143,8 @@
 			children = (
 				8DBBDE3F1B6715D60065CD3B /* FlowthingsTests.swift */,
 				8DBBDE411B6715D60065CD3B /* Info.plist */,
+				8DBC114D1B736ED40065FA37 /* DropAPISpec.swift */,
+				8D22AC491B738FA0004CC348 /* LocationSpec.swift */,
 			);
 			path = FlowthingsTests;
 			sourceTree = "<group>";
@@ -295,6 +301,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DBBDE401B6715D60065CD3B /* FlowthingsTests.swift in Sources */,
+				8D22AC4A1B738FA0004CC348 /* LocationSpec.swift in Sources */,
+				8DBC114E1B736ED40065FA37 /* DropAPISpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,8 +455,13 @@
 		8DBBDE481B6715D60065CD3B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = FlowthingsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				INFOPLIST_FILE = Flowthings/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Flowthings.framework/Frameworks @executable_path/Frameworks @loader_path/../Flowthings.framework/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = io.cityos.FlowthingsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -457,8 +470,13 @@
 		8DBBDE491B6715D60065CD3B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = FlowthingsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				INFOPLIST_FILE = Flowthings/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Flowthings.framework/Frameworks @executable_path/Frameworks @loader_path/../Flowthings.framework/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = io.cityos.FlowthingsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -8,7 +8,7 @@
 
 import Foundation
 import SwiftyJSON
-
+import Alamofire
 
 struct Flow {
     
@@ -24,17 +24,17 @@ struct Flow {
     var description : String?
     var capacity : Int?
     
-    func create(model: [String:AnyObject], success: (body: JSON?)->(), failure: (error:ErrorType)->())  {
+    func create(model: [String:AnyObject], success: (result: Result<AnyObject>)->(), failure: (result:Result<AnyObject>)->())  {
         
-        API.POST("/flow/", parameters: model,
-            success: {
-                json in
-                success(body: json)
-            },
-            failure: {
-                error in
-                failure(error: error)
-        })
+//        API.POST("/flow/", parameters: model,
+//            success: {
+//                result in
+//                success(result: result)
+//            },
+//            failure: {
+//                result in
+//                failure(result: result)
+//        })
         
     }
     

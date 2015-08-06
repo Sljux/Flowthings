@@ -7,5 +7,9 @@ github "Alamofire/Alamofire" "swift-2.0"
 # SwifyJSON - json parsing
 github "SwiftyJSON/SwiftyJSON" "xcode7"
 
+# The Swift testing framework.
+#github "Quick/Quick" "swift-2.0"
+#github "Quick/Nimble" "swift-2.0"
+
 # Haneke - cache layer
 # github "Haneke/HanekeSwift"
