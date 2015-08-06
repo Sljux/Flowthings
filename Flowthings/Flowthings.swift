@@ -22,7 +22,7 @@ public class Flowthings {
         //wss = WSS(creds: creds)
     }
     
-    convenience init(accountID: String, tokenID: String){
+    public convenience init(accountID: String, tokenID: String){
         let creds = Creds(accountID: accountID, tokenID: tokenID)
         self.init(creds: creds)
     }

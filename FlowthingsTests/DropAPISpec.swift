@@ -7,20 +7,24 @@
 //
 
 import XCTest
+import Quick
+import Nimble
 import Alamofire
 import SwiftyJSON
 @testable import Flowthings
 
-class DropAPITests: XCTestCase {
+class DropAPITests: QuickSpec {
     
     var api : API = Flowthings(accountID: "ceco", tokenID: "6GMlrMISkC95NsTvadZKetBrgo4G0TKW").api
     
+    
     override func setUp() {
+        separator()
         super.setUp()
-        
     }
     
     override func tearDown() {
+        separator()
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
@@ -30,14 +34,16 @@ class DropAPITests: XCTestCase {
         let flowID = "f55b991ab68056d7454984a87"
         let dropID = "d55b991ab68056d7454984a8d"
 
+        print("CECO")
         api.drop.read(flowID: flowID, dropID: dropID,
             success:{
                 body in
-                print(body)
+                
+                XCTFail("DropAPIRead failed")
         },
             failure:{
                 error in
-                
+
                 XCTFail("DropAPIRead failed")
         })
     }

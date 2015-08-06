@@ -18,7 +18,7 @@ public class API {
     static let secure = true
     
     //Main
-    lazy var drop = Drop()
+    public lazy var drop = Drop()
     lazy var flow = Flow()
     
     //Others
@@ -43,6 +43,9 @@ public class API {
         case MissingBody
     }
     
+    public static func test (){
+        print("test") 
+    }
     
     static func url(path: String) -> NSURL? {
         

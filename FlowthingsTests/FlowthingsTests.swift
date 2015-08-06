@@ -9,7 +9,16 @@
 import XCTest
 @testable import Flowthings
 
+func separator(div: String = "---", num: Int = 5){
+
+    for _ in 0...5 {
+        print(".")
+    }
+}
+
 class FlowthingsTests: XCTestCase {
+    
+    
     
     var api : API = Flowthings(accountID: "ceco", tokenID: "6GMlrMISkC95NsTvadZKetBrgo4G0TKW").api
     
