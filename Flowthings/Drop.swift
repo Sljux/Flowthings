@@ -89,22 +89,25 @@ struct Drop {
         
     }
     
-    func read(flowID flowID: String, dropID: String, success: (body: JSON)->(), failure: (error: DropError)->()){
+    func read(flowID flowID: String, dropID: String, success: (body: JSON?)->()?, failure: (error: ErrorType?)->()?){
         
-//        let path = "/drop/" + flowID + "/" + dropID
-//
-//        API.GET(path, parameters: nil,
-//            success: {
-//                body in
-//                if let json = body {
-//                    success(body: json)
-//                }
-//                
-//            }, failure: {
-//                error in
-//                    failure(error: error)
-//        })
-    
+        let path = "/drop/" + flowID + "/" + dropID
+        let parameters : [String:AnyObject] = [:]
+        
+        API.GET(path, parameters: parameters,
+            success: {
+                json_option in
+                print(json_option)
+                if let json = json_option {
+                    success(body: json)
+                }
+                return nil
+            },
+            failure: {
+            error in
+                failure(error: nil)
+                return nil
+        })
     }
     
     func find(){}

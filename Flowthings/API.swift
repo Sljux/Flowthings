@@ -154,49 +154,48 @@ public class API {
         failure: (error: Int?) -> ()?
         ){
             
-            //        guard let url = API.url(path) else {
-            //            failure(error: nil)
-            //            return
-            //        }
+            guard let url = API.url(path) else {
+                failure(error: nil)
+                return
+            }
             
-            //        Alamofire.request(
-            //            .POST,
-            //            url,
-            //            parameters: parameters,
-            //            encoding: .JSON,
-            //            headers: API.headers
-            //            ).responseJSON() {
-            //
-            //                _,_,result in
-            //
-            //                guard result.isSuccess else {
-            //
-            //                    print(result.error)
-            //                    print(result.data)
-            //
-            //                    failure(error: nil)
-            //                    return
-            //                }
-            //
-            //                guard let json_value = result.value else {
-            //                    print("empty value")
-            //                    failure(error: nil)
-            //                    return
-            //                }
-            //                
-            //                let json = JSON(json_value)
-            //                
-            //                if let err = json["head"]["errors"].array?.count {
-            //                    if err > 0 {
-            //                        print("ERROR")
-            //                        print(err, json)
-            //                        failure(error: nil)
-            //                    }
-            //                }
-            //                
-            //                print("SUCCESS", json)
-            //                success(body: json)
-            //        }
-            //    }
+            Alamofire.request(
+                .GET,
+                url,
+                parameters: parameters,
+                encoding: .JSON,
+                headers: API.headers
+                ).responseJSON() {
+                    
+                    _,_,result in
+                    
+                    guard result.isSuccess else {
+                        
+                        print(result.error)
+                        print(result.data)
+                        
+                        failure(error: nil)
+                        return
+                    }
+                    
+                    guard let json_value = result.value else {
+                        print("empty value")
+                        failure(error: nil)
+                        return
+                    }
+                    
+                    let json = JSON(json_value)
+                    
+                    if let err = json["head"]["errors"].array?.count {
+                        if err > 0 {
+                            print("ERROR")
+                            print(err, json)
+                            failure(error: nil)
+                        }
+                    }
+                    
+                    print("SUCCESS", json)
+                    success(body: json)
+            }
     }
 }
