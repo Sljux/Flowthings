@@ -12,7 +12,7 @@ import SwiftyJSON
 import Alamofire
 
 
-struct Drop {
+public struct Drop {
 
     enum DropErrors {
         case BadConnection
@@ -75,7 +75,9 @@ struct Drop {
         
     }
     
-    func create(model: [String:AnyObject], success: (result: Result<AnyObject>)->(), failure: (result: Result<AnyObject>)->())  {
+    func create(model: [String:AnyObject],
+        success: (result: Result<AnyObject>)->(),
+        failure: (result: Result<AnyObject>)->())  {
         
 //        API.POST("/drop/", parameters: model,
 //            success: {
@@ -89,25 +91,26 @@ struct Drop {
         
     }
     
-    func read(flowID flowID: String, dropID: String, success: (body: JSON?)->()?, failure: (error: ErrorType?)->()?){
+    public func read(flowID flowID: String, dropID: String, success: (body: JSON?)->()?, failure: (error: ErrorType?)->()?){
         
-        let path = "/drop/" + flowID + "/" + dropID
-        let parameters : [String:AnyObject] = [:]
-        
-        API.GET(path, parameters: parameters,
-            success: {
-                json_option in
-                print(json_option)
-                if let json = json_option {
-                    success(body: json)
-                }
-                return nil
-            },
-            failure: {
-            error in
-                failure(error: nil)
-                return nil
-        })
+//        let path = "/drop/" + flowID + "/" + dropID
+//        let parameters : [String:AnyObject] = [:]
+//        
+//        API.GET(path,
+//            parameters: parameters,
+//            success: {
+//                json_option in
+//                print(json_option)
+//                if let json = json_option {
+//                    success(body: json)
+//                }
+//                return nil
+//            },
+//            failure: {
+//            error in
+//                failure(error: nil)
+//                return nil
+//        })
     }
     
     func find(){}

@@ -7,27 +7,6 @@
 //
 
 
-import Foundation
-import SwiftyJSON
-
-public class Flowthings {
-    
-    var creds : Creds
-    public var api : API
-    //public var wss : WSS
-    
-    init(creds: Creds) {
-        self.creds = creds
-        api = API(creds: creds)
-        //wss = WSS(creds: creds)
-    }
-    
-    public convenience init(accountID: String, tokenID: String){
-        let creds = Creds(accountID: accountID, tokenID: tokenID)
-        self.init(creds: creds)
-    }
-}
-
 ////OLD - remove later
 //
 //import Foundation
