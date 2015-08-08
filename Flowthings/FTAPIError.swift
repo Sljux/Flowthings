@@ -11,9 +11,10 @@ import SwiftyJSON
 public enum FTAPIError {
     
     //Setup
-    case URLCanNotBuild
+    case URLCanNotBuild(path: String)
     case JSONIsNil
     case HeaderStatusIsMissing
+    case UnsupportedMethod(FTMethod)
     
     //Header Codes
     case BadRequest
@@ -23,8 +24,14 @@ public enum FTAPIError {
     case MessagesMissing
     case Errors(errors: [JSON])
     
+    //Generic
+    case UnexpectedJSONFormat(JSON?)
+    
     //Anomalies
     case BodyIsMissing
-
+    
+    //Drop
+    case MissingPath
+    
 }
 

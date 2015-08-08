@@ -6,25 +6,20 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
-import Foundation
 import Alamofire
 import SwiftyJSON
 
 public enum FTMethod : String {
-    case OPTIONS
     case GET
-    case HEAD
     case POST
-    case PUT
-    case PATCH
-    case DELETE
-    case TRACE
-    case CONNECT
+
+    //case OPTIONS, HEAD, PUT, PATCH, DELETE, TRACE, CONNECT
 }
 
-public class FTAPI {
+typealias FTAPI = FlowthingsAPI
+
+public class FlowthingsAPI {
     
-    //Main
     public lazy var drop = Drop()
     lazy var flow = Flow()
     
@@ -42,11 +37,11 @@ public class FTAPI {
     */
     
     //static var req = NSMutableURLRequest()
-    var headers : [String:String] = [:]
+    static var headers : [String:String] = [:]
     
     init () {
         
-        headers = [
+        FTAPI.headers = [
             "X-Auth-Token" : Config.tokenID!,
             "X-Auth-Account" : Config.accountID!,
             "Content-Type" : "application/json"
@@ -60,21 +55,51 @@ public class FTAPI {
         self.init()
     }
 
-    public func request(method: FTMethod, path: String, parameters: [String:AnyObject]?,
+    public static func request(ftmethod: FTMethod, path: String, parameters: [String:AnyObject]? = nil,
         success:(body: JSON?) -> (),
         failure: (error: FTAPIError) -> ()
         ) -> Void {
+
             
-            guard let url = Config.url(path) else {
-                failure(error: .URLCanNotBuild)
+            //removing dependecy on Alamofire u apps
+            var method : Alamofire.Method
+            
+            switch ftmethod {
+            
+            case FTMethod.GET :
+                    method = Alamofire.Method.GET
+            case FTMethod.POST :
+                    method = Alamofire.Method.POST
+            }
+            
+            guard let url = Config.url(path) as? URLStringConvertible else {
+                failure(error: .URLCanNotBuild(path: path))
                 return
             }
             
-            Alamofire.request(.GET, url, parameters: nil, encoding: .JSON, headers: headers).responseJSON(completionHandler: {(req, res, data) in
+            var response : Alamofire.Request
+
+            
+            if let _ = parameters {
+                
+                response = Alamofire.request(
+                    method,
+                    url,
+                    parameters: parameters,
+                    encoding: ParameterEncoding.JSON,
+                    headers: FTAPI.headers)
+            } else {
+                response = Alamofire.request(
+                    method,
+                    url,
+                    headers: FTAPI.headers)
+            }
+            
+            response.responseJSON(completionHandler: {(req, res, data) in
                 switch data {
                 case .Success(let json):
                     
-                    self.validateResponse(json,
+                    FTAPI.validateResponse(json,
                         success: {
                             json in
                             success(body: json)
@@ -86,26 +111,28 @@ public class FTAPI {
                     
                     
                 case .Failure(let data, let error):
-                    print(req, appendNewline: true)
-                    print(res, appendNewline: true)
-                    print(data, appendNewline: true)
-                    print(error, appendNewline: true)
+                    print(req)
+                    print(res)
+                    print(data)
+                    print(error)
+                    failure(error: FTAPIError.BadRequest)
                 }
             })
     }
     
-    func validateResponse(
+    static func validateResponse(
         json_optional: AnyObject?,
         success:(json: JSON) -> (),
         failure:(error: FTAPIError) -> ()
         ) {
+
             guard let json = json_optional else {
                 failure(error: .JSONIsNil)
                 return
             }
             
             let data = JSON(json)
-            
+
             guard (data != nil) else {
                 failure(error: .JSONIsNil)
                 return

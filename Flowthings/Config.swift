@@ -28,8 +28,8 @@ struct Config {
             print("Set creds first with Creds(accountID, tokenID)")
             return nil
         }
-        
         var url = "http"
+
         if Config.secure {
             url += "s"
         }
