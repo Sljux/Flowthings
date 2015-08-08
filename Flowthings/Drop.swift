@@ -11,7 +11,7 @@ import SwiftyJSON
 public class Drop : Base {
     
     override var baseURL : String { return "/drop/" }
- 
+    
     public func createOnFlowID(
         flowID flowID: String,
         model: [String:AnyObject],
@@ -37,4 +37,22 @@ public class Drop : Base {
                     failure(error: error)
             })
     }
+    
+    func aggregate(
+        path: String,
+        model: [String:AnyObject],
+        success: (json: JSON)->(),
+        failure: (error: FTAPIError)->()){
+            
+            FTAPI.request(.PUT, path: path, parameters: model,
+                success: {
+                    json in
+                    success(json: json!)
+                },
+                failure: {
+                    error in
+                    failure(error: error)
+            })
+    }
+
 }

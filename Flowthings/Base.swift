@@ -65,12 +65,89 @@ public class Base {
         })
     }
         
-    func find(){}
-    func multiFind(){}
-    func update(){}
-    func memberUpdate(){}
-    func delete(){}
-    func aggregate(){}
+    func find(
+        model: [String:AnyObject],
+        success: (json: JSON)->(),
+        failure: (error: FTAPIError)->())  {
+            
+            let path = baseURL
+            
+            FTAPI.request(.GET, path: path, parameters: model,
+                success: {
+                    json in
+                    success(json: json!)
+                },
+                failure: {
+                    error in
+                    failure(error: error)
+            })
+
+    }
     
+    func multiFind(
+        model model: [String:AnyObject],
+        success: (json: JSON)->(),
+        failure: (error: FTAPIError)->()){
+            let path = baseURL
+            
+            FTAPI.request(.GET, path: path, parameters: model,
+                success: {
+                    json in
+                    success(json: json!)
+                },
+                failure: {
+                    error in
+                    failure(error: error)
+            })
+    }
+    
+    func update(
+        path: String,
+        model: [String:AnyObject],
+        success: (json: JSON)->(),
+        failure: (error: FTAPIError)->()){
+            
+            FTAPI.request(.PUT, path: path, parameters: model,
+                success: {
+                    json in
+                    success(json: json!)
+                },
+                failure: {
+                    error in
+                    failure(error: error)
+            })
+    }
+    
+    func memberUpdate(
+        path: String,
+        model: [String:AnyObject],
+        success: (json: JSON)->(),
+        failure: (error: FTAPIError)->()){
+            
+            FTAPI.request(.PUT, path: path, parameters: model,
+                success: {
+                    json in
+                    success(json: json!)
+                },
+                failure: {
+                    error in
+                    failure(error: error)
+            })
+    }
+    func delete(
+        path: String,
+        success: (json: JSON)->(),
+        failure: (error: FTAPIError)->()){
+            
+            FTAPI.request(.DELETE, path: path, parameters: nil,
+                success: {
+                    json in
+                    success(json: json!)
+                },
+                failure: {
+                    error in
+                    failure(error: error)
+            })
+    }
 }
 

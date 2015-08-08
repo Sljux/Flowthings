@@ -10,8 +10,7 @@ import Alamofire
 import SwiftyJSON
 
 public enum FTMethod : String {
-    case GET
-    case POST
+    case GET, POST, PUT, DELETE
 
     //case OPTIONS, HEAD, PUT, PATCH, DELETE, TRACE, CONNECT
 }
@@ -63,13 +62,20 @@ public class FlowthingsAPI {
             
             //removing dependecy on Alamofire u apps
             var method : Alamofire.Method
+            var encoding : ParameterEncoding = .JSON
             
             switch ftmethod {
             
-            case FTMethod.GET :
-                    method = Alamofire.Method.GET
-            case FTMethod.POST :
-                    method = Alamofire.Method.POST
+            case .GET :
+                method = Alamofire.Method.GET
+                encoding = .URL
+            case .POST :
+                method = Alamofire.Method.POST
+            case .PUT :
+                method = Alamofire.Method.PUT
+            case .DELETE :
+                method = Alamofire.Method.DELETE
+
             }
             
             guard let url = Config.url(path) as? URLStringConvertible else {
@@ -86,7 +92,7 @@ public class FlowthingsAPI {
                     method,
                     url,
                     parameters: parameters,
-                    encoding: ParameterEncoding.JSON,
+                    encoding: encoding,
                     headers: FTAPI.headers)
             } else {
                 response = Alamofire.request(
