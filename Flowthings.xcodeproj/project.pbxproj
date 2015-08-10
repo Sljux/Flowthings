@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D086E201B79123E006B39F6 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D086E1F1B79123E006B39F6 /* Validate.swift */; };
 		8D0E035E1B72779200D44014 /* FlowthingsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E035D1B72779200D44014 /* FlowthingsAPI.swift */; };
 		8D0E03601B72779F00D44014 /* FTWSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E035F1B72779F00D44014 /* FTWSS.swift */; };
 		8D0E03621B72782F00D44014 /* Identity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03611B72782F00D44014 /* Identity.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D086E1F1B79123E006B39F6 /* Validate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
 		8D0E035D1B72779200D44014 /* FlowthingsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowthingsAPI.swift; sourceTree = "<group>"; };
 		8D0E035F1B72779F00D44014 /* FTWSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWSS.swift; sourceTree = "<group>"; };
 		8D0E03611B72782F00D44014 /* Identity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identity.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		8DBBDE321B6715D60065CD3B /* Flowthings */ = {
 			isa = PBXGroup;
 			children = (
+				8D086E1F1B79123E006B39F6 /* Validate.swift */,
 				8D1C2F061B759C20003F6329 /* Base.swift */,
 				8DBBDE4E1B6716300065CD3B /* Drop.swift */,
 				8D572D541B7509C700D29297 /* Config.swift */,
@@ -296,6 +299,7 @@
 				8D0E03601B72779F00D44014 /* FTWSS.swift in Sources */,
 				8DBBDE551B6716300065CD3B /* Session.swift in Sources */,
 				8D0E03641B72783E00D44014 /* Token.swift in Sources */,
+				8D086E201B79123E006B39F6 /* Validate.swift in Sources */,
 				8D572D551B7509C700D29297 /* Config.swift in Sources */,
 				8DBBDE581B6716300065CD3B /* Track.swift in Sources */,
 			);

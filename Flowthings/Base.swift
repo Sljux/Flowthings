@@ -26,19 +26,22 @@ public class Base {
     init(){}
     
     public func create(
-        model model: [String:AnyObject],
+        params params: [String:AnyObject],
         success: (json: JSON)->(),
         failure: (error: FTAPIError)->())  {
             
-            //Check that path is set as we dont have flowID here
-            guard let _ = model["path"] else {
-                failure(error: .MissingPath)
+            let required = ["elems", "path"]
+            
+            let check = Valid(params: params, checkFor: required)
+            
+            guard check.isValid else {
+                failure(error: .FailedRequiredParams(check.messages))
                 return
             }
             
             let path = baseURL
             
-            FTAPI.request(.POST, path: path, parameters: model,
+            FTAPI.request(.POST, path: path, parameters: params,
                 success: {
                     json in
                     success(json: json!)
@@ -53,18 +56,18 @@ public class Base {
         path: String,
         success: (body: JSON)->(),
         failure: (error: FTAPIError)->()){
-        
-        FTAPI.request(.GET, path: path,
-            success: {
-                json in
-                success(body: json!)
-            },
-            failure: {
-                error in
-                failure(error: error)
-        })
+            
+            FTAPI.request(.GET, path: path,
+                success: {
+                    json in
+                    success(body: json!)
+                },
+                failure: {
+                    error in
+                    failure(error: error)
+            })
     }
-        
+    
     func find(
         model: [String:AnyObject],
         success: (json: JSON)->(),
@@ -81,7 +84,7 @@ public class Base {
                     error in
                     failure(error: error)
             })
-
+            
     }
     
     func multiFind(
@@ -150,4 +153,3 @@ public class Base {
             })
     }
 }
-

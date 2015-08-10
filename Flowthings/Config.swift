@@ -15,21 +15,21 @@ struct Config {
     
     static var accountID: String? = ""
     static var tokenID: String? = ""
-
+    
     static let domain = "api.flowthings.io"
     static let apiVersion = "v0.1"
     static let secure = true
-
+    
     
     static func url(path: String) -> NSURL? {
         
         guard   let accountID = Config.accountID,
-                let _ = Config.tokenID else {
-            print("Set creds first with Creds(accountID, tokenID)")
-            return nil
+            let _ = Config.tokenID else {
+                print("Set creds first with Creds(accountID, tokenID)")
+                return nil
         }
         var url = "http"
-
+        
         if Config.secure {
             url += "s"
         }

@@ -11,7 +11,7 @@ import SwiftyJSON
 
 public enum FTMethod : String {
     case GET, POST, PUT, DELETE
-
+    
     //case OPTIONS, HEAD, PUT, PATCH, DELETE, TRACE, CONNECT
 }
 
@@ -53,19 +53,19 @@ public class FlowthingsAPI {
         
         self.init()
     }
-
+    
     public static func request(ftmethod: FTMethod, path: String, parameters: [String:AnyObject]? = nil,
         success:(body: JSON?) -> (),
         failure: (error: FTAPIError) -> ()
         ) -> Void {
-
+            
             
             //removing dependecy on Alamofire u apps
             var method : Alamofire.Method
             var encoding : ParameterEncoding = .JSON
             
             switch ftmethod {
-            
+                
             case .GET :
                 method = Alamofire.Method.GET
                 encoding = .URL
@@ -75,7 +75,7 @@ public class FlowthingsAPI {
                 method = Alamofire.Method.PUT
             case .DELETE :
                 method = Alamofire.Method.DELETE
-
+                
             }
             
             guard let url = Config.url(path) as? URLStringConvertible else {
@@ -84,7 +84,7 @@ public class FlowthingsAPI {
             }
             
             var response : Alamofire.Request
-
+            
             
             if let _ = parameters {
                 
@@ -109,7 +109,7 @@ public class FlowthingsAPI {
                         success: {
                             json in
                             success(body: json)
-                    },
+                        },
                         failure:{
                             error in
                             failure(error: error)
@@ -131,19 +131,19 @@ public class FlowthingsAPI {
         success:(json: JSON) -> (),
         failure:(error: FTAPIError) -> ()
         ) {
-
+            
             guard let json = json_optional else {
                 failure(error: .JSONIsNil)
                 return
             }
             
             let data = JSON(json)
-
+            
             guard (data != nil) else {
                 failure(error: .JSONIsNil)
                 return
             }
-
+            
             guard let ok = data["head"]["ok"].bool else {
                 
                 failure(error: .HeaderStatusIsMissing)
@@ -154,8 +154,8 @@ public class FlowthingsAPI {
                 success(json: data)
                 return
             }
-
-
+            
+            
             guard let statusCode = data["head"]["status"].int else {
                 
                 failure(error: .HeaderStatusIsMissing)
@@ -177,7 +177,7 @@ public class FlowthingsAPI {
                 break
                 
             }
-
+            
             if let errors = data["head"]["errors"].array {
                 
                 if errors.count > 0 {

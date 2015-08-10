@@ -29,7 +29,7 @@ public class Drop : Base {
                         failure(error: .UnexpectedJSONFormat(json))
                         return
                     }
-
+                    
                     success(json: json!)
                 },
                 failure: {
@@ -54,5 +54,5 @@ public class Drop : Base {
                     failure(error: error)
             })
     }
-
+    
 }
