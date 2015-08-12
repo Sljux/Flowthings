@@ -68,9 +68,9 @@ public class Valid {
     
     public init (){}
     
-    public init(checks: Checks, params:[String:AnyObject], checkFor: [String]) {
+    public init(checks: Checks, params:[String:AnyObject]) {
     
-        self.checkFor = checkFor
+        self.checkFor = checks.params
         self.params = params
         self.checks = checks
 

@@ -8,14 +8,33 @@
 
 import Foundation
 
-public struct Checks {
+public class Checks {
 
-    public var run : ValidChecks = [
-        "flow_id":ValidTests(),
-        "drop_id":ValidTests()
-    ]
+    public var run : ValidChecks = ValidChecks()
+    var params : [String] {
+        return run.keys.array
+    }
+
+    init(){}
     
-    mutating public func add(param: String, test: ValidTest){
+    init (param: String, tests: ValidTests){
+
+        let index : String = param
+        self.run[index] = ValidTests()
+        self.run[index]? = tests
+        
+    }
+
+    init (param: String, test: ValidTest){
+        
+        let index : String = param
+        self.run[index] = ValidTests()
+        self.run[index]? = [test]
+        
+    }
+
+    
+    public func add(param: String, test: ValidTest){
         
         if run[param] == nil {
             run[param] = []
@@ -23,7 +42,18 @@ public struct Checks {
         
         run[param]?.append(test)
     }
- 
+
+    public func add(param: String, tests: ValidTests){
+        
+        if run[param] == nil {
+            run[param] = []
+        }
+        
+        for test in tests {
+            run[param]?.append(test)
+        }
+    }
+
     subscript(index: String) -> ValidTests? {
         get {
             var result : ValidTests? = nil

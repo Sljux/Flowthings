@@ -34,11 +34,8 @@ public class Base : ValidChecksProtocol {
         success: (json: JSON)->(),
         failure: (error: FTAPIError)->())  {
             
-            let required = ["elems", "path"]
-            
-            var checks = Checks()
-            
-            let tests : ValidTests = [{
+            let checks = Checks(param: "path",
+            test: {
                 valid, path in
                 if path.isEmail(){
                     valid.addMessage("\"" + path + "\" is not valid email")
@@ -48,13 +45,19 @@ public class Base : ValidChecksProtocol {
                     valid.addMessage("\"" + path + "\" is too short")
                     valid.isValid = false
                 }                
-            }]
+            })
+
+            let extra_test : ValidTest = {
+                valid, path in
+                if(!path.contains("jim")){
+                    valid.addMessage("\"" + path + "\" is not jim happy")
+                    valid.isValid = false
+                }
+            }
             
-            let index : String = "path"
-            checks.run[index] = ValidTests()
-            checks.run[index]? = tests
+            checks.add("path", test: extra_test)
             
-            let check = Valid(checks: checks, params: params, checkFor: required)
+            let check = Valid(checks: checks, params: params)
             
 //                    let params = [
 //            "flow_id" : "123",
