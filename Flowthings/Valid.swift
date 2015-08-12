@@ -6,9 +6,11 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
-public typealias ValidTest = ((Valid, String) -> Void)
+public typealias ValidTest = ((Valid, AnyObject) -> Void)
 public typealias ValidTests = [ValidTest]
 public typealias ValidChecks = [String:ValidTests]
+
+public typealias ValidParams = [String:AnyObject]
 
 protocol ValidChecksProtocol {
 
@@ -33,7 +35,7 @@ public class Valid {
     var messages : [String] = []
 
     var checks : Checks?
-    var params : [String:AnyObject] = [:]
+    var params : ValidParams = [:]
     var checkFor : [String] = []
     
     public var tests : [String:[() -> ()]] = [:]
@@ -68,7 +70,7 @@ public class Valid {
     
     public init (){}
     
-    public init(checks: Checks, params:[String:AnyObject]) {
+    public init(checks: Checks, params:ValidParams) {
     
         self.checkFor = checks.params
         self.params = params
@@ -98,9 +100,9 @@ public class Valid {
                         if let value = params[check] as? String {
                             test(self, value)
                         }
-                        else {
-                            //Implement alternative test for Dict
-                            print("AnyObject test - can not test this yet")
+                        else if let value = params[check] {
+                            //Any object test
+                            test(self, value)
                         }
                     }
                 }

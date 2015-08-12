@@ -30,32 +30,57 @@ public class Base : ValidChecksProtocol {
     init(){}
     
     public func create(
-        params params: [String:AnyObject],
+        params params: ValidParams,
         success: (json: JSON)->(),
         failure: (error: FTAPIError)->())  {
             
             let checks = Checks(param: "path",
             test: {
                 valid, path in
-                if path.isEmail(){
-                    valid.addMessage("\"" + path + "\" is not valid email")
+                
+                guard let p = path as? String else {
+                    valid.addMessage("path value is not String")
+                    valid.isValid = false
+                    return
+                }
+                
+                if p.isEmail(){
+                    valid.addMessage("\"" + p + "\" is not valid email")
                     valid.isValid = false
                 }
-                if path.isShorterThen(100){
-                    valid.addMessage("\"" + path + "\" is too short")
+                if p.isShorterThen(100){
+                    valid.addMessage("\"" + p + "\" is too short")
                     valid.isValid = false
                 }                
             })
 
             let extra_test : ValidTest = {
-                valid, path in
-                if(!path.contains("jim")){
-                    valid.addMessage("\"" + path + "\" is not jim happy")
+                valid, elems in
+
+                guard let e = elems as? ValidParams else {
+                    valid.addMessage("elems are not of time FlowParams alias: [String:AnyObject]")
                     valid.isValid = false
+                    return
+                }
+
+                let json = JSON(e)
+                
+                //PASS Example:
+                guard let _ = json["description"].string else {
+                    valid.addMessage("\"elems\": [\"description\"] is not provided")
+                    valid.isValid = false
+                    return
+                }
+                
+                //FAIL Example:
+                guard let _ = json["test"]["id"].string else {
+                    valid.addMessage("elems[\"test\"][\"id\"] is not provided")
+                    valid.isValid = false
+                    return
                 }
             }
             
-            checks.add("path", test: extra_test)
+            checks.add("elems", test: extra_test)
             
             let check = Valid(checks: checks, params: params)
             

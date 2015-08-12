@@ -11,6 +11,9 @@ import Foundation
 public class Checks {
 
     public var run : ValidChecks = ValidChecks()
+
+    public var runDeep : ValidChecks = ValidChecks()
+
     var params : [String] {
         return run.keys.array
     }
@@ -51,30 +54,6 @@ public class Checks {
         
         for test in tests {
             run[param]?.append(test)
-        }
-    }
-
-    subscript(index: String) -> ValidTests? {
-        get {
-            var result : ValidTests? = nil
-            if let tests = run[index] {
-                if tests.count > 0 {
-                    result = tests
-                }
-            }
-            return result
-
-        }
-        set(newValue) {
-            if let tests = newValue {
-                for test in tests {
-                    add(index, test: test)
-                }
-            }
-            else {
-                //reset
-                run = ValidChecks()
-            }
         }
     }
 }

@@ -21,7 +21,6 @@
 		8D572D571B750D8400D29297 /* FTAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D572D561B750D8400D29297 /* FTAPIError.swift */; };
 		8DBBDE341B6715D60065CD3B /* Flowthings.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DBBDE331B6715D60065CD3B /* Flowthings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DBBDE3B1B6715D60065CD3B /* Flowthings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBBDE301B6715D60065CD3B /* Flowthings.framework */; };
-		8DBBDE4B1B67161D0065CD3B /* Flowthings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE4A1B67161D0065CD3B /* Flowthings.swift */; };
 		8DBBDE541B6716300065CD3B /* Creds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE4C1B6716300065CD3B /* Creds.swift */; };
 		8DBBDE551B6716300065CD3B /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE4D1B6716300065CD3B /* Session.swift */; };
 		8DBBDE561B6716300065CD3B /* Drop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE4E1B6716300065CD3B /* Drop.swift */; };
@@ -65,7 +64,6 @@
 		8DBBDE351B6715D60065CD3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DBBDE3A1B6715D60065CD3B /* FlowthingsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowthingsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBBDE411B6715D60065CD3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DBBDE4A1B67161D0065CD3B /* Flowthings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flowthings.swift; sourceTree = "<group>"; };
 		8DBBDE4C1B6716300065CD3B /* Creds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Creds.swift; sourceTree = "<group>"; };
 		8DBBDE4D1B6716300065CD3B /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		8DBBDE4E1B6716300065CD3B /* Drop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drop.swift; sourceTree = "<group>"; };
@@ -127,29 +125,11 @@
 		8DBBDE321B6715D60065CD3B /* Flowthings */ = {
 			isa = PBXGroup;
 			children = (
-				8DD5FE6C1B7ACE2200CBCB4F /* Checks.swift */,
-				8DD5FE671B7AA6ED00CBCB4F /* String.swift */,
-				8DD5FE5A1B7A705500CBCB4F /* Debug.swift */,
-				8D086E1F1B79123E006B39F6 /* Valid.swift */,
-				8D1C2F061B759C20003F6329 /* Base.swift */,
-				8DBBDE4E1B6716300065CD3B /* Drop.swift */,
 				8D572D541B7509C700D29297 /* Config.swift */,
-				8D0E035D1B72779200D44014 /* FlowthingsAPI.swift */,
-				8D572D561B750D8400D29297 /* FTAPIError.swift */,
-				8D0E035F1B72779F00D44014 /* FTWSS.swift */,
-				8DBBDE4C1B6716300065CD3B /* Creds.swift */,
-				8DBBDE4D1B6716300065CD3B /* Session.swift */,
-				8DBBDE4F1B6716300065CD3B /* Flow.swift */,
-				8D0E03611B72782F00D44014 /* Identity.swift */,
-				8D0E03631B72783E00D44014 /* Token.swift */,
-				8D0E03651B72784700D44014 /* Share.swift */,
-				8DBBDE501B6716300065CD3B /* Track.swift */,
-				8D0E03691B7278B900D44014 /* Elem.swift */,
-				8DBBDE511B6716300065CD3B /* Group.swift */,
-				8DBBDE531B6716300065CD3B /* Location.swift */,
-				8DBBDE331B6715D60065CD3B /* Flowthings.h */,
-				8DBBDE351B6715D60065CD3B /* Info.plist */,
-				8DBBDE4A1B67161D0065CD3B /* Flowthings.swift */,
+				8DD5FE6F1B7AEBE800CBCB4F /* Core */,
+				8DD5FE6E1B7AEB9C00CBCB4F /* Validations */,
+				8DD5FE701B7AEC1B00CBCB4F /* Flow */,
+				8DD5FE711B7AEC3C00CBCB4F /* Misc */,
 			);
 			path = Flowthings;
 			sourceTree = "<group>";
@@ -162,6 +142,55 @@
 				8DBBDE411B6715D60065CD3B /* Info.plist */,
 			);
 			path = FlowthingsTests;
+			sourceTree = "<group>";
+		};
+		8DD5FE6E1B7AEB9C00CBCB4F /* Validations */ = {
+			isa = PBXGroup;
+			children = (
+				8DD5FE6C1B7ACE2200CBCB4F /* Checks.swift */,
+				8DD5FE671B7AA6ED00CBCB4F /* String.swift */,
+				8DD5FE5A1B7A705500CBCB4F /* Debug.swift */,
+				8D086E1F1B79123E006B39F6 /* Valid.swift */,
+			);
+			name = Validations;
+			sourceTree = "<group>";
+		};
+		8DD5FE6F1B7AEBE800CBCB4F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8D0E035D1B72779200D44014 /* FlowthingsAPI.swift */,
+				8D572D561B750D8400D29297 /* FTAPIError.swift */,
+				8DBBDE4C1B6716300065CD3B /* Creds.swift */,
+				8DBBDE4D1B6716300065CD3B /* Session.swift */,
+				8D0E035F1B72779F00D44014 /* FTWSS.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		8DD5FE701B7AEC1B00CBCB4F /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				8D1C2F061B759C20003F6329 /* Base.swift */,
+				8DBBDE4E1B6716300065CD3B /* Drop.swift */,
+				8DBBDE4F1B6716300065CD3B /* Flow.swift */,
+				8D0E03611B72782F00D44014 /* Identity.swift */,
+				8D0E03631B72783E00D44014 /* Token.swift */,
+				8D0E03651B72784700D44014 /* Share.swift */,
+				8DBBDE501B6716300065CD3B /* Track.swift */,
+				8D0E03691B7278B900D44014 /* Elem.swift */,
+				8DBBDE511B6716300065CD3B /* Group.swift */,
+				8DBBDE531B6716300065CD3B /* Location.swift */,
+			);
+			name = Flow;
+			sourceTree = "<group>";
+		};
+		8DD5FE711B7AEC3C00CBCB4F /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				8DBBDE331B6715D60065CD3B /* Flowthings.h */,
+				8DBBDE351B6715D60065CD3B /* Info.plist */,
+			);
+			name = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +325,6 @@
 				8D572D571B750D8400D29297 /* FTAPIError.swift in Sources */,
 				8DD5FE6D1B7ACE2200CBCB4F /* Checks.swift in Sources */,
 				8DBBDE591B6716300065CD3B /* Group.swift in Sources */,
-				8DBBDE4B1B67161D0065CD3B /* Flowthings.swift in Sources */,
 				8DD5FE681B7AA6ED00CBCB4F /* String.swift in Sources */,
 				8DBBDE571B6716300065CD3B /* Flow.swift in Sources */,
 				8DBBDE541B6716300065CD3B /* Creds.swift in Sources */,
