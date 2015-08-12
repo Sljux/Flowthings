@@ -26,7 +26,7 @@ public enum FTAPIError {
     
     //Generic
     case UnexpectedJSONFormat(JSON?)
-    case FailedRequiredParams([String])
+    case badParams([String])
     
     //Anomalies
     case BodyIsMissing

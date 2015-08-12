@@ -6,16 +6,25 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
-typealias ValidTest = () -> Void
+public typealias ValidTest = ((Valid, String) -> Void)
+public typealias ValidTests = [ValidTest]
+public typealias ValidChecks = [String:ValidTests]
 
-enum ValidReturn{
+protocol ValidChecksProtocol {
 
-    case Success
-    case Failure(messages: [String])
+    var checks : ValidChecks { get }
     
 }
 
-public class Valid : NSObject {
+protocol ValidResultsProtocol {
+    
+    func validationSuccess()
+    func validationFail()
+    
+}
+
+
+public class Valid {
     
     public var isValid : Bool = true
     
@@ -23,15 +32,11 @@ public class Valid : NSObject {
 
     var messages : [String] = []
 
+    var checks : Checks?
     var params : [String:AnyObject] = [:]
     var checkFor : [String] = []
     
-    public var tests : [String:() -> Void] = [:]
-    var _testsLoaded : Bool = false
-    
-    var ceco : Int {
-        return 1
-    }
+    public var tests : [String:[() -> ()]] = [:]
     
     public func getMessages() -> [String] {
     
@@ -43,23 +48,6 @@ public class Valid : NSObject {
         
         messages.append(message)
         
-    }
-    
-    public func loadTests () {
-        
-        //For non init calls
-        guard !_testsLoaded else { return }
-        
-        let mirror = Mirror(reflecting: self)
-        for (n, t) in mirror.children {
-            print(n)
-            print(t)
-            if let name = n,
-                test = t as? ValidTest {
-                    tests[name] = test
-            }
-        }
-        _testsLoaded = true
     }
     
     private var checkRequired : Bool {
@@ -77,19 +65,17 @@ public class Valid : NSObject {
         
         return isValid
     }
-
     
-    public override init (){}
+    public init (){}
     
-    public init(params:[String:AnyObject], checkFor: [String]) {
+    public init(checks: Checks, params:[String:AnyObject], checkFor: [String]) {
     
-        super.init()
         self.checkFor = checkFor
         self.params = params
+        self.checks = checks
 
         if !checkRequired { return }
         
-        loadTests()
         check()
     
     }
@@ -99,32 +85,26 @@ public class Valid : NSObject {
         //Make sure params are set if using empty init
         if !checkRequired { return }
         
-        var missing = false
-        
-        for check in self.checkFor {
-            missing = params[check] == nil
-            if missing {
+        for check in checkFor {
+            if params[check] == nil {
                 messages.append(check + " is missing")
                 isValid = false
             }
             else {
-                print(tests)
-                //extraTest = convertProperties[]
-
-                if let test = tests[check] {
-                    print("here")
-                    let _ = test()
+                
+                //Run all sub tests
+                if let tests = checks?.run[check] {
+                    for test in tests {
+                        if let value = params[check] as? String {
+                            test(self, value)
+                        }
+                        else {
+                            //Implement alternative test for Dict
+                            print("AnyObject test - can not test this yet")
+                        }
+                    }
                 }
             }
         }
-    }
-}
-
-extension Valid {
-
-    var flow_id : Int {
-        print("flow_id checking hard")
-        isValid = false
-        return 1
     }
 }

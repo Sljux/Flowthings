@@ -28,6 +28,8 @@ public class FlowthingsAPI {
     lazy var share = Share()
     lazy var group = Group()
     
+    lazy var valid = Valid()
+    
     /* Future
     lazy var device = Device()
     lazy var task = Task()
@@ -45,6 +47,7 @@ public class FlowthingsAPI {
             "X-Auth-Account" : Config.accountID!,
             "Content-Type" : "application/json"
         ]
+    
     }
     
     public convenience init(accountID: String, tokenID: String){

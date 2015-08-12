@@ -19,9 +19,13 @@ import CoreLocation
 import SwiftyJSON
 import Alamofire
 
-public class Base {
+
+
+public class Base : ValidChecksProtocol {
     
     var baseURL : String { return "/base/" }
+    
+    var checks : ValidChecks = ValidChecks()
     
     init(){}
     
@@ -32,10 +36,49 @@ public class Base {
             
             let required = ["elems", "path"]
             
-            let check = Valid(params: params, checkFor: required)
+            var checks = Checks()
+            
+            let tests : ValidTests = [{
+                valid, path in
+                if path.isEmail(){
+                    valid.addMessage("\"" + path + "\" is not valid email")
+                    valid.isValid = false
+                }
+                if path.isShorterThen(100){
+                    valid.addMessage("\"" + path + "\" is too short")
+                    valid.isValid = false
+                }                
+            }]
+            
+            let index : String = "path"
+            checks.run[index] = ValidTests()
+            checks.run[index]? = tests
+            
+            let check = Valid(checks: checks, params: params, checkFor: required)
+            
+//                    let params = [
+//            "flow_id" : "123",
+//            "drop_id" : "123"
+//        ]
+//        
+//        let checks = [
+//            "flow_id",
+//            "drop_id"
+//        ]
+//        
+//        let valid = Valid(params: params, checkFor: checks)
+//        
+//        print(valid.tests)
+//        
+//        if(valid.isValid){
+//            print("All good")
+//        }
+//        else{
+//            print(valid.getMessages())
+//        }
             
             guard check.isValid else {
-                failure(error: .FailedRequiredParams(check.messages))
+                failure(error: .badParams(check.messages))
                 return
             }
             
@@ -137,6 +180,7 @@ public class Base {
                     failure(error: error)
             })
     }
+    
     func delete(
         path: String,
         success: (json: JSON)->(),
@@ -152,4 +196,5 @@ public class Base {
                     failure(error: error)
             })
     }
+    
 }

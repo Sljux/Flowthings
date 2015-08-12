@@ -32,6 +32,8 @@
 		8DBBDE5F1B6719BA0065CD3B /* SwiftWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBBDE5E1B6719BA0065CD3B /* SwiftWebSocket.framework */; };
 		8DBC11161B72DDE00065FA37 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC11151B72DDE00065FA37 /* Alamofire.framework */; };
 		8DD5FE5B1B7A705500CBCB4F /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE5A1B7A705500CBCB4F /* Debug.swift */; };
+		8DD5FE681B7AA6ED00CBCB4F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE671B7AA6ED00CBCB4F /* String.swift */; };
+		8DD5FE6D1B7ACE2200CBCB4F /* Checks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE6C1B7ACE2200CBCB4F /* Checks.swift */; };
 		8DD624C51B73D3F300A4BAFE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD624C41B73D3F300A4BAFE /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,8 @@
 		8DBBDE5E1B6719BA0065CD3B /* SwiftWebSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftWebSocket.framework; path = Carthage/Build/iOS/SwiftWebSocket.framework; sourceTree = "<group>"; };
 		8DBC11151B72DDE00065FA37 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		8DD5FE5A1B7A705500CBCB4F /* Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
+		8DD5FE671B7AA6ED00CBCB4F /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		8DD5FE6C1B7ACE2200CBCB4F /* Checks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checks.swift; sourceTree = "<group>"; };
 		8DD624C41B73D3F300A4BAFE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +127,8 @@
 		8DBBDE321B6715D60065CD3B /* Flowthings */ = {
 			isa = PBXGroup;
 			children = (
+				8DD5FE6C1B7ACE2200CBCB4F /* Checks.swift */,
+				8DD5FE671B7AA6ED00CBCB4F /* String.swift */,
 				8DD5FE5A1B7A705500CBCB4F /* Debug.swift */,
 				8D086E1F1B79123E006B39F6 /* Valid.swift */,
 				8D1C2F061B759C20003F6329 /* Base.swift */,
@@ -288,8 +294,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D572D571B750D8400D29297 /* FTAPIError.swift in Sources */,
+				8DD5FE6D1B7ACE2200CBCB4F /* Checks.swift in Sources */,
 				8DBBDE591B6716300065CD3B /* Group.swift in Sources */,
 				8DBBDE4B1B67161D0065CD3B /* Flowthings.swift in Sources */,
+				8DD5FE681B7AA6ED00CBCB4F /* String.swift in Sources */,
 				8DBBDE571B6716300065CD3B /* Flow.swift in Sources */,
 				8DBBDE541B6716300065CD3B /* Creds.swift in Sources */,
 				8D0E035E1B72779200D44014 /* FlowthingsAPI.swift in Sources */,
@@ -437,6 +445,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.cityos.Flowthings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -461,6 +470,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.cityos.Flowthings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
