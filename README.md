@@ -111,125 +111,38 @@ let parameters = [
     ]
 ]
 
-Alamofire.request(.POST, "http://httpbin.org/post", parameters: parameters)
-// HTTP body: foo=bar&baz[]=a&baz[]=1&qux[x]=1&qux[y]=2&qux[z]=3
 ```
+## Extensions
 
-### Parameter Encoding
-
-Parameters can also be encoded as JSON, Property List, or any custom format, using the `ParameterEncoding` enum:
+example of extending service
 
 ```swift
-enum ParameterEncoding {
-    case URL
-    case JSON
-    case PropertyList(format: NSPropertyListFormat, options: NSPropertyListWriteOptions)
-    case Custom((URLRequestConvertible, [String: AnyObject]?) -> (NSMutableURLRequest, NSError?))
-
-    func encode(request: NSURLRequest, parameters: [String: AnyObject]?) -> (NSURLRequest, NSError?)
-    { ... }
-}
-```
-
-- `URL`: A query string to be set as or appended to any existing URL query for `GET`, `HEAD`, and `DELETE` requests, or set as the body for requests with any other HTTP method. The `Content-Type` HTTP header field of an encoded request with HTTP body is set to `application/x-www-form-urlencoded`. _Since there is no published specification for how to encode collection types, Alamofire follows the convention of appending `[]` to the key for array values (`foo[]=1&foo[]=2`), and appending the key surrounded by square brackets for nested dictionary values (`foo[bar]=baz`)._
-- `JSON`: Uses `NSJSONSerialization` to create a JSON representation of the parameters object, which is set as the body of the request. The `Content-Type` HTTP header field of an encoded request is set to `application/json`.
-- `PropertyList`: Uses `NSPropertyListSerialization` to create a plist representation of the parameters object, according to the associated format and write options values, which is set as the body of the request. The `Content-Type` HTTP header field of an encoded request is set to `application/x-plist`.
-- `Custom`: Uses the associated closure value to construct a new request given an existing request and parameters.
-
-#### Manual Parameter Encoding of an NSURLRequest
-
-```swift
-let URL = NSURL(string: "http://httpbin.org/get")!
-var request = NSURLRequest(URL: URL)
-
-let parameters = ["foo": "bar"]
-let encoding = Alamofire.ParameterEncoding.URL
-(request, _) = encoding.encode(request, parameters: parameters)
-```
-
-#### POST Request with JSON-encoded Parameters
-
-```swift
-let parameters = [
-    "foo": [1,2,3],
-    "bar": [
-        "baz": "qux"
-    ]
-]
-
-Alamofire.request(.POST, "http://httpbin.org/post", parameters: parameters, encoding: .JSON)
-// HTTP body: {"foo": [1, 2, 3], "bar": {"baz": "qux"}}
-```
-
-### HTTP Headers
-
-Adding a custom HTTP header to a `Request` is supported directly in the global `request` method. This makes it easy to attach HTTP headers to a `Request` that can be constantly changing.
-
-> For HTTP headers that do not change, it is recommended to set them on the `NSURLSessionConfiguration` so they are automatically applied to any `NSURLSessionTask` created by the underlying `NSURLSession`.
-
-```swift
-let headers = [
-    "Authorization": "Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==",
-    "Content-Type": "application/x-www-form-urlencoded"
-]
-
-Alamofire.request(.GET, "http://httpbin.org/get", headers: headers)
-         .responseJSON { _, _, result in
-             debugPrint(result)
-         }
-```
-
-### Caching
-
-Caching is handled on the system framework level by [`NSURLCache`](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSURLCache_Class/Reference/Reference.html#//apple_ref/occ/cl/NSURLCache).
-
-### Uploading
-
-**Supported Upload Types**
-
-- File
-- Data
-- Stream
-- MultipartFormData
-
-#### Uploading a File
-
-```swift
-let fileURL = NSBundle.mainBundle().URLForResource("Default", withExtension: "png")
-Alamofire.upload(.POST, "http://httpbin.org/post", file: fileURL)
-```
-
-#### Uploading with Progress
-
-```swift
-Alamofire.upload(.POST, "http://httpbin.org/post", file: fileURL)
-         .progress { bytesWritten, totalBytesWritten, totalBytesExpectedToWrite in
-             print(totalBytesWritten)
-         }
-         .responseJSON { request, response, result in
-             debugPrint(result)
-         }
-```
-
-#### Uploading MultipartFormData
-
-```swift
-Alamofire.upload(
-    .POST,
-    URLString: "http://httpbin.org/post",
-    multipartFormData: { multipartFormData in
-        multipartFormData.appendBodyPart(fileURL: unicornImageURL, name: "unicorn")
-        multipartFormData.appendBodyPart(fileURL: rainbowImageURL, name: "rainbow")
-    },
-    encodingCompletion: { encodingResult in
-    	switch encodingResult {
-    	case .Success(let upload, _, _):
-            upload.responseJSON { request, response, result in
-                debugPrint(result)
-            }
-    	case .Failure(let encodingError):
-    	    print(encodingError)
-    	}
+extension Drop {
+    
+    public func createOnFlowID(
+        flowID flowID: String,
+        params: [String:AnyObject],
+        success: (json: JSON)->(),
+        failure: (error: FTAPIError)->())  {
+            
+            let path = baseURL + flowID
+            
+            FTAPI.request(.POST, path: path, parameters: params,
+                success: {
+                    json in
+                    
+                    //Verify that ID came back
+                    guard let _ = json!["body"]["id"].string else {
+                        failure(error: .UnexpectedJSONFormat(json))
+                        return
+                    }
+                    
+                    success(json: json!)
+                },
+                failure: {
+                    error in
+                    failure(error: error)
+            })
     }
-)
+}
 ```
