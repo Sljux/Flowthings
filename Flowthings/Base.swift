@@ -44,11 +44,7 @@ public class Base : ValidChecksProtocol {
                     return
                 }
                 
-                if p.isEmail(){
-                    valid.addMessage("\"" + p + "\" is not valid email")
-                    valid.isValid = false
-                }
-                if p.isShorterThen(100){
+                if p.isShorterThen(3){
                     valid.addMessage("\"" + p + "\" is too short")
                     valid.isValid = false
                 }                
@@ -63,23 +59,24 @@ public class Base : ValidChecksProtocol {
                     return
                 }
 
-                let json = JSON(e)
-                
-                //PASS Example:
-                guard let _ = json["description"].string else {
-                    valid.addMessage("\"elems\": [\"description\"] is not provided")
-                    valid.isValid = false
-                    return
-                }
-                
-                //FAIL Example:
-                guard let _ = json["test"]["id"].string else {
-                    valid.addMessage("elems[\"test\"][\"id\"] is not provided")
-                    valid.isValid = false
-                    return
-                }
+
+                let _ = JSON(e)
+//                
+//                //PASS Example:
+//                guard let _ = json["description"].string else {
+//                    valid.addMessage("\"elems\": [\"description\"] is not provided")
+//                    valid.isValid = false
+//                    return
+//                }
+//                
+//                //FAIL Example:
+//                guard let _ = json["test"]["id"].string else {
+//                    valid.addMessage("elems[\"test\"][\"id\"] is not provided")
+//                    valid.isValid = false
+//                    return
+//                }
             }
-            
+
             checks.add("elems", test: extra_test)
             
             let check = Valid(checks: checks, params: params)

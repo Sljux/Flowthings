@@ -30,7 +30,7 @@ class Session {
             completion(sessionID: sessID)
         }
         
-        let creds = Creds()
+        let creds = Creds(accountID: "", tokenID: "")
         
         let url = NSURL(string: self.wsSessionIDURL)!
 

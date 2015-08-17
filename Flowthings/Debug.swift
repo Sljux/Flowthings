@@ -9,6 +9,7 @@
 import Foundation
 
 func d(args:AnyObject...) {
+
     for arg: AnyObject in args {
         print(arg)
     }

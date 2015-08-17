@@ -26,5 +26,7 @@
 	<string>NSLocationWhenInUseUsageDescription</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>NSLocationAlwaysUsageDescription</string>
+	<key>CFBundleDisplayName</key>
+	<string></string>
 </dict>
 </plist>

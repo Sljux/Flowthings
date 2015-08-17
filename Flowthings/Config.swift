@@ -8,11 +8,6 @@
 
 struct Config {
     
-    init(accountID: String, tokenID: String){
-        Config.accountID = accountID
-        Config.tokenID = tokenID
-    }
-    
     static var accountID: String? = ""
     static var tokenID: String? = ""
     
@@ -20,7 +15,24 @@ struct Config {
     static let apiVersion = "v0.1"
     static let secure = true
     
+    init(accountID: String, tokenID: String){
     
+        //.gitignore hides Config.plist
+        if let path = NSBundle.mainBundle().pathForResource("Config", ofType: "plist") {
+            if let config = NSDictionary(contentsOfFile: path) as? Dictionary<String, AnyObject> {
+                if let accID = config["accountID"] as? String,
+                    let tokID = config["tokenID"] as? String {
+                        Config.accountID = accID
+                        Config.tokenID = tokID
+                        return
+                }
+            }
+        }
+
+        Config.accountID = accountID
+        Config.tokenID = tokenID
+    }
+
     static func url(path: String) -> NSURL? {
         
         guard   let accountID = Config.accountID,
