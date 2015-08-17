@@ -81,27 +81,6 @@ public class Base : ValidChecksProtocol {
             
             let check = Valid(checks: checks, params: params)
             
-//                    let params = [
-//            "flow_id" : "123",
-//            "drop_id" : "123"
-//        ]
-//        
-//        let checks = [
-//            "flow_id",
-//            "drop_id"
-//        ]
-//        
-//        let valid = Valid(params: params, checkFor: checks)
-//        
-//        print(valid.tests)
-//        
-//        if(valid.isValid){
-//            print("All good")
-//        }
-//        else{
-//            print(valid.getMessages())
-//        }
-            
             guard check.isValid else {
                 failure(error: .badParams(check.messages))
                 return

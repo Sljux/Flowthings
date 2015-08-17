@@ -4,15 +4,8 @@ github "tidwall/SwiftWebSocket"
 # Alamofire - net
 github "Alamofire/Alamofire" "swift-2.0"
 
-#Last working version on Beta 4
-#github "Alamofire/Alamofire" "1a12318dcf6b6918687dd3babe28e521e8b8842c"
-
 # SwifyJSON - json parsing
 github "SwiftyJSON/SwiftyJSON" "xcode7"
-
-# The Swift testing framework.
-#github "Quick/Quick" "swift-2.0"
-#github "Quick/Nimble" "swift-2.0"
 
 # Haneke - cache layer
 # github "Haneke/HanekeSwift"

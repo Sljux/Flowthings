@@ -56,3 +56,34 @@ public class Drop : Base {
     }
     
 }
+
+
+
+extension Drop {
+    
+    public func createOnFlowID(
+        flowID flowID: String,
+        params: [String:AnyObject],
+        success: (json: JSON)->(),
+        failure: (error: FTAPIError)->())  {
+            
+            let path = baseURL + flowID
+            
+            FTAPI.request(.POST, path: path, parameters: params,
+                success: {
+                    json in
+                    
+                    //Verify that ID came back
+                    guard let _ = json!["body"]["id"].string else {
+                        failure(error: .UnexpectedJSONFormat(json))
+                        return
+                    }
+                    
+                    success(json: json!)
+                },
+                failure: {
+                    error in
+                    failure(error: error)
+            })
+    }
+}
