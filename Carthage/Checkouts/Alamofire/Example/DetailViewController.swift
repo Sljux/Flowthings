@@ -68,21 +68,19 @@ class DetailViewController: UITableViewController {
     // MARK: IBActions
 
     @IBAction func refresh() {
-        guard let request = request else {
+        if request == nil {
             return
         }
 
         refreshControl?.beginRefreshing()
 
         let start = CACurrentMediaTime()
-        request.responseString { request, response, result in
+        request?.responseString { request, response, result in
             let end = CACurrentMediaTime()
             self.elapsedTime = end - start
 
-            if let response = response {
-                for (field, value) in response.allHeaderFields {
-                    self.headers["\(field)"] = "\(value)"
-                }
+            for (field, value) in response!.allHeaderFields {
+                self.headers["\(field)"] = "\(value)"
             }
 
             if let segueIdentifier = self.segueIdentifier {

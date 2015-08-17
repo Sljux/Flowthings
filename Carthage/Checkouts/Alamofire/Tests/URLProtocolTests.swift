@@ -126,7 +126,7 @@ class URLProtocolTestCase: BaseTestCase {
         // Given
         let URLString = "https://httpbin.org/response-headers"
         let URL = NSURL(string: URLString)!
-        let parameters = ["request-header": "foobar"]
+        let parameters = ["URLRequest-Header": "foobar"]
 
         let mutableURLRequest = NSMutableURLRequest(URL: URL)
         mutableURLRequest.HTTPMethod = Method.GET.rawValue
@@ -160,7 +160,7 @@ class URLProtocolTestCase: BaseTestCase {
         XCTAssertNil(error, "error should be nil")
 
         if let headers = response?.allHeaderFields as? [String: String] {
-            XCTAssertEqual(headers["request-header"] ?? "", "foobar", "urlrequest-header should be foobar")
+            XCTAssertEqual(headers["urlrequest-header"] ?? "", "foobar", "urlrequest-header should be foobar")
             XCTAssertNil(headers["Session-Configuration-Header"], "Session-Configuration-Header should be nil")
         } else {
             XCTFail("headers should not be nil")

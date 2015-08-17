@@ -22,7 +22,7 @@
 
 import Foundation
 
-#if os(iOS) || os(watchOS)
+#if os(iOS)
 import MobileCoreServices
 #elseif os(OSX)
 import CoreServices
@@ -254,10 +254,13 @@ public class MultipartFormData {
         //              Check 2 - is file URL reachable?
         //============================================================
 
-        var isReachable = true
+        var isReachable = false
 
-        if #available(OSX 10.10, *) {
-            isReachable = fileURL.checkPromisedItemIsReachableAndReturnError(nil)
+        do {
+            try fileURL.checkResourceIsReachable()
+            isReachable = true
+        } catch {
+            // No-op
         }
 
         guard isReachable else {

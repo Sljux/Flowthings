@@ -2,7 +2,10 @@
 github "tidwall/SwiftWebSocket"
 
 # Alamofire - net
-github "Alamofire/Alamofire" "swift-2.0"
+#github "Alamofire/Alamofire" "swift-2.0"
+
+#Last working version on Beta 4
+github "Alamofire/Alamofire" "1a12318dcf6b6918687dd3babe28e521e8b8842c"
 
 # SwifyJSON - json parsing
 github "SwiftyJSON/SwiftyJSON" "xcode7"
