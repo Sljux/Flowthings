@@ -8,7 +8,10 @@
 
 import Foundation
 
-extension String {
+//CheckString: easier to find available checks in file structure
+typealias CheckString = String
+
+extension CheckString {
     
     var length: Int {
         get {

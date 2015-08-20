@@ -15,6 +15,7 @@
 		8D0E03661B72784700D44014 /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03651B72784700D44014 /* Share.swift */; };
 		8D0E036A1B7278B900D44014 /* Elem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03691B7278B900D44014 /* Elem.swift */; };
 		8D1C2F071B759C20003F6329 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1C2F061B759C20003F6329 /* Base.swift */; };
+		8D438D701B84D8B300FD70C1 /* StandardChecks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D438D6F1B84D8B300FD70C1 /* StandardChecks.swift */; };
 		8D5101971B755F0C0043D778 /* DropTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5101961B755F0C0043D778 /* DropTests.swift */; };
 		8D5101991B7562F50043D778 /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5101981B7562F50043D778 /* TestConfig.swift */; };
 		8D572D551B7509C700D29297 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D572D541B7509C700D29297 /* Config.swift */; };
@@ -31,7 +32,7 @@
 		8DBBDE5F1B6719BA0065CD3B /* SwiftWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBBDE5E1B6719BA0065CD3B /* SwiftWebSocket.framework */; };
 		8DBC11161B72DDE00065FA37 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC11151B72DDE00065FA37 /* Alamofire.framework */; };
 		8DD5FE5B1B7A705500CBCB4F /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE5A1B7A705500CBCB4F /* Debug.swift */; };
-		8DD5FE681B7AA6ED00CBCB4F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE671B7AA6ED00CBCB4F /* String.swift */; };
+		8DD5FE681B7AA6ED00CBCB4F /* CheckString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE671B7AA6ED00CBCB4F /* CheckString.swift */; };
 		8DD5FE6D1B7ACE2200CBCB4F /* Checks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE6C1B7ACE2200CBCB4F /* Checks.swift */; };
 		8DD624C51B73D3F300A4BAFE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD624C41B73D3F300A4BAFE /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		8D0E03651B72784700D44014 /* Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
 		8D0E03691B7278B900D44014 /* Elem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elem.swift; sourceTree = "<group>"; };
 		8D1C2F061B759C20003F6329 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		8D438D6F1B84D8B300FD70C1 /* StandardChecks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardChecks.swift; sourceTree = "<group>"; };
 		8D5101961B755F0C0043D778 /* DropTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropTests.swift; sourceTree = "<group>"; };
 		8D5101981B7562F50043D778 /* TestConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestConfig.swift; sourceTree = "<group>"; };
 		8D572D541B7509C700D29297 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -74,7 +76,7 @@
 		8DBBDE5E1B6719BA0065CD3B /* SwiftWebSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftWebSocket.framework; path = Carthage/Build/iOS/SwiftWebSocket.framework; sourceTree = "<group>"; };
 		8DBC11151B72DDE00065FA37 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		8DD5FE5A1B7A705500CBCB4F /* Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Debug.swift; path = Flowthings/Debug.swift; sourceTree = "<group>"; };
-		8DD5FE671B7AA6ED00CBCB4F /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		8DD5FE671B7AA6ED00CBCB4F /* CheckString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckString.swift; sourceTree = "<group>"; };
 		8DD5FE6C1B7ACE2200CBCB4F /* Checks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checks.swift; sourceTree = "<group>"; };
 		8DD624C41B73D3F300A4BAFE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,8 +151,9 @@
 			isa = PBXGroup;
 			children = (
 				8DD5FE6C1B7ACE2200CBCB4F /* Checks.swift */,
-				8DD5FE671B7AA6ED00CBCB4F /* String.swift */,
+				8DD5FE671B7AA6ED00CBCB4F /* CheckString.swift */,
 				8D086E1F1B79123E006B39F6 /* Valid.swift */,
+				8D438D6F1B84D8B300FD70C1 /* StandardChecks.swift */,
 			);
 			name = Validations;
 			sourceTree = "<group>";
@@ -323,9 +326,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D572D571B750D8400D29297 /* FTAPIError.swift in Sources */,
+				8D438D701B84D8B300FD70C1 /* StandardChecks.swift in Sources */,
 				8DD5FE6D1B7ACE2200CBCB4F /* Checks.swift in Sources */,
 				8DBBDE591B6716300065CD3B /* Group.swift in Sources */,
-				8DD5FE681B7AA6ED00CBCB4F /* String.swift in Sources */,
+				8DD5FE681B7AA6ED00CBCB4F /* CheckString.swift in Sources */,
 				8DBBDE571B6716300065CD3B /* Flow.swift in Sources */,
 				8DBBDE541B6716300065CD3B /* Creds.swift in Sources */,
 				8D0E035E1B72779200D44014 /* FlowthingsAPI.swift in Sources */,

@@ -12,13 +12,15 @@ public typealias ValidChecks = [String:ValidTests]
 
 public typealias ValidParams = [String:AnyObject]
 
-protocol ValidChecksProtocol {
+public protocol ValidChecksProtocol {
 
     var checks : ValidChecks { get }
     
 }
 
-protocol ValidResultsProtocol {
+
+
+public protocol ValidResultsProtocol {
     
     func validationSuccess()
     func validationFail()
@@ -81,9 +83,9 @@ public class Valid {
         check()
     
     }
-    
-    func check() {
 
+    func check() {
+        
         //Make sure params are set if using empty init
         if !checkRequired { return }
         
@@ -93,11 +95,11 @@ public class Valid {
                 isValid = false
             }
             else {
-                
-                //Run all sub tests
-                if let tests = checks?.run[check] {
+
+                //Run standard added sub tests first
+                if let tests = checks?.runStandard?[check] {
                     for test in tests {
-                        if let value = params[check] as? String {
+                        if let value = params[check] as? CheckString {
                             test(self, value)
                         }
                         else if let value = params[check] {
@@ -106,6 +108,20 @@ public class Valid {
                         }
                     }
                 }
+                
+                //Run manually added sub tests
+                if let tests = checks?.run[check] {
+                    for test in tests {
+                        if let value = params[check] as? CheckString {
+                            test(self, value)
+                        }
+                        else if let value = params[check] {
+                            //Any object test
+                            test(self, value)
+                        }
+                    }
+                }
+                
             }
         }
     }

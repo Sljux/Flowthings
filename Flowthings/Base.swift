@@ -25,7 +25,7 @@ public class Base : ValidChecksProtocol {
     
     var baseURL : String { return "/base/" }
     
-    var checks : ValidChecks = ValidChecks()
+    public var checks : ValidChecks = ValidChecks()
     
     init(){}
     
@@ -38,7 +38,7 @@ public class Base : ValidChecksProtocol {
             test: {
                 valid, path in
                 
-                guard let p = path as? String else {
+                guard let p = path as? CheckString else {
                     valid.addMessage("path value is not String")
                     valid.isValid = false
                     return
