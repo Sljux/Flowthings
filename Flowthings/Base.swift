@@ -23,12 +23,60 @@ import Alamofire
 
 public class Base : ValidChecksProtocol {
     
+    ///Last part of API URL on https://domain.io/vX.X</.../> e.g. /drop/
     var baseURL : String { return "/base/" }
     
+    ///Checks for validations of incoming params
     public var checks : ValidChecks = ValidChecks()
     
     init(){}
     
+    
+    
+    /**
+    
+    General flowthings.io api.service.create method
+    
+    - Parameter params:     ValidParams [String:AnyObject] type for eazy work with JSON
+    
+    - Parameter success:     Closure that will recive json (type JSON) on success
+    
+    - Parameter failure:     Closure that will recive error (type FTAPIError) on failure
+    
+    - Precondition:
+    api has to be initialized
+    ```swift
+    
+    let api = FlowthingsAPI(
+        accountID: "XXX",
+        tokenID: "XXX"
+    )
+    ```
+    
+    #### Example usage:
+    
+    ```swift
+    let params : ValidParams = [
+        "path" : "/account/some/path",
+        "elems":[
+            "task":"task name",
+            "description": "Some Description"
+        ]
+    ]
+    
+    api.drop.create(
+        params: params,
+        success:{
+            json in
+            print("success")
+        },
+        failure:{
+            error in
+            print(error)
+        })
+    ```
+
+    */
     public func create(
         params params: ValidParams,
         success: (json: JSON)->(),
@@ -39,14 +87,13 @@ public class Base : ValidChecksProtocol {
                 valid, path in
                 
                 guard let p = path as? CheckString else {
-                    valid.addMessage("path value is not String")
-                    valid.isValid = false
+                    valid.addError("param: 'path' is not a String")
                     return
                 }
                 
                 if p.isShorterThen(3){
-                    valid.addMessage("\"" + p + "\" is too short")
-                    valid.isValid = false
+                    valid.addError("path: \"" + p + "\" is too short")
+                    return
                 }                
             })
 
@@ -54,8 +101,7 @@ public class Base : ValidChecksProtocol {
                 valid, elems in
 
                 guard let e = elems as? ValidParams else {
-                    valid.addMessage("elems are not of time FlowParams alias: [String:AnyObject]")
-                    valid.isValid = false
+                    valid.addError("elems are not of time FlowParams alias: [String:AnyObject]")
                     return
                 }
 
@@ -88,7 +134,7 @@ public class Base : ValidChecksProtocol {
             
             let path = baseURL
             
-            FTAPI.request(.POST, path: path, parameters: params,
+            FTAPI.request(.POST, path: path, params: params,
                 success: {
                     json in
                     success(json: json!)
@@ -116,13 +162,13 @@ public class Base : ValidChecksProtocol {
     }
     
     func find(
-        model: [String:AnyObject],
+        params: ValidParams,
         success: (json: JSON)->(),
         failure: (error: FTAPIError)->())  {
             
             let path = baseURL
             
-            FTAPI.request(.GET, path: path, parameters: model,
+            FTAPI.request(.GET, path: path, params: params,
                 success: {
                     json in
                     success(json: json!)
@@ -140,7 +186,7 @@ public class Base : ValidChecksProtocol {
         failure: (error: FTAPIError)->()){
             let path = baseURL
             
-            FTAPI.request(.GET, path: path, parameters: model,
+            FTAPI.request(.GET, path: path, params: model,
                 success: {
                     json in
                     success(json: json!)
@@ -157,7 +203,7 @@ public class Base : ValidChecksProtocol {
         success: (json: JSON)->(),
         failure: (error: FTAPIError)->()){
             
-            FTAPI.request(.PUT, path: path, parameters: model,
+            FTAPI.request(.PUT, path: path, params: model,
                 success: {
                     json in
                     success(json: json!)
@@ -170,11 +216,11 @@ public class Base : ValidChecksProtocol {
     
     func memberUpdate(
         path: String,
-        model: [String:AnyObject],
+        params: ValidParams,
         success: (json: JSON)->(),
         failure: (error: FTAPIError)->()){
             
-            FTAPI.request(.PUT, path: path, parameters: model,
+            FTAPI.request(.PUT, path: path, params: params,
                 success: {
                     json in
                     success(json: json!)
@@ -190,7 +236,7 @@ public class Base : ValidChecksProtocol {
         success: (json: JSON)->(),
         failure: (error: FTAPIError)->()){
             
-            FTAPI.request(.DELETE, path: path, parameters: nil,
+            FTAPI.request(.DELETE, path: path, params: nil,
                 success: {
                     json in
                     success(json: json!)

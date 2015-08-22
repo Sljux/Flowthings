@@ -18,7 +18,7 @@ public class Track : Base {
         success: (json: JSON)->(),
         failure: (error: FTAPIError)->()){
             
-            FTAPI.request(.PUT, path: path, parameters: model,
+            FTAPI.request(.PUT, path: path, params: model,
                 success: {
                     json in
                     success(json: json!)

@@ -14,13 +14,13 @@ public class Drop : Base {
     
     public func createOnFlowID(
         flowID flowID: String,
-        model: [String:AnyObject],
+        params: [String:AnyObject],
         success: (json: JSON)->(),
         failure: (error: FTAPIError)->())  {
             
             let path = baseURL + flowID
             
-            FTAPI.request(.POST, path: path, parameters: model,
+            FTAPI.request(.POST, path: path, params: params,
                 success: {
                     json in
                     
@@ -44,7 +44,7 @@ public class Drop : Base {
         success: (json: JSON)->(),
         failure: (error: FTAPIError)->()){
             
-            FTAPI.request(.PUT, path: path, parameters: model,
+            FTAPI.request(.PUT, path: path, params: model,
                 success: {
                     json in
                     success(json: json!)

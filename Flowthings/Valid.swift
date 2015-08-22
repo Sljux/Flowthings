@@ -53,6 +53,13 @@ public class Valid {
         messages.append(message)
         
     }
+
+    public func addError(message: String) {
+        
+        messages.append(message)
+        isValid = false
+        
+    }
     
     private var checkRequired : Bool {
         

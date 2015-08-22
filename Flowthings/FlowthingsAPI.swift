@@ -57,7 +57,10 @@ public class FlowthingsAPI {
         self.init()
     }
     
-    public static func request(ftmethod: FTMethod, path: String, parameters: [String:AnyObject]? = nil,
+    public static func request(
+        ftmethod: FTMethod,
+        path: String,
+        params: ValidParams? = nil,
         success:(body: JSON?) -> (),
         failure: (error: FTAPIError) -> ()
         ) -> Void {
@@ -89,12 +92,12 @@ public class FlowthingsAPI {
             var response : Alamofire.Request
             
             
-            if let _ = parameters {
+            if let _ = params {
                 
                 response = Alamofire.request(
                     method,
                     url,
-                    parameters: parameters,
+                    parameters: params,
                     encoding: encoding,
                     headers: FTAPI.headers)
             } else {
