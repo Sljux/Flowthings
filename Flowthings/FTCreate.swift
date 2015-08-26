@@ -6,8 +6,6 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
-import SwiftyJSON
-
 public protocol FTCreate {
     
     var baseURL : String { get }

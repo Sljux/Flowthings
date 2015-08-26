@@ -6,8 +6,6 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
-import SwiftyJSON
-
 public typealias ValidTest = ((Valid, AnyObject) -> Void)
 public typealias ValidTests = [ValidTest]
 public typealias ValidChecks = [String:ValidTests]

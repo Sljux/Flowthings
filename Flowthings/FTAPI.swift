@@ -7,7 +7,6 @@
 //
 
 import Alamofire
-import SwiftyJSON
 import SwiftTask
 
 public enum FTMethod : String {
@@ -129,13 +128,14 @@ public class FTAPI {
                             totalBytesWritten,
                             totalBytesExpectedToWrite))
                 }
-                response.responseJSON(completionHandler: {(req, res, data) in
+                response.responseJSON(completionHandler: {
+                    (req, res, data) in
+//                    print(data)
                     switch data {
                     case .Success(let json):
                         let result: FTResult = FTAPI.validateJSON(json)
                         
                         switch result {
-                            
                         case .Success(let json):
                                 fulfill(json)
                         case .Failure(let error):
@@ -147,7 +147,8 @@ public class FTAPI {
                         print(res)
                         print(data)
                         print(error)
-                        
+                        print("FAILED")
+                        //TODO: Add better handling here
                         reject(.BadRequest)
                     }
                     })
@@ -161,10 +162,9 @@ public class FTAPI {
             guard let json = jsonString else {
                 return .Failure(.JSONIsNil)
             }
-            
             let data = JSON(json)
             
-            guard (data != nil) else {
+            guard (data.type != .Null) else {
                 return .Failure(.JSONIsNil)
             }
             
@@ -173,7 +173,7 @@ public class FTAPI {
                 return .Failure(.HeaderStatusIsMissing)
 
             }
-            
+        
             if ok == true {
                 return .Success(data)
             }
@@ -195,7 +195,7 @@ public class FTAPI {
                 
             }
             
-            if let errors = data["head"]["errors"].array {
+            if let errors = data["head"]["errors"].array as? [String] {
                 
                 if errors.count > 0 {
                     return .Failure(.Errors(errors: errors))
@@ -205,7 +205,6 @@ public class FTAPI {
             guard let _ = data["body"].array else {
                 return .Failure(.BodyIsMissing)
             }
-            
             return .Success(data)
     }
 }

@@ -1,19 +1,19 @@
 //
-//  Parser.swift
+//  JSON.swift
 //  Stream
 //
 //  Created by Said Sikira on 6/24/15.
-//  Copyright © 2015 Said Sikira. All rights reserved.
+//  Copyright © 2015 cityos. All rights reserved.
 //
 
-//MARK: - Parser error definitions
-public enum ParserError : ErrorType {
+//MARK: - JSON error definitions
+public enum JSONError : ErrorType {
     case InvalidData(error : ErrorType)
     case InvalidKey
 }
 
-//MARK: - Parser type definition
-public enum ParserType : Int {
+//MARK: - JSON type definition
+public enum JSONType : Int {
     case Bool
     case Number
     case String
@@ -25,16 +25,16 @@ public enum ParserType : Int {
 
 typealias Null = NSNull
 
-//MARK: - Parser struct
+//MARK: - JSON struct
 
-///Defines a JSON Parser used by the objects conforming Streamable protocol
-public struct Parser {
+///Defines a JSON JSON used by the objects conforming Streamable protocol
+public struct JSON {
     
     /// Parsed JSON data
     let parsedData : AnyObject
     
-    /// Parser type based on the JSON type
-    var type : ParserType {
+    /// JSON type based on the JSON type
+    public var type : JSONType {
         if let _ = parsedData as? Dictionary<String,AnyObject> { return .Dictionary }
         if let _ = parsedData as? Array<AnyObject> { return .Array }
         if let number = parsedData as? NSNumber { if number.boolValue { return .Bool }
@@ -46,7 +46,7 @@ public struct Parser {
     }
     
     /**
-    Initializes Parser
+    Initializes JSON
     :param: data NSData
     */
     public init(data: NSData) throws {
@@ -54,27 +54,27 @@ public struct Parser {
             let parsedJSON = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
             self.parsedData = parsedJSON
         } catch {
-            throw ParserError.InvalidData(error: error)
+            throw JSONError.InvalidData(error: error)
         }
     }
     
-    /// Initalize Parser from AnyObject
+    /// Initalize JSON from AnyObject
     init(_ object: AnyObject) {
         self.parsedData = object
     }
 }
 
-//MARK: - Null case Parser extension
-extension Parser {
+//MARK: - Null case JSON extension
+extension JSON {
     
-    /// Retrieve the null case for the Parser
-    static func nullCase() -> Parser {
-        return Parser(Null())
+    /// Retrieve the null case for the JSON
+    static func nullCase() -> JSON {
+        return JSON(Null())
     }
 }
 
 //MARK: - Custom String Convertible protocol
-extension Parser : CustomStringConvertible {
+extension JSON : CustomStringConvertible {
     
     public var description : String {
         return String(self.parsedData)
@@ -82,9 +82,9 @@ extension Parser : CustomStringConvertible {
 }
 
 //MARK: - Sequence Type protocol
-extension Parser : SequenceType {
+extension JSON : SequenceType {
     
-    public func generate() -> AnyGenerator<Parser> {
+    public func generate() -> AnyGenerator<JSON> {
         switch self.type {
         case .Array:
             let array = self.parsedData as! [AnyObject]
@@ -92,7 +92,7 @@ extension Parser : SequenceType {
             
             return anyGenerator {
                 if let object = generator.next() {
-                    return Parser(object)
+                    return JSON(object)
                 }
                 return nil
             }
@@ -102,7 +102,7 @@ extension Parser : SequenceType {
             
             return anyGenerator {
                 if let (_,value) = generator.next() {
-                    return Parser(value)
+                    return JSON(value)
                 }
                 return nil
             }
@@ -115,7 +115,7 @@ extension Parser : SequenceType {
 }
 
 //MARK: - Collection Type protocol
-extension Parser : CollectionType {
+extension JSON : CollectionType {
     
     public typealias Index = Int
     
@@ -141,72 +141,77 @@ extension Parser : CollectionType {
         }
     }
     
-    /// Start index of the parser object
+    /// Start index of the JSON object
     public var startIndex : Int {
         return 0
     }
     
-    /// End index of the parser object
+    /// End index of the JSON object
     public var endIndex : Int {
         return self.count
     }
     
-    public subscript(position : Int) -> Parser {
+    public subscript(position : Int) -> JSON {
         switch self.type {
         case .Array:
-            return Parser(self.parsedData[position])
+            return JSON(self.parsedData[position])
         default:
-            return Parser.nullCase()
+            return JSON.nullCase()
         }
     }
     
-    public subscript(key : String) -> Parser {
+    public subscript(key : String) -> JSON {
         switch self.type {
         case .Dictionary:
             if let dict = self.parsedData as? [String : AnyObject] {
                 if let _ = dict[key] {
-                    return Parser(dict[key]!)
-                } else { return Parser.nullCase() }
+                    return JSON(dict[key]!)
+                } else { return JSON.nullCase() }
             }
         default:
-            return Parser.nullCase()
+            return JSON.nullCase()
         }
-        return Parser.nullCase()
+        return JSON.nullCase()
     }
 }
 
 //MARK: - Nil Literal Convertible Protocol
-extension Parser : NilLiteralConvertible {
+extension JSON : NilLiteralConvertible {
     public init(nilLiteral: ()) {
         self.init(Null())
     }
 }
 
-//MARK: - Parser types implementation
-extension Parser {
+//MARK: - JSON types implementation
+extension JSON {
     
-    ///Array value of the Parser
+    ///Array value of the JSON
     public var array : [AnyObject]? {
         return self.parsedData as? [AnyObject]
     }
     
-    ///Dictionary value of the Parser
+    ///Dictionary value of the JSON
     public var dictionary : [String : AnyObject]? {
         return self.parsedData as? [String : AnyObject]
     }
     
-    ///String value of the Parser
+    ///String value of the JSON
     public var string : String? {
         return self.parsedData as? String
     }
     
-    ///Int value of the Parser
+    ///Int value of the JSON
     public var int : Int? {
         return self.parsedData as? Int
     }
-    
-    ///Float value of the Parser
+
+    ///Float value of the JSON
     public var float : Float? {
         return self.parsedData as? Float
     }
+    
+    public var bool : Bool? {
+        return self.parsedData as? Bool
+    }
+    
 }

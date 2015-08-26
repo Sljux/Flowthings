@@ -6,10 +6,7 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
-
-import Foundation
 import Alamofire
-import SwiftyJSON
 import SwiftWebSocket
 
 public class WSS : WebSocket {

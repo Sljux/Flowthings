@@ -6,10 +6,6 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
-import Foundation
-
-import SwiftyJSON
-
 public protocol FTRead {
     
     var baseURL : String { get }

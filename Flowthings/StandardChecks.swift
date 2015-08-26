@@ -6,8 +6,6 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
-import SwiftyJSON
-
 // RUN THIS OUTSIDE
 //guard let e = elems as? ValidParams else {
 //    valid.addMessage("elems are not: [String:AnyObject]")
@@ -23,9 +21,7 @@ public struct StandardChecks {
             valid, flow_id in
             
             guard let flowID = flow_id as? CheckString else {
-                valid.addMessage("flow_id is not type: String")
-                valid.isValid = false
-                return
+                return valid.addError("flow_id is not type: String")
             }
             
             if flowID.isShorterThen(5){

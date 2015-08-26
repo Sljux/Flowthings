@@ -16,7 +16,6 @@
 
 import Foundation
 import CoreLocation
-import SwiftyJSON
 import Alamofire
 
 public struct Base : ValidChecksProtocol, FTRead, FTCreate {

@@ -6,9 +6,6 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
-import SwiftyJSON
-
-
 struct Identity {
     var baseURL : String { return "/identity/" }
     

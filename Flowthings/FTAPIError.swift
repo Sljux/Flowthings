@@ -6,8 +6,6 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
-import SwiftyJSON
-
 public enum FTAPIError : ErrorType {
     
     //Setup
@@ -22,7 +20,7 @@ public enum FTAPIError : ErrorType {
     case ServiceUnavailable
     
     case MessagesMissing
-    case Errors(errors: [JSON])
+    case Errors(errors: [String])
     
     //Generic
     case UnexpectedJSONFormat(json: JSON?)

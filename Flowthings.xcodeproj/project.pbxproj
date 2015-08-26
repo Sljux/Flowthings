@@ -17,9 +17,7 @@
 		8D0E036A1B7278B900D44014 /* Elem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03691B7278B900D44014 /* Elem.swift */; };
 		8D1C2F071B759C20003F6329 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1C2F061B759C20003F6329 /* Base.swift */; };
 		8D28A0761B8D29D100243B50 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC11151B72DDE00065FA37 /* Alamofire.framework */; };
-		8D28A0771B8D29D100243B50 /* SwiftTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4BEDAE1B8A44390032AC5A /* SwiftTask.framework */; };
 		8D28A0781B8D29D100243B50 /* SwiftWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBBDE5E1B6719BA0065CD3B /* SwiftWebSocket.framework */; };
-		8D28A0791B8D29D100243B50 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD624C41B73D3F300A4BAFE /* SwiftyJSON.framework */; };
 		8D28A07B1B8D37B200243B50 /* FTCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28A07A1B8D37B200243B50 /* FTCreate.swift */; settings = {ASSET_TAGS = (); }; };
 		8D28A07D1B8D39CC00243B50 /* FTRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28A07C1B8D39CC00243B50 /* FTRead.swift */; settings = {ASSET_TAGS = (); }; };
 		8D438D701B84D8B300FD70C1 /* StandardChecks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D438D6F1B84D8B300FD70C1 /* StandardChecks.swift */; };
@@ -28,6 +26,7 @@
 		8D5101991B7562F50043D778 /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5101981B7562F50043D778 /* TestConfig.swift */; };
 		8D572D551B7509C700D29297 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D572D541B7509C700D29297 /* Config.swift */; };
 		8D572D571B750D8400D29297 /* FTAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D572D561B750D8400D29297 /* FTAPIError.swift */; };
+		8D8468DC1B8E132D00FA15A6 /* SwiftTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8468DB1B8E132D00FA15A6 /* SwiftTask.framework */; };
 		8D89714E1B88FD5900CA2528 /* ApiDropCreatePositive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D89714D1B88FD5900CA2528 /* ApiDropCreatePositive.swift */; };
 		8D8971501B88FF1A00CA2528 /* ApiDropCreateNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D89714F1B88FF1A00CA2528 /* ApiDropCreateNegative.swift */; };
 		8DBBDE341B6715D60065CD3B /* Flowthings.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DBBDE331B6715D60065CD3B /* Flowthings.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -42,7 +41,7 @@
 		8DD5FE5B1B7A705500CBCB4F /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE5A1B7A705500CBCB4F /* Debug.swift */; };
 		8DD5FE681B7AA6ED00CBCB4F /* CheckString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE671B7AA6ED00CBCB4F /* CheckString.swift */; };
 		8DD5FE6D1B7ACE2200CBCB4F /* Checks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE6C1B7ACE2200CBCB4F /* Checks.swift */; };
-		8DFA3A601B8E00AA00749D91 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFA3A5F1B8E00AA00749D91 /* Parser.swift */; settings = {ASSET_TAGS = (); }; };
+		8DFA3A601B8E00AA00749D91 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFA3A5F1B8E00AA00749D91 /* JSON.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,12 +67,12 @@
 		8D28A07A1B8D37B200243B50 /* FTCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTCreate.swift; sourceTree = "<group>"; };
 		8D28A07C1B8D39CC00243B50 /* FTRead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTRead.swift; sourceTree = "<group>"; };
 		8D438D6F1B84D8B300FD70C1 /* StandardChecks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardChecks.swift; sourceTree = "<group>"; };
-		8D4BEDAE1B8A44390032AC5A /* SwiftTask.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftTask.framework; path = Carthage/Build/iOS/SwiftTask.framework; sourceTree = "<group>"; };
 		8D4BEDB01B8A46000032AC5A /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		8D5101961B755F0C0043D778 /* ApiDropCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiDropCreate.swift; sourceTree = "<group>"; };
 		8D5101981B7562F50043D778 /* TestConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestConfig.swift; sourceTree = "<group>"; };
 		8D572D541B7509C700D29297 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8D572D561B750D8400D29297 /* FTAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTAPIError.swift; sourceTree = "<group>"; };
+		8D8468DB1B8E132D00FA15A6 /* SwiftTask.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftTask.framework; path = Carthage/Build/iOS/SwiftTask.framework; sourceTree = "<group>"; };
 		8D89714D1B88FD5900CA2528 /* ApiDropCreatePositive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiDropCreatePositive.swift; sourceTree = "<group>"; };
 		8D89714F1B88FF1A00CA2528 /* ApiDropCreateNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiDropCreateNegative.swift; sourceTree = "<group>"; };
 		8DBBDE301B6715D60065CD3B /* Flowthings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Flowthings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,8 +92,7 @@
 		8DD5FE5A1B7A705500CBCB4F /* Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Debug.swift; path = Flowthings/Debug.swift; sourceTree = "<group>"; };
 		8DD5FE671B7AA6ED00CBCB4F /* CheckString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckString.swift; sourceTree = "<group>"; };
 		8DD5FE6C1B7ACE2200CBCB4F /* Checks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checks.swift; sourceTree = "<group>"; };
-		8DD624C41B73D3F300A4BAFE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
-		8DFA3A5F1B8E00AA00749D91 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		8DFA3A5F1B8E00AA00749D91 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +101,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D28A0761B8D29D100243B50 /* Alamofire.framework in Frameworks */,
-				8D28A0771B8D29D100243B50 /* SwiftTask.framework in Frameworks */,
 				8D28A0781B8D29D100243B50 /* SwiftWebSocket.framework in Frameworks */,
-				8D28A0791B8D29D100243B50 /* SwiftyJSON.framework in Frameworks */,
+				8D8468DC1B8E132D00FA15A6 /* SwiftTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,8 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				8DD5FE5A1B7A705500CBCB4F /* Debug.swift */,
-				8D4BEDAE1B8A44390032AC5A /* SwiftTask.framework */,
-				8DD624C41B73D3F300A4BAFE /* SwiftyJSON.framework */,
+				8D8468DB1B8E132D00FA15A6 /* SwiftTask.framework */,
 				8DBC11151B72DDE00065FA37 /* Alamofire.framework */,
 				8DBBDE5E1B6719BA0065CD3B /* SwiftWebSocket.framework */,
 				8DBBDE321B6715D60065CD3B /* Flowthings */,
@@ -207,7 +203,7 @@
 				8DBBDE4C1B6716300065CD3B /* Creds.swift */,
 				8DBBDE4D1B6716300065CD3B /* Session.swift */,
 				8D0E035F1B72779F00D44014 /* FTWSS.swift */,
-				8DFA3A5F1B8E00AA00749D91 /* Parser.swift */,
+				8DFA3A5F1B8E00AA00749D91 /* JSON.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -364,7 +360,6 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftWebSocket.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftTask.framework",
 			);
@@ -401,7 +396,7 @@
 				8DBBDE551B6716300065CD3B /* Session.swift in Sources */,
 				8D0E03641B72783E00D44014 /* Token.swift in Sources */,
 				8DD5FE5B1B7A705500CBCB4F /* Debug.swift in Sources */,
-				8DFA3A601B8E00AA00749D91 /* Parser.swift in Sources */,
+				8DFA3A601B8E00AA00749D91 /* JSON.swift in Sources */,
 				8D086E201B79123E006B39F6 /* Valid.swift in Sources */,
 				8D572D551B7509C700D29297 /* Config.swift in Sources */,
 				8DBBDE581B6716300065CD3B /* Track.swift in Sources */,

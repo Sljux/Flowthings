@@ -6,8 +6,6 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
-import SwiftyJSON
-
 public struct Track {
     
     var base = Base(baseURL : "/track/")
