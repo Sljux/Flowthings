@@ -22,7 +22,7 @@ public typealias Progress = (
     totalBytesWritten: Int64,
     totalBytesExpectedToWrite: Int64)
 
-public typealias Value = JSON?
+public typealias Value = JSON
 public typealias Error = FTAPIError
 
 public enum FTResult {
@@ -34,13 +34,13 @@ public typealias FTStream = Task<Progress, Value, Error>
 
 public class FTAPI {
     
-    public var drop = Drop()
-    public var flow = Flow()
+    public lazy var drop = Drop()
+    public lazy var flow = Flow()
     
-//    lazy var track = Track()
-//    lazy var identity = Identity()
-//    lazy var share = Share()
-//    lazy var group = Group()
+    lazy var track = Track()
+    lazy var identity = Identity()
+    lazy var share = Share()
+    lazy var group = Group()
 //    lazy var device = Device()
 //    lazy var task = Task()
 //    lazy var mqtt = MQTT()
@@ -122,6 +122,13 @@ public class FTAPI {
                         headers: FTAPI.headers)
                 }
                 
+                response.progress {
+                    (bytesWritten, totalBytesWritten, totalBytesExpectedToWrite) in
+                    
+                    progress((bytesWritten,
+                            totalBytesWritten,
+                            totalBytesExpectedToWrite))
+                }
                 response.responseJSON(completionHandler: {(req, res, data) in
                     switch data {
                     case .Success(let json):
