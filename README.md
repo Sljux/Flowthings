@@ -6,7 +6,7 @@ Flowthings is an flowthings.io library written in Swift.
 ## Requirements
 
 - iOS 8.0+ / Mac OS X 10.9+ / watchOS 2
-- Xcode 7.0 beta 5+
+- Xcode 7.0 beta 6+
 
 ## Installation
 
@@ -29,6 +29,9 @@ To integrate Flowthings into your Xcode project using Carthage, specify it in yo
 github "appsmonkey/Flowthings"
 ```
 
+Note: This will move to [flowthings repository](https://github.com/flowthings) once officially released, (when Xcode 7 is out of the beta)
+
+
 ### Manually
 
 If you prefer not to use either of the aforementioned dependency managers, you can integrate Flowthings into your project manually.
@@ -37,44 +40,100 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 
 ### Making a Request
 
-[flowthings.io token and account id] (https://dev.flowthings.io/#/account)
+You will need your flowthings.io account:
+
+then from this link https://dev.flowthings.io/#/account get:
+
+- [accountID](https://dev.flowthings.io/#/account) - your username
+- [tokenID](https://dev.flowthings.io/#/account) - your token
+
+![image](https://www.evernote.com/l/AAqDH6Fg-yxIGKe_72iOkZNV--_6fxqs8ikB/image.png)
+
+#### Steps to set it up  (e.g. create drop)
+
+Step 1.
+
+Add import to top of your file 
 ```swift
 import Flowthings
+```
 
+Step 2.
+
+Setup Creds.
+```swift
   let api = FlowthingsAPI(
       accountID: "XXX",
       tokenID: "XXX"
   )
-        
+```
+Step 3.
+Set path to send data to and prepare data to send
+```swift
   let params : [String:AnyObject] = [
-      "path" : "/ceco/framework/test1",
+      "path" : "/<your-account-id>/framework/unit-test",
       "elems":[
           "task":"running test",
           "description": "UnitTest testDropCreateOnPath"
       ]
   ]
-        
-  api.drop.create(
-      params: params,
-      success:{
+```
+Step 4.
+Make a call, and response in success and failure closures 
+```swift
+  api.drop.create(params: params)
+      .success {
           json in
-          guard let id = json["test"]["id"].string else {
-            print("Missing id")
-            return
-          }
-          print(id)
-      },
-      failure:{
+          print(json["body"]["id"].string)
+      }
+      .failure {
           error in
           print(error)
-  })
+  	  }
 ```
 
+That is all you need to get you going.
+
+#### Alternative way to set Creds
+You can also set creds in **Config.plist** inside of your app
+
+![Setting Flowthings creds in Config.plist](https://www.evernote.com/l/AAoDCAMPFy1C8ZfSa_RRiKPLgSYQz0YoXOwB/image.png)
+
+#### Alternative FTStream chaining response (promise.then() style)
+```swift
+  api.drop.create(params: params)
+		.then{
+           value, error -> Value in
+           print("IN.FIRST.THEN")
+           if let _ = error {
+	           return nil
+           }
+	       print("Value:", value?.type)
+	       return value!
+       }
+		.then{
+           value, error -> Value in
+           print("IN.SECOND.THEN")
+           ...
+       }
+		.then{
+           value, error -> Value in
+           print("IN.THIRD.THEN")
+           ...
+		}
+		.success {
+			value in
+			print(value)
+		}
+```
+Note: Success in this one is called only if there was no error to start with
+
+#### Networking is done _asynchronously
 > Networking is done _asynchronously_. Asynchronous programming may be a source of frustration to programmers unfamiliar with the concept, but there are [very good reasons](https://developer.apple.com/library/ios/qa/qa1693/_index.html) for doing it this way.
 
 > Rather than blocking execution to wait for a response from the server, a [callback](http://en.wikipedia.org/wiki/Callback_%28computer_programming%29) is specified to handle the response once it's received. The result of a request is only available inside the scope of a response handler. Any execution contingent on the response or data received from the server must be done within a handler.
 
-####  Response JSON Handler
+####  Checking Response JSON
 
 ```swift
 guard let id = json["test"]["id"].string else {
@@ -82,22 +141,20 @@ guard let id = json["test"]["id"].string else {
 }
 ```
 
+#### HTTP Methods
 
-### HTTP Methods
-
-`Flowthings.Method` lists the HTTP methods defined in [RFC 7231 §4.3](http://tools.ietf.org/html/rfc7231#section-4.3):
+`Flowthings.FTMethod` lists the HTTP methods defined in [RFC 7231 Â§4.3](http://tools.ietf.org/html/rfc7231#section-4.3):
 
 ```swift
-public enum Method: String {
-    case OPTIONS, GET, HEAD, POST, PUT, PATCH, DELETE, TRACE, CONNECT
+public enum FTMethod : String {
+    case GET, POST, PUT, DELETE
+    //Headers not needed/supported
+    //case OPTIONS, HEAD, PATCH, TRACE, CONNECT
 }
 ```
 
 ### Parameters
-
-
-#### POST & GET Request 
-
+All requests requardless of their METHOD type support  ```swift [String:AnyObject] ```
 
 
 ```swift
@@ -112,6 +169,7 @@ let parameters = [
 ]
 
 ```
+
 ## Extensions
 
 example of extending service
