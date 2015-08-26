@@ -19,16 +19,7 @@ struct Identity {
             
         let path = baseURL + identityID
             
-            FTAPI.request(.GET,
-                path: path,
-                success: {
-                    json in
-                    success(body: json)
-                },
-                failure: {
-                    error in
-                    failure(error: error)
-            })
+            FTAPI.request(.GET, path: path)
     }
     
     //func find(){}

@@ -15,20 +15,30 @@ struct Config {
     static let apiVersion = "v0.1"
     static let secure = true
     
-    init(accountID: String, tokenID: String){
+    /**
+    Set these once per app run
     
-        //.gitignore hides Config.plist
+    - returns: Config object or kicks off assert 
+    */
+    init(){
+    
+        //.gitignore hides Config.plist - to avoid commiting tokens
         if let path = NSBundle.mainBundle().pathForResource("Config", ofType: "plist") {
             if let config = NSDictionary(contentsOfFile: path) as? Dictionary<String, AnyObject> {
-                if let accID = config["accountID"] as? String,
-                    let tokID = config["tokenID"] as? String {
-                        Config.accountID = accID
-                        Config.tokenID = tokID
+                if let accountID = config["accountID"] as? String,
+                    let tokenID = config["tokenID"] as? String {
+                        Config.accountID = accountID
+                        Config.tokenID = tokenID
                         return
                 }
             }
         }
 
+        assert(false, "Config.plist has to have accountID and tokenID for this init to work")
+    }
+
+    init(accountID: String, tokenID: String){
+        
         Config.accountID = accountID
         Config.tokenID = tokenID
     }

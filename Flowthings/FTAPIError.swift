@@ -15,7 +15,7 @@ public enum FTAPIError : ErrorType {
     case JSONIsNil
     case HeaderStatusIsMissing
     case UnsupportedMethod(FTMethod)
-    
+ 
     //Header Codes
     case BadRequest
     case Unauthorized

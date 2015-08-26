@@ -1,8 +1,8 @@
 //
-//  APIController.swift
+//  FTAPI.swift
 //  flowthings-ios-wss
 //
-//  Created by Ceco on 7/27/15.
+//  Created by Ceco on 2015.
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
@@ -16,8 +16,6 @@ public enum FTMethod : String {
     //case OPTIONS, HEAD, PATCH, TRACE, CONNECT
 }
 
-public typealias successClosure = (body: JSON) -> ()
-public typealias errorClosure = (error: FTAPIError) -> ()
 
 public typealias Progress = (
     bytesWritten: Int64,
@@ -25,43 +23,45 @@ public typealias Progress = (
     totalBytesExpectedToWrite: Int64)
 
 public typealias Value = JSON?
-public typealias Error = NSError
+public typealias Error = FTAPIError
 
-typealias AlamofireTask = Task<Progress, Value, Error>
-//public typealias ErrorInfo = (error: Error?, isCancelled: Bool)
+public enum FTResult {
+    case Success(Value)
+    case Failure(Error)
+}
 
-let myError = NSError(domain: "MyErrorDomain", code: 0, userInfo: nil)
-
-//
-//
-//  Created by Ceco on 7/27/15.
-//  Copyright © 2015 cityos. All rights reserved.
-//
+public typealias FTStream = Task<Progress, Value, Error>
 
 public class FTAPI {
     
     public var drop = Drop()
-    lazy var flow = Flow()
+    public var flow = Flow()
     
-    //Others
-    lazy var track = Track()
-    lazy var identity = Identity()
-    lazy var share = Share()
-    lazy var group = Group()
+//    lazy var track = Track()
+//    lazy var identity = Identity()
+//    lazy var share = Share()
+//    lazy var group = Group()
+//    lazy var device = Device()
+//    lazy var task = Task()
+//    lazy var mqtt = MQTT()
+//    lazy var rss = RSS()
     
     lazy var valid = Valid()
     
-    /* Future
-    lazy var device = Device()
-    lazy var task = Task()
-    lazy var mqtt = MQTT()
-    lazy var rss = RSS()
-    */
-    
-    //static var req = NSMutableURLRequest()
     static var headers : [String:String] = [:]
     
-    init () {
+    public init(){
+        let _ = Config()
+        setAuth ()
+    }
+    
+    public init(accountID: String, tokenID: String){
+        
+        let _ = Config(accountID: accountID, tokenID: tokenID)
+        setAuth ()
+    }
+    
+    func setAuth () {
         
         FTAPI.headers = [
             "X-Auth-Token" : Config.tokenID!,
@@ -71,135 +71,118 @@ public class FTAPI {
         
     }
     
-    public convenience init(accountID: String, tokenID: String){
-        
-        let _ = Config(accountID: accountID, tokenID: tokenID)
-        
-        self.init()
-    }
-    
-    public static func request(ftmethod: FTMethod,
+    public static func request(
+        ftmethod: FTMethod,
         path: String,
-        params: ValidParams? = nil,
-        success: successClosure,
-        failure: errorClosure
-        ) -> Void {
+        params: ValidParams? = nil
+        ) -> FTStream {
             
-            
-            //removing dependecy on Alamofire u apps
-            var method : Alamofire.Method
-            var encoding : ParameterEncoding = .JSON
-            
-            switch ftmethod {
+            //Setting up the task
+            let stream = FTStream { progress, fulfill, reject, configure in
                 
-            case .GET :
-                method = Alamofire.Method.GET
-                encoding = .URL
-            case .POST :
-                method = Alamofire.Method.POST
-            case .PUT :
-                method = Alamofire.Method.PUT
-            case .DELETE :
-                method = Alamofire.Method.DELETE
                 
-            }
-            
-            guard let url = Config.url(path) as? URLStringConvertible else {
-                failure(error: .URLCanNotBuild(path: path))
-                return
-            }
-            
-            var response : Alamofire.Request
-            
-            
-            if let _ = params {
+                //removing dependecy on Alamofire u apps
+                var method : Alamofire.Method
+                var encoding : ParameterEncoding = .JSON
                 
-                response = Alamofire.request(
-                    method,
-                    url,
-                    parameters: params,
-                    encoding: encoding,
-                    headers: FTAPI.headers)
-            } else {
-                response = Alamofire.request(
-                    method,
-                    url,
-                    headers: FTAPI.headers)
-            }
-            
-            response.responseJSON(completionHandler: {(req, res, data) in
-                switch data {
-                case .Success(let json):
+                switch ftmethod {
                     
-                    FTAPI.validateResponse(json,
-                        success: {
-                            json in
-                            success(body: json)
-                        },
-                        failure:{
-                            error in
-                            failure(error: error)
-                    })
+                case .GET :
+                    method = Alamofire.Method.GET
+                    encoding = .URL
+                case .POST :
+                    method = Alamofire.Method.POST
+                case .PUT :
+                    method = Alamofire.Method.PUT
+                case .DELETE :
+                    method = Alamofire.Method.DELETE
                     
-                    
-                case .Failure(let data, let error):
-                    print(req)
-                    print(res)
-                    print(data)
-                    print(error)
-                    
-                    failure(error: FTAPIError.BadRequest)
                 }
-            })
+                
+                
+                guard let url = Config.url(path) as? URLStringConvertible else {
+                    reject(.URLCanNotBuild(path: path))
+                    return
+                }
+                
+                var response : Alamofire.Request
+                
+                if let _ = params {
+                    
+                    response = Alamofire.request(
+                        method,
+                        url,
+                        parameters: params,
+                        encoding: encoding,
+                        headers: FTAPI.headers)
+                } else {
+                    response = Alamofire.request(
+                        method,
+                        url,
+                        headers: FTAPI.headers)
+                }
+                
+                response.responseJSON(completionHandler: {(req, res, data) in
+                    switch data {
+                    case .Success(let json):
+                        let result: FTResult = FTAPI.validateJSON(json)
+                        
+                        switch result {
+                            
+                        case .Success(let json):
+                                fulfill(json)
+                        case .Failure(let error):
+                                reject(error)
+                        }
+                        
+                    case .Failure(let data, let error):
+                        print(req)
+                        print(res)
+                        print(data)
+                        print(error)
+                        
+                        reject(.BadRequest)
+                    }
+                    })
+            }
+            return stream
     }
-    
-    static func validateResponse(
-        json_optional: AnyObject?,
-        success:successClosure,
-        failure:errorClosure
-        ) {
+
+    public static func validateJSON(jsonString: AnyObject?)
+        -> FTResult {
             
-            guard let json = json_optional else {
-                failure(error: .JSONIsNil)
-                return
+            guard let json = jsonString else {
+                return .Failure(.JSONIsNil)
             }
             
             let data = JSON(json)
             
             guard (data != nil) else {
-                failure(error: .JSONIsNil)
-                return
+                return .Failure(.JSONIsNil)
             }
             
             guard let ok = data["head"]["ok"].bool else {
                 
-                failure(error: .HeaderStatusIsMissing)
-                return
+                return .Failure(.HeaderStatusIsMissing)
+
             }
             
             if ok == true {
-                success(body: data)
-                return
+                return .Success(data)
             }
             
-            
             guard let statusCode = data["head"]["status"].int else {
-                
-                failure(error: .HeaderStatusIsMissing)
-                return
+                return .Failure(.HeaderStatusIsMissing)
             }
             
             switch statusCode {
                 
             case 400 :
-                failure(error: .BadRequest)
-                return
+                return .Failure(.BadRequest)
             case 401 :
-                failure(error: .Unauthorized)
-                return
+                return .Failure(.Unauthorized)
             case 503 :
-                failure(error: .ServiceUnavailable)
-                return
+                return .Failure(.ServiceUnavailable)
             default:
                 break
                 
@@ -208,19 +191,14 @@ public class FTAPI {
             if let errors = data["head"]["errors"].array {
                 
                 if errors.count > 0 {
-                    
-                    failure(error: .Errors(errors: errors))
-                    
-                    return
+                    return .Failure(.Errors(errors: errors))
                 }
             }
             
             guard let _ = data["body"].array else {
-                
-                failure(error: .BodyIsMissing)
-                return
+                return .Failure(.BodyIsMissing)
             }
             
-            success(body: data)
+            return .Success(data)
     }
 }

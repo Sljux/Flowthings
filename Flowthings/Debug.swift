@@ -8,7 +8,7 @@
 
 import Foundation
 
-func d(args:AnyObject...) {
+func q(args:AnyObject...) {
 
     for arg: AnyObject in args {
         print(arg)

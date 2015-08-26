@@ -10,7 +10,11 @@ import SwiftyJSON
 
 public class Drop: FTRead, FTCreate {
     
-    public init(){}
+    public init(){
+    
+        assert(!baseURL.isEmpty, "empty baseURL - please set it")
+        
+    }
     
     public var baseURL = "/drop/"
 
@@ -27,47 +31,35 @@ extension Drop {
     - parameter success: closure
     - parameter failure: closure
     */
-    public func createOnFlowID(
-        flowID flowID: String,
-        params: [String:AnyObject],
-        success: (json: JSON)->(),
-        failure: (error: FTAPIError)->())  {
-            
-            let path = baseURL + flowID
-            
-            FTAPI.request(.POST, path: path, params: params,
-                success: {
-                    json in
-                    
-                    //Verify that ID came back
-                    guard let _ = json["body"]["id"].string else {
-                        failure(error: .UnexpectedJSONFormat(json: json))
-                        return
-                    }
-                    
-                    success(json: json)
-                },
-                failure: {
-                    error in
-                    failure(error: error)
-            })
-    }
+//    public func createOnFlowID(
+//        flowID flowID: String,
+//        params: [String:AnyObject],
+//        success: (json: JSON)->(),
+//        failure: (error: FTAPIError)->())  {
+//            
+//            let path = baseURL + flowID
+//            
+//            FTAPI.request(.POST, path: path, params: params,
+//                success: {
+//                    json in
+//                    
+//                    //Verify that ID came back
+//                    guard let _ = json["body"]["id"].string else {
+//                        failure(error: .UnexpectedJSONFormat(json: json))
+//                        return
+//                    }
+//                    
+//                    success(json: json)
+//                },
+//                failure: {
+//                    error in
+//                    failure(error: error)
+//            })
+//    }
     
-    func aggregate(
-        path: String,
-        model: [String:AnyObject],
-        success: (json: JSON)->(),
-        failure: (error: FTAPIError)->()){
+    func aggregate(path: String, params: ValidParams){
             
-            FTAPI.request(.PUT, path: path, params: model,
-                success: {
-                    json in
-                    success(json: json)
-                },
-                failure: {
-                    error in
-                    failure(error: error)
-            })
+            FTAPI.request(.PUT, path: path, params: params)
     }
     
 }

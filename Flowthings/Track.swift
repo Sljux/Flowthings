@@ -12,20 +12,8 @@ public struct Track {
     
     var base = Base(baseURL : "/track/")
     
-    func simulate (
-        path: String,
-        model: [String:AnyObject],
-        success: (json: JSON)->(),
-        failure: (error: FTAPIError)->()){
+    func simulate (path: String, params: ValidParams) -> FTStream {
             
-            FTAPI.request(.PUT, path: path, params: model,
-                success: {
-                    json in
-                    success(json: json)
-                },
-                failure: {
-                    error in
-                    failure(error: error)
-            })
+        return FTAPI.request(.PUT, path: path, params: params)
     }
 }

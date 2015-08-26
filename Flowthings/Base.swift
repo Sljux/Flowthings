@@ -58,20 +58,12 @@ public struct Base : ValidChecksProtocol, FTRead, FTCreate {
                 return
             }
             
-            FTAPI.request(.GET, path: baseURL, params: params,
-                success: {
-                    json in
-                    success(json: json)
-                },
-                failure: {
-                    error in
-                    failure(error: error)
-            })
+            FTAPI.request(.GET, path: baseURL, params: params)
             
     }
     
     func multiFind(
-        model model: [String:AnyObject],
+        params params: [String:AnyObject],
         success: (json: JSON)->(),
         failure: (error: FTAPIError)->()){
             
@@ -80,51 +72,16 @@ public struct Base : ValidChecksProtocol, FTRead, FTCreate {
                 return
             }
             
-            FTAPI.request(.GET,
-                path: baseURL,
-                params: model,
-                success: {
-                    json in
-                    success(json: json)
-                },
-                failure: {
-                    error in
-                    failure(error: error)
-            })
+            FTAPI.request(.GET, path: baseURL, params: params)
     }
     
-    func update(
-        path: String,
-        model: [String:AnyObject],
-        success: (json: JSON)->(),
-        failure: (error: FTAPIError)->()){
-            
-            FTAPI.request(.PUT, path: path, params: model,
-                success: {
-                    json in
-                    success(json: json)
-                },
-                failure: {
-                    error in
-                    failure(error: error)
-            })
+    func update(path: String, params: ValidParams){
+            FTAPI.request(.PUT, path: path, params: params)
     }
     
-    func memberUpdate(
-        path: String,
-        params: ValidParams,
-        success: (json: JSON)->(),
-        failure: (error: FTAPIError)->()){
+    func memberUpdate(path: String, params: ValidParams){
             
-            FTAPI.request(.PUT, path: path, params: params,
-                success: {
-                    json in
-                    success(json: json)
-                },
-                failure: {
-                    error in
-                    failure(error: error)
-            })
+            FTAPI.request(.PUT, path: path, params: params)
     }
     
     func delete(
@@ -132,15 +89,7 @@ public struct Base : ValidChecksProtocol, FTRead, FTCreate {
         success: (json: JSON)->(),
         failure: (error: FTAPIError)->()){
             
-            FTAPI.request(.DELETE, path: path, params: nil,
-                success: {
-                    json in
-                    success(json: json)
-                },
-                failure: {
-                    error in
-                    failure(error: error)
-            })
+            FTAPI.request(.DELETE, path: path)
     }
     
 }

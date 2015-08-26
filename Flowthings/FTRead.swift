@@ -26,20 +26,9 @@ extension FTRead {
     - parameter success: Closure type: (body: JSON) -> ()
     - parameter failure: Closure type: (error: FTAPIError) -> ()
     */
-    public func read(path
-        path: String,
-        success: successClosure,
-        failure: errorClosure){
+    public func read(path path: String) -> FTStream {
             
-            FTAPI.request(.GET, path: path,
-                success: {
-                    json in
-                    success(body: json)
-                },
-                failure: {
-                    error in
-                    failure(error: error)
-            })
+            return FTAPI.request(.GET, path: path)
     }
     
 }
