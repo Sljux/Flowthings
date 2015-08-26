@@ -9,14 +9,21 @@
 /* Begin PBXBuildFile section */
 		8D086E201B79123E006B39F6 /* Valid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D086E1F1B79123E006B39F6 /* Valid.swift */; };
 		8D0B19B21B88CF0500D17EB8 /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B19B11B88CF0500D17EB8 /* BaseTests.swift */; };
-		8D0E035E1B72779200D44014 /* FlowthingsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E035D1B72779200D44014 /* FlowthingsAPI.swift */; };
+		8D0E035E1B72779200D44014 /* FTAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E035D1B72779200D44014 /* FTAPI.swift */; };
 		8D0E03601B72779F00D44014 /* FTWSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E035F1B72779F00D44014 /* FTWSS.swift */; };
 		8D0E03621B72782F00D44014 /* Identity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03611B72782F00D44014 /* Identity.swift */; };
 		8D0E03641B72783E00D44014 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03631B72783E00D44014 /* Token.swift */; };
 		8D0E03661B72784700D44014 /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03651B72784700D44014 /* Share.swift */; };
 		8D0E036A1B7278B900D44014 /* Elem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03691B7278B900D44014 /* Elem.swift */; };
 		8D1C2F071B759C20003F6329 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1C2F061B759C20003F6329 /* Base.swift */; };
+		8D28A0761B8D29D100243B50 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC11151B72DDE00065FA37 /* Alamofire.framework */; };
+		8D28A0771B8D29D100243B50 /* SwiftTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4BEDAE1B8A44390032AC5A /* SwiftTask.framework */; };
+		8D28A0781B8D29D100243B50 /* SwiftWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBBDE5E1B6719BA0065CD3B /* SwiftWebSocket.framework */; };
+		8D28A0791B8D29D100243B50 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD624C41B73D3F300A4BAFE /* SwiftyJSON.framework */; };
+		8D28A07B1B8D37B200243B50 /* FTCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28A07A1B8D37B200243B50 /* FTCreate.swift */; settings = {ASSET_TAGS = (); }; };
+		8D28A07D1B8D39CC00243B50 /* FTRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28A07C1B8D39CC00243B50 /* FTRead.swift */; settings = {ASSET_TAGS = (); }; };
 		8D438D701B84D8B300FD70C1 /* StandardChecks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D438D6F1B84D8B300FD70C1 /* StandardChecks.swift */; };
+		8D4BEDB11B8A46000032AC5A /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BEDB01B8A46000032AC5A /* Alamofire.swift */; };
 		8D5101971B755F0C0043D778 /* ApiDropCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5101961B755F0C0043D778 /* ApiDropCreate.swift */; };
 		8D5101991B7562F50043D778 /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5101981B7562F50043D778 /* TestConfig.swift */; };
 		8D572D551B7509C700D29297 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D572D541B7509C700D29297 /* Config.swift */; };
@@ -32,12 +39,9 @@
 		8DBBDE581B6716300065CD3B /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE501B6716300065CD3B /* Track.swift */; };
 		8DBBDE591B6716300065CD3B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE511B6716300065CD3B /* Group.swift */; };
 		8DBBDE5B1B6716300065CD3B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE531B6716300065CD3B /* Location.swift */; };
-		8DBBDE5F1B6719BA0065CD3B /* SwiftWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBBDE5E1B6719BA0065CD3B /* SwiftWebSocket.framework */; };
-		8DBC11161B72DDE00065FA37 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC11151B72DDE00065FA37 /* Alamofire.framework */; };
 		8DD5FE5B1B7A705500CBCB4F /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE5A1B7A705500CBCB4F /* Debug.swift */; };
 		8DD5FE681B7AA6ED00CBCB4F /* CheckString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE671B7AA6ED00CBCB4F /* CheckString.swift */; };
 		8DD5FE6D1B7ACE2200CBCB4F /* Checks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE6C1B7ACE2200CBCB4F /* Checks.swift */; };
-		8DD624C51B73D3F300A4BAFE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD624C41B73D3F300A4BAFE /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,14 +57,18 @@
 /* Begin PBXFileReference section */
 		8D086E1F1B79123E006B39F6 /* Valid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Valid.swift; sourceTree = "<group>"; };
 		8D0B19B11B88CF0500D17EB8 /* BaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTests.swift; sourceTree = "<group>"; };
-		8D0E035D1B72779200D44014 /* FlowthingsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowthingsAPI.swift; sourceTree = "<group>"; };
+		8D0E035D1B72779200D44014 /* FTAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTAPI.swift; sourceTree = "<group>"; };
 		8D0E035F1B72779F00D44014 /* FTWSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWSS.swift; sourceTree = "<group>"; };
 		8D0E03611B72782F00D44014 /* Identity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identity.swift; sourceTree = "<group>"; };
 		8D0E03631B72783E00D44014 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		8D0E03651B72784700D44014 /* Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
 		8D0E03691B7278B900D44014 /* Elem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elem.swift; sourceTree = "<group>"; };
 		8D1C2F061B759C20003F6329 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		8D28A07A1B8D37B200243B50 /* FTCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTCreate.swift; sourceTree = "<group>"; };
+		8D28A07C1B8D39CC00243B50 /* FTRead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTRead.swift; sourceTree = "<group>"; };
 		8D438D6F1B84D8B300FD70C1 /* StandardChecks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardChecks.swift; sourceTree = "<group>"; };
+		8D4BEDAE1B8A44390032AC5A /* SwiftTask.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftTask.framework; path = Carthage/Build/iOS/SwiftTask.framework; sourceTree = "<group>"; };
+		8D4BEDB01B8A46000032AC5A /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		8D5101961B755F0C0043D778 /* ApiDropCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiDropCreate.swift; sourceTree = "<group>"; };
 		8D5101981B7562F50043D778 /* TestConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestConfig.swift; sourceTree = "<group>"; };
 		8D572D541B7509C700D29297 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -92,9 +100,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DBBDE5F1B6719BA0065CD3B /* SwiftWebSocket.framework in Frameworks */,
-				8DBC11161B72DDE00065FA37 /* Alamofire.framework in Frameworks */,
-				8DD624C51B73D3F300A4BAFE /* SwiftyJSON.framework in Frameworks */,
+				8D28A0761B8D29D100243B50 /* Alamofire.framework in Frameworks */,
+				8D28A0771B8D29D100243B50 /* SwiftTask.framework in Frameworks */,
+				8D28A0781B8D29D100243B50 /* SwiftWebSocket.framework in Frameworks */,
+				8D28A0791B8D29D100243B50 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,20 +118,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8D961A181B88F50F0005899E /* Drop.create */ = {
+		8D28A07E1B8D39D700243B50 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8D1C2F061B759C20003F6329 /* Base.swift */,
+				8D28A07A1B8D37B200243B50 /* FTCreate.swift */,
+				8D28A07C1B8D39CC00243B50 /* FTRead.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		8D961A181B88F50F0005899E /* Drop.create.tests */ = {
 			isa = PBXGroup;
 			children = (
 				8D5101961B755F0C0043D778 /* ApiDropCreate.swift */,
 				8D89714D1B88FD5900CA2528 /* ApiDropCreatePositive.swift */,
 				8D89714F1B88FF1A00CA2528 /* ApiDropCreateNegative.swift */,
 			);
-			name = Drop.create;
+			name = Drop.create.tests;
 			sourceTree = "<group>";
 		};
 		8DBBDE261B6715D60065CD3B = {
 			isa = PBXGroup;
 			children = (
 				8DD5FE5A1B7A705500CBCB4F /* Debug.swift */,
+				8D4BEDAE1B8A44390032AC5A /* SwiftTask.framework */,
 				8DD624C41B73D3F300A4BAFE /* SwiftyJSON.framework */,
 				8DBC11151B72DDE00065FA37 /* Alamofire.framework */,
 				8DBBDE5E1B6719BA0065CD3B /* SwiftWebSocket.framework */,
@@ -146,6 +166,7 @@
 			children = (
 				8D572D541B7509C700D29297 /* Config.swift */,
 				8DD5FE6F1B7AEBE800CBCB4F /* Core */,
+				8D28A07E1B8D39D700243B50 /* Protocols */,
 				8DD5FE6E1B7AEB9C00CBCB4F /* Validations */,
 				8DD5FE701B7AEC1B00CBCB4F /* Flow */,
 				8DD5FE711B7AEC3C00CBCB4F /* Misc */,
@@ -158,8 +179,9 @@
 			children = (
 				8D5101981B7562F50043D778 /* TestConfig.swift */,
 				8D0B19B11B88CF0500D17EB8 /* BaseTests.swift */,
-				8D961A181B88F50F0005899E /* Drop.create */,
+				8D961A181B88F50F0005899E /* Drop.create.tests */,
 				8DBBDE411B6715D60065CD3B /* Info.plist */,
+				8D4BEDB01B8A46000032AC5A /* Alamofire.swift */,
 			);
 			path = FlowthingsTests;
 			sourceTree = "<group>";
@@ -178,7 +200,7 @@
 		8DD5FE6F1B7AEBE800CBCB4F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				8D0E035D1B72779200D44014 /* FlowthingsAPI.swift */,
+				8D0E035D1B72779200D44014 /* FTAPI.swift */,
 				8D572D561B750D8400D29297 /* FTAPIError.swift */,
 				8DBBDE4C1B6716300065CD3B /* Creds.swift */,
 				8DBBDE4D1B6716300065CD3B /* Session.swift */,
@@ -190,7 +212,6 @@
 		8DD5FE701B7AEC1B00CBCB4F /* Flow */ = {
 			isa = PBXGroup;
 			children = (
-				8D1C2F061B759C20003F6329 /* Base.swift */,
 				8DBBDE4E1B6716300065CD3B /* Drop.swift */,
 				8DBBDE4F1B6716300065CD3B /* Flow.swift */,
 				8D0E03611B72782F00D44014 /* Identity.swift */,
@@ -236,6 +257,7 @@
 				8DBBDE2D1B6715D60065CD3B /* Headers */,
 				8DBBDE2E1B6715D60065CD3B /* Resources */,
 				8DBC10A91B72BC740065FA37 /* ShellScript */,
+				8D2093CE1B896D61006BDE6D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -276,7 +298,7 @@
 				TargetAttributes = {
 					8DBBDE2F1B6715D60065CD3B = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = JV4AJKUT4A;
+						DevelopmentTeam = 648PE3P6D2;
 					};
 					8DBBDE391B6715D60065CD3B = {
 						CreatedOnToolsVersion = 7.0;
@@ -319,6 +341,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8D2093CE1B896D61006BDE6D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
 		8DBC10A91B72BC740065FA37 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,6 +363,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftWebSocket.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftTask.framework",
 			);
 			outputPaths = (
 			);
@@ -345,16 +381,18 @@
 				8D572D571B750D8400D29297 /* FTAPIError.swift in Sources */,
 				8D438D701B84D8B300FD70C1 /* StandardChecks.swift in Sources */,
 				8DD5FE6D1B7ACE2200CBCB4F /* Checks.swift in Sources */,
+				8D28A07B1B8D37B200243B50 /* FTCreate.swift in Sources */,
 				8DBBDE591B6716300065CD3B /* Group.swift in Sources */,
 				8DD5FE681B7AA6ED00CBCB4F /* CheckString.swift in Sources */,
 				8DBBDE571B6716300065CD3B /* Flow.swift in Sources */,
 				8DBBDE541B6716300065CD3B /* Creds.swift in Sources */,
-				8D0E035E1B72779200D44014 /* FlowthingsAPI.swift in Sources */,
+				8D0E035E1B72779200D44014 /* FTAPI.swift in Sources */,
 				8DBBDE5B1B6716300065CD3B /* Location.swift in Sources */,
 				8D0E03621B72782F00D44014 /* Identity.swift in Sources */,
 				8D1C2F071B759C20003F6329 /* Base.swift in Sources */,
 				8D0E036A1B7278B900D44014 /* Elem.swift in Sources */,
 				8DBBDE561B6716300065CD3B /* Drop.swift in Sources */,
+				8D28A07D1B8D39CC00243B50 /* FTRead.swift in Sources */,
 				8D0E03661B72784700D44014 /* Share.swift in Sources */,
 				8D0E03601B72779F00D44014 /* FTWSS.swift in Sources */,
 				8DBBDE551B6716300065CD3B /* Session.swift in Sources */,
@@ -370,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D4BEDB11B8A46000032AC5A /* Alamofire.swift in Sources */,
 				8D89714E1B88FD5900CA2528 /* ApiDropCreatePositive.swift in Sources */,
 				8D0B19B21B88CF0500D17EB8 /* BaseTests.swift in Sources */,
 				8D5101971B755F0C0043D778 /* ApiDropCreate.swift in Sources */,

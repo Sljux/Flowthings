@@ -50,7 +50,7 @@ extension CheckString {
     }
     
     func isFullName() -> Bool {
-        var nameArray: [String] = self.componentsSeparatedByString(" ")
+        let nameArray: [String] = self.componentsSeparatedByString(" ")
         return nameArray.count >= 2
     }
     
@@ -76,7 +76,7 @@ extension CheckString {
     subscript (i: Int) -> Character
         {
         get {
-            let index = advance(startIndex, i)
+            let index = startIndex.advancedBy(i)
             return self[index]
         }
     }
@@ -84,8 +84,8 @@ extension CheckString {
     subscript (r: Range<Int>) -> String
         {
         get {
-            let startIndex = advance(self.startIndex, r.startIndex)
-            let endIndex = advance(self.startIndex, r.endIndex - 1)
+            let startIndex = self.startIndex.advancedBy(r.startIndex)
+            let endIndex = self.startIndex.advancedBy(r.endIndex - 1)
             
             return self[Range(start: startIndex, end: endIndex)]
         }
@@ -93,8 +93,8 @@ extension CheckString {
     
     func subString(startIndex: Int, length: Int) -> String
     {
-        let start = advance(self.startIndex, startIndex)
-        let end = advance(self.startIndex, startIndex + length)
+        let start = self.startIndex.advancedBy(startIndex)
+        let end = self.startIndex.advancedBy(startIndex + length)
         return self.substringWithRange(Range<String.Index>(start: start, end: end))
     }
     
@@ -102,7 +102,7 @@ extension CheckString {
         
         let range = self.rangeOfString(target)
         if let range = range {
-            return distance(self.startIndex, range.startIndex)
+            return self.startIndex.distanceTo(range.startIndex)
         } else {
             return -1
         }
@@ -110,12 +110,12 @@ extension CheckString {
     
     func indexOf(target: String, startIndex: Int) -> Int
     {
-        let startRange = advance(self.startIndex, startIndex)
+        let startRange = self.startIndex.advancedBy(startIndex)
         
         let range = self.rangeOfString(target, options: NSStringCompareOptions.LiteralSearch, range: Range<String.Index>(start: startRange, end: self.endIndex))
         
         if let range = range {
-            return distance(self.startIndex, range.startIndex)
+            return self.startIndex.distanceTo(range.startIndex)
         } else {
             return -1
         }

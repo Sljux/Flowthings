@@ -8,7 +8,7 @@
 
 import SwiftyJSON
 
-public enum FTAPIError {
+public enum FTAPIError : ErrorType {
     
     //Setup
     case URLCanNotBuild(path: String)
@@ -25,10 +25,15 @@ public enum FTAPIError {
     case Errors(errors: [JSON])
     
     //Generic
-    case UnexpectedJSONFormat(JSON?)
-    case badParams([String])
+    case UnexpectedJSONFormat(json: JSON?)
+    case BadParams(messages: [String])
+    case BaseURLIsNotSet
     
     //Anomalies
     case BodyIsMissing
+
+    case UserCanceled
+    
+    case UnknownError
     
 }

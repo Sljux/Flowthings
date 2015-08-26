@@ -8,9 +8,9 @@
 
 import SwiftyJSON
 
-public class Track : Base {
+public struct Track {
     
-    override var baseURL : String { return "/track/" }
+    var base = Base(baseURL : "/track/")
     
     func simulate (
         path: String,
@@ -21,7 +21,7 @@ public class Track : Base {
             FTAPI.request(.PUT, path: path, params: model,
                 success: {
                     json in
-                    success(json: json!)
+                    success(json: json)
                 },
                 failure: {
                     error in

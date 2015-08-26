@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Share {
+public class Share {
     
-    func create(){}
-    func read(){}
-    func delete(){}
+//    func create(){}
+//    func read(){}
+//    func delete(){}
 }

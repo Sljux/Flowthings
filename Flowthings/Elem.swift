@@ -27,7 +27,6 @@ enum DropDataType {
     case DropRef(JSON)
     case Email(String)
     
-    /*
     case Float(Double)
     case FlowRef(String)
     case ID(String)
@@ -37,9 +36,8 @@ enum DropDataType {
     case Media(JSON)
     case Set(JSON)
     case SortedMap(JSON)
-    case sortedSet(JSON)
-    case String(String)
+    case SortedSet(JSON)
+    case StringType(String)
     case Text(JSON)
     case URL(String)
-  */  
 }

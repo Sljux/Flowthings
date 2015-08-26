@@ -6,6 +6,8 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
+import SwiftyJSON
+
 public typealias ValidTest = ((Valid, AnyObject) -> Void)
 public typealias ValidTests = [ValidTest]
 public typealias ValidChecks = [String:ValidTests]
@@ -18,7 +20,11 @@ public protocol ValidChecksProtocol {
     
 }
 
-
+public enum ValidResult {
+    case onSuccess(json: JSON)
+    case onFailure(error: FTAPIError)
+    //case onCancel(error: FTAPIError)
+}
 
 public protocol ValidResultsProtocol {
     

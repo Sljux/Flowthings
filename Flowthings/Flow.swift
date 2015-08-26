@@ -10,9 +10,6 @@ import Foundation
 import SwiftyJSON
 import Alamofire
 
-public class Flow : Base {
-    
-    override var baseURL : String { return "/track/" }
-
-    
+public struct Flow {
+    var base = Base(baseURL: "/flow/")
 }

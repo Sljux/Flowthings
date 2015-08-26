@@ -1,5 +1,5 @@
 # Websocket - web sockets
-github "tidwall/SwiftWebSocket"
+# github "tidwall/SwiftWebSocket"
 
 # Alamofire - net
 github "Alamofire/Alamofire" "swift-2.0"
@@ -9,6 +9,9 @@ github "Alamofire/Alamofire" "swift-2.0"
 
 # SwifyJSON - json parsing
 github "SwiftyJSON/SwiftyJSON" "xcode7"
+
+#State machine, promise, cancel, retry, etc
+github "ReactKit/SwiftTask" "swift/2.0"
 
 # Haneke - cache layer
 # github "Haneke/HanekeSwift"

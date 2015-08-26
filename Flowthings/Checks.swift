@@ -21,7 +21,7 @@ public class Checks {
     
     
     var params : [String] {
-        return run.keys.array
+        return Array(run.keys)
     }
 
 
@@ -62,6 +62,16 @@ public class Checks {
         
     }
     
+    /**
+    Add a single validation test
+    
+    - Parameter param:  param to validate
+    - Parameter test :  closure to run against param value
+    
+    - SeeAlso:
+        - [`ValidTest`](ValidTest)
+        - Valid
+    */
     public func add(param: String, test: ValidTest){
         
         if run[param] == nil {

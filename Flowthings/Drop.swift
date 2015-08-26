@@ -8,10 +8,25 @@
 
 import SwiftyJSON
 
-public class Drop : Base {
+public class Drop: FTRead, FTCreate {
     
-    override var baseURL : String { return "/drop/" }
+    public init(){}
     
+    public var baseURL = "/drop/"
+
+}
+
+/** Drop Specific Methods */
+extension Drop {
+    
+    /**
+    Alternative Drop Create using flow_id instead of path
+    
+    - parameter flowID:  flow_id (from flowthings.io)
+    - parameter params:  ValidParams
+    - parameter success: closure
+    - parameter failure: closure
+    */
     public func createOnFlowID(
         flowID flowID: String,
         params: [String:AnyObject],
@@ -25,12 +40,12 @@ public class Drop : Base {
                     json in
                     
                     //Verify that ID came back
-                    guard let _ = json!["body"]["id"].string else {
-                        failure(error: .UnexpectedJSONFormat(json))
+                    guard let _ = json["body"]["id"].string else {
+                        failure(error: .UnexpectedJSONFormat(json: json))
                         return
                     }
                     
-                    success(json: json!)
+                    success(json: json)
                 },
                 failure: {
                     error in
@@ -47,7 +62,7 @@ public class Drop : Base {
             FTAPI.request(.PUT, path: path, params: model,
                 success: {
                     json in
-                    success(json: json!)
+                    success(json: json)
                 },
                 failure: {
                     error in

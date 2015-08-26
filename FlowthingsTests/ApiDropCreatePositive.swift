@@ -142,7 +142,7 @@ extension APIDropCreateTests {
                 
                 let path = "/drop/" + conf.flowID + "/" + id
                 
-                self.api.drop.read(path,
+                self.api.drop.read(path: path,
                     success: {
                         json in
                         print(json)
