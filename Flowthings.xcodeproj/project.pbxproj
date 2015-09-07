@@ -16,6 +16,7 @@
 		8D0E03661B72784700D44014 /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03651B72784700D44014 /* Share.swift */; };
 		8D0E036A1B7278B900D44014 /* Elem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03691B7278B900D44014 /* Elem.swift */; };
 		8D1C2F071B759C20003F6329 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1C2F061B759C20003F6329 /* Base.swift */; };
+		8D1D96231B9CF83700D6AEE0 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D96221B9CF83700D6AEE0 /* Example.swift */; settings = {ASSET_TAGS = (); }; };
 		8D28A0761B8D29D100243B50 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC11151B72DDE00065FA37 /* Alamofire.framework */; };
 		8D28A0781B8D29D100243B50 /* SwiftWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBBDE5E1B6719BA0065CD3B /* SwiftWebSocket.framework */; };
 		8D28A07B1B8D37B200243B50 /* FTCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28A07A1B8D37B200243B50 /* FTCreate.swift */; settings = {ASSET_TAGS = (); }; };
@@ -64,6 +65,7 @@
 		8D0E03651B72784700D44014 /* Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
 		8D0E03691B7278B900D44014 /* Elem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elem.swift; sourceTree = "<group>"; };
 		8D1C2F061B759C20003F6329 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		8D1D96221B9CF83700D6AEE0 /* Example.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		8D28A07A1B8D37B200243B50 /* FTCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTCreate.swift; sourceTree = "<group>"; };
 		8D28A07C1B8D39CC00243B50 /* FTRead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTRead.swift; sourceTree = "<group>"; };
 		8D438D6F1B84D8B300FD70C1 /* StandardChecks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardChecks.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				8DD5FE671B7AA6ED00CBCB4F /* CheckString.swift */,
 				8D086E1F1B79123E006B39F6 /* Valid.swift */,
 				8D438D6F1B84D8B300FD70C1 /* StandardChecks.swift */,
+				8D1D96221B9CF83700D6AEE0 /* Example.swift */,
 			);
 			name = Validations;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				8D438D701B84D8B300FD70C1 /* StandardChecks.swift in Sources */,
 				8DD5FE6D1B7ACE2200CBCB4F /* Checks.swift in Sources */,
 				8D28A07B1B8D37B200243B50 /* FTCreate.swift in Sources */,
+				8D1D96231B9CF83700D6AEE0 /* Example.swift in Sources */,
 				8DBBDE591B6716300065CD3B /* Group.swift in Sources */,
 				8DD5FE681B7AA6ED00CBCB4F /* CheckString.swift in Sources */,
 				8DBBDE571B6716300065CD3B /* Flow.swift in Sources */,

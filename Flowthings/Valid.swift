@@ -99,14 +99,15 @@ public class Valid {
         
         //Make sure params are set if using empty init
         if !checkRequired { return }
-        
+
         for check in checkFor {
+            print("HERE")
             if params[check] == nil {
                 messages.append(check + " is missing")
                 isValid = false
             }
             else {
-
+                print("HERE")
                 //Run standard added sub tests first
                 if let tests = checks?.runStandard?[check] {
                     for test in tests {

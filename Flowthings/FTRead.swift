@@ -19,8 +19,6 @@ extension FTRead {
     FTRead is Protocol func extension
     
     - parameter path:    url (String)
-    - parameter success: Closure type: (body: JSON) -> ()
-    - parameter failure: Closure type: (error: FTAPIError) -> ()
     */
     public func read(path path: String) -> FTStream {
             

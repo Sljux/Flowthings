@@ -54,9 +54,8 @@ public class Checks {
     
     init (param: String, test: ValidTest){
         
-        let index : String = param
-        self.run[index] = ValidTests()
-        self.run[index]? = [test]
+        self.run[param] = ValidTests()
+        self.run[param]? = [test]
         
         self.runStandard = StandardChecks().run
         

@@ -43,6 +43,24 @@ public struct StandardChecks {
                 valid.addMessage("\"path: " + path + "\" is too short")
                 valid.isValid = false
             }
+            }],
+        "elems" : [{
+            valid, elems in
+            
+            guard 2 < 1 else {
+                return valid.addError("testing error")
+            }
+            
+            guard let e = elems as? ValidParams else {
+                return valid.addError("elems are not of type FlowParams alias: [String:AnyObject]")
+            }
+            
+            let json = JSON(e)
+            
+            guard json.count > 0 else {
+                return valid.addError("Sending empty elems")
+            }
+            
             }]
     ]
 

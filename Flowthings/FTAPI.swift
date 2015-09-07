@@ -133,6 +133,7 @@ public class FTAPI {
 //                    print(data)
                     switch data {
                     case .Success(let json):
+                        
                         let result: FTResult = FTAPI.validateJSON(json)
                         
                         switch result {
@@ -142,12 +143,14 @@ public class FTAPI {
                                 reject(error)
                         }
                         
-                    case .Failure(let data, let error):
-                        print(req)
-                        print(res)
-                        print(data)
-                        print(error)
-                        print("FAILED")
+                    case .Failure( _, let error):
+                        //print(error._code)
+                        
+                        if let code = error._code as Int? {
+                            
+                            let message = FTAPIError.errorCodeToString(code)
+                            reject(FTAPIError.connectionError(message))
+                        }
                         //TODO: Add better handling here
                         reject(.BadRequest)
                     }

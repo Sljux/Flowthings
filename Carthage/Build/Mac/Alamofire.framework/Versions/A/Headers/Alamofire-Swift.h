@@ -94,11 +94,6 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
 
-@interface NSMutableURLRequest (SWIFT_EXTENSION(Alamofire))
-@property (nonatomic, readonly) NSMutableURLRequest * __nonnull URLRequest;
-@end
-
-
 @interface NSURL (SWIFT_EXTENSION(Alamofire))
 @property (nonatomic, readonly, copy) NSString * __nonnull URLString;
 @end
@@ -108,6 +103,7 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 @property (nonatomic, readonly, copy) NSString * __nonnull URLString;
 @end
 
+@class NSMutableURLRequest;
 
 @interface NSURLRequest (SWIFT_EXTENSION(Alamofire))
 @property (nonatomic, readonly) NSMutableURLRequest * __nonnull URLRequest;
