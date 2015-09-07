@@ -13,7 +13,7 @@ public typealias ValidChecks = [String:ValidTests]
 public typealias ValidParams = [String:AnyObject]
 
 public protocol ValidChecksProtocol {
-
+    
     var checks : ValidChecks { get }
     
 }
@@ -37,27 +37,53 @@ public class Valid {
     public var isValid : Bool = true
     
     public var isFatal : Bool = false
-
+    
     var messages : [String] = []
-
+    
     var checks : Checks?
     var params : ValidParams = [:]
     var checkFor : [String] = []
     
     public var tests : [String:[() -> ()]] = [:]
     
-    public func getMessages() -> [String] {
-    
-        return messages
-    
+    public convenience init (checkFor: [String], params:ValidParams){
+        
+        let checks = Checks(checkFor: checkFor)
+        self.init(checks: checks, params: params)
+        
     }
-
+    
+    public init (checkFor: [String:AnyObject]){
+        
+        for (param, value) in checkFor {
+            check (param, value: value)
+        }
+    }
+    
+    public init(checks: Checks, params:ValidParams) {
+        
+        self.checkFor = checks.params
+        self.params = params
+        self.checks = checks
+        
+        if !checkRequired { return }
+        
+        check()
+        
+    }
+    
+    public func getMessages() -> [String] {
+        
+        return messages
+        
+    }
+    
     public func addMessage(message: String) {
         
         messages.append(message)
         
     }
-
+    
     public func addError(message: String) {
         
         messages.append(message)
@@ -81,40 +107,25 @@ public class Valid {
         return isValid
     }
     
-    public init (){}
-    
-    public init(checks: Checks, params:ValidParams) {
-    
-        self.checkFor = checks.params
-        self.params = params
-        self.checks = checks
-
-        if !checkRequired { return }
-        
-        check()
-    
-    }
-
     func check() {
         
         //Make sure params are set if using empty init
         if !checkRequired { return }
-
-        for check in checkFor {
-            print("HERE")
-            if params[check] == nil {
-                messages.append(check + " is missing")
+        
+        for param in checkFor {
+            
+            if params[param] == nil {
+                messages.append("Param: " + param + " is not provided")
                 isValid = false
             }
             else {
-                print("HERE")
                 //Run standard added sub tests first
-                if let tests = checks?.runStandard?[check] {
+                if let tests = checks?.runStandard?[param] {
                     for test in tests {
-                        if let value = params[check] as? CheckString {
+                        if let value = params[param] as? CheckString {
                             test(self, value)
                         }
-                        else if let value = params[check] {
+                        else if let value = params[param] {
                             //Any object test
                             test(self, value)
                         }
@@ -122,12 +133,12 @@ public class Valid {
                 }
                 
                 //Run manually added sub tests
-                if let tests = checks?.run[check] {
+                if let tests = checks?.run[param] {
                     for test in tests {
-                        if let value = params[check] as? CheckString {
+                        if let value = params[param] as? CheckString {
                             test(self, value)
                         }
-                        else if let value = params[check] {
+                        else if let value = params[param] {
                             //Any object test
                             test(self, value)
                         }
@@ -136,5 +147,70 @@ public class Valid {
                 
             }
         }
+        
+        //Additional standard checks
+        for (param,_) in params {
+            
+            //Skip those we explicitly checked already
+            if checkFor.contains(param) {
+                continue
+            }
+            
+            //Run standard added sub tests first
+            if let tests = checks?.runStandard?[param] {
+                for test in tests {
+                    if let value = params[param] as? CheckString {
+                        test(self, value)
+                    }
+                    else if let value = params[param] {
+                        //Any object test
+                        test(self, value)
+                    }
+                }
+            }
+            
+            
+        }
     }
+    
+    func check(param: String, value: AnyObject){
+        
+        //Run standard added sub tests first
+        if let tests = checks?.runStandard?[param] {
+            for test in tests {
+                if let value = value as? CheckString {
+                    test(self, value)
+                }
+                else {
+                    //Any object test
+                    test(self, value)
+                }
+            }
+        }
+        
+        //Run manually added sub tests
+        if let tests = checks?.run[param] {
+            for test in tests {
+                if let value = value as? CheckString {
+                    test(self, value)
+                }
+                else {
+                    //Any object test
+                    test(self, value)
+                }
+            }
+        }
+    }
+    
+    public func stream(action: ()->FTStream ) ->FTStream {
+        
+        if isValid  {
+            return action()
+        }
+        
+        return FTStream { _, _, reject, _ in
+            reject(.BadParams(messages: self.messages)) }
+        
+    }
+    
 }

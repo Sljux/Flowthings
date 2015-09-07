@@ -29,17 +29,21 @@ public class Checks {
         runStandard = standardChecks
     }
     
+    convenience init(checkFor: [String]){
 
-    convenience init(){
         self.init(standardChecks: StandardChecks().run)
+
+        for param in checkFor {
+            self.run[param] = ValidTests()
+        }
+        
     }
 
     init (param: String, tests: ValidTests,
         standardChecks: ValidChecks){
         
-        let index : String = param
-        self.run[index] = ValidTests()
-        self.run[index]? = tests
+        self.run[param] = ValidTests()
+        self.run[param] = tests
         self.runStandard = standardChecks
         
     }

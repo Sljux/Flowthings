@@ -45,7 +45,7 @@ public class FTAPI {
 //    lazy var mqtt = MQTT()
 //    lazy var rss = RSS()
     
-    lazy var valid = Valid()
+//    lazy var valid = Valid()
     
     static var headers : [String:String] = [:]
     

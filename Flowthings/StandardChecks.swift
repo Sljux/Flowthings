@@ -46,11 +46,7 @@ public struct StandardChecks {
             }],
         "elems" : [{
             valid, elems in
-            
-            guard 2 < 1 else {
-                return valid.addError("testing error")
-            }
-            
+                        
             guard let e = elems as? ValidParams else {
                 return valid.addError("elems are not of type FlowParams alias: [String:AnyObject]")
             }

@@ -16,24 +16,19 @@ extension FTCreate {
     
     /**
     
-    General flowthings.io api.service.create method
+    flowthings.io api.<service>.create method
     
     - parameter params:     ValidParams is typealias for [String:AnyObject], JSON standard swift format
     
+    - returns: FTStream
     */
     public func create(params params: ValidParams) -> FTStream {
         
+        let valid = Valid(checkFor: ["path", "elems"], params: params)
         
-        let checks = Checks()
-        
-        let valid = Valid(checks: checks, params: params)
-        
-        if valid.isValid  {
-            return FTAPI.request(.POST, path: baseURL, params: params)
+        return valid.stream  {
+            FTAPI.request(.POST, path: self.baseURL, params: params)
         }
-        
-        return FTStream { _, _, reject, _ in
-            reject(.BadParams(messages: valid.messages)) }
         
     }
     
