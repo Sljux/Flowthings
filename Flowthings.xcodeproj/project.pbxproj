@@ -10,7 +10,6 @@
 		8D086E201B79123E006B39F6 /* Valid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D086E1F1B79123E006B39F6 /* Valid.swift */; };
 		8D0B19B21B88CF0500D17EB8 /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B19B11B88CF0500D17EB8 /* BaseTests.swift */; };
 		8D0E035E1B72779200D44014 /* FTAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E035D1B72779200D44014 /* FTAPI.swift */; };
-		8D0E03601B72779F00D44014 /* FTWSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E035F1B72779F00D44014 /* FTWSS.swift */; };
 		8D0E03621B72782F00D44014 /* Identity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03611B72782F00D44014 /* Identity.swift */; };
 		8D0E03641B72783E00D44014 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03631B72783E00D44014 /* Token.swift */; };
 		8D0E03661B72784700D44014 /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03651B72784700D44014 /* Share.swift */; };
@@ -29,7 +28,6 @@
 		8D8468DC1B8E132D00FA15A6 /* SwiftTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8468DB1B8E132D00FA15A6 /* SwiftTask.framework */; };
 		8D89714E1B88FD5900CA2528 /* ApiDropCreatePositive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D89714D1B88FD5900CA2528 /* ApiDropCreatePositive.swift */; };
 		8D8971501B88FF1A00CA2528 /* ApiDropCreateNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D89714F1B88FF1A00CA2528 /* ApiDropCreateNegative.swift */; };
-		8DB3D22A1B9E48DA00670376 /* SwiftWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB3D2281B9E419400670376 /* SwiftWebSocket.framework */; };
 		8DBBDE341B6715D60065CD3B /* Flowthings.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DBBDE331B6715D60065CD3B /* Flowthings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DBBDE3B1B6715D60065CD3B /* Flowthings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBBDE301B6715D60065CD3B /* Flowthings.framework */; };
 		8DBBDE541B6716300065CD3B /* Creds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE4C1B6716300065CD3B /* Creds.swift */; };
@@ -59,7 +57,6 @@
 		8D086E1F1B79123E006B39F6 /* Valid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Valid.swift; sourceTree = "<group>"; };
 		8D0B19B11B88CF0500D17EB8 /* BaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTests.swift; sourceTree = "<group>"; };
 		8D0E035D1B72779200D44014 /* FTAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTAPI.swift; sourceTree = "<group>"; };
-		8D0E035F1B72779F00D44014 /* FTWSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWSS.swift; sourceTree = "<group>"; };
 		8D0E03611B72782F00D44014 /* Identity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identity.swift; sourceTree = "<group>"; };
 		8D0E03631B72783E00D44014 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		8D0E03651B72784700D44014 /* Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
@@ -77,8 +74,6 @@
 		8D8468DB1B8E132D00FA15A6 /* SwiftTask.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftTask.framework; path = Carthage/Build/iOS/SwiftTask.framework; sourceTree = "<group>"; };
 		8D89714D1B88FD5900CA2528 /* ApiDropCreatePositive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiDropCreatePositive.swift; sourceTree = "<group>"; };
 		8D89714F1B88FF1A00CA2528 /* ApiDropCreateNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiDropCreateNegative.swift; sourceTree = "<group>"; };
-		8DB3D2261B9E407B00670376 /* SwiftWebSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = text; name = SwiftWebSocket.framework; path = ../../Downloads/SwiftWebSocket.framework; sourceTree = "<group>"; };
-		8DB3D2281B9E419400670376 /* SwiftWebSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftWebSocket.framework; path = Carthage/Build/iOS/SwiftWebSocket.framework; sourceTree = "<group>"; };
 		8DBBDE301B6715D60065CD3B /* Flowthings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Flowthings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBBDE331B6715D60065CD3B /* Flowthings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flowthings.h; sourceTree = "<group>"; };
 		8DBBDE351B6715D60065CD3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,7 +100,6 @@
 			files = (
 				8D28A0761B8D29D100243B50 /* Alamofire.framework in Frameworks */,
 				8D8468DC1B8E132D00FA15A6 /* SwiftTask.framework in Frameworks */,
-				8DB3D22A1B9E48DA00670376 /* SwiftWebSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +137,6 @@
 		8DBBDE261B6715D60065CD3B = {
 			isa = PBXGroup;
 			children = (
-				8DB3D2281B9E419400670376 /* SwiftWebSocket.framework */,
-				8DB3D2261B9E407B00670376 /* SwiftWebSocket.framework */,
 				8DD5FE5A1B7A705500CBCB4F /* Debug.swift */,
 				8D8468DB1B8E132D00FA15A6 /* SwiftTask.framework */,
 				8DBC11151B72DDE00065FA37 /* Alamofire.framework */,
@@ -207,7 +199,6 @@
 				8D572D561B750D8400D29297 /* FTAPIError.swift */,
 				8DBBDE4C1B6716300065CD3B /* Creds.swift */,
 				8DBBDE4D1B6716300065CD3B /* Session.swift */,
-				8D0E035F1B72779F00D44014 /* FTWSS.swift */,
 				8DFA3A5F1B8E00AA00749D91 /* JSON.swift */,
 			);
 			name = Core;
@@ -398,7 +389,6 @@
 				8DBBDE561B6716300065CD3B /* Drop.swift in Sources */,
 				8D28A07D1B8D39CC00243B50 /* FTRead.swift in Sources */,
 				8D0E03661B72784700D44014 /* Share.swift in Sources */,
-				8D0E03601B72779F00D44014 /* FTWSS.swift in Sources */,
 				8DBBDE551B6716300065CD3B /* Session.swift in Sources */,
 				8D0E03641B72783E00D44014 /* Token.swift in Sources */,
 				8DD5FE5B1B7A705500CBCB4F /* Debug.swift in Sources */,
