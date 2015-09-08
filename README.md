@@ -99,10 +99,18 @@ You can also set creds in **Config.plist** inside of your app
 
 ![Setting Flowthings creds in Config.plist](https://www.evernote.com/l/AAoDCAMPFy1C8ZfSa_RRiKPLgSYQz0YoXOwB/image.png)
 
-#### Alternative FTStream chaining response (promise.then() style)
+#### Alternative FTStream chaining response (promise.then() style also optional progress included for monitoring of big requests)
 ```swift
   api.drop.create(params: params)
-		.then{
+  	.progress {
+                (oldProgress: Progress?, newProgress: Progress) in
+                print("IN.PROGRESS")
+                print("\(newProgress.bytesWritten)")
+                print("\(newProgress.totalBytesWritten)")
+                print("\(newProgress.totalBytesExpectedToWrite)")
+                
+            }
+	.then{
            value, error -> Value in
            print("IN.FIRST.THEN")
            if let _ = error {
@@ -111,20 +119,16 @@ You can also set creds in **Config.plist** inside of your app
 	       print("Value:", value?.type)
 	       return value!
        }
-		.then{
+	.then{
            value, error -> Value in
            print("IN.SECOND.THEN")
            ...
        }
-		.then{
-           value, error -> Value in
+	.then{
+           value, error -> Void in
            print("IN.THIRD.THEN")
            ...
-		}
-		.success {
-			value in
-			print(value)
-		}
+	}
 ```
 Note: Success in this one is called only if there was no error to start with
 
