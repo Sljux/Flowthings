@@ -62,7 +62,7 @@ Step 2.
 
 Setup Creds.
 ```swift
-  let api = FlowthingsAPI(
+  let api = FTAPI(
       accountID: "XXX",
       tokenID: "XXX"
   )
