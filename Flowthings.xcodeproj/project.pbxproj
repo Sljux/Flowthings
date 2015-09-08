@@ -31,7 +31,6 @@
 		8DBBDE341B6715D60065CD3B /* Flowthings.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DBBDE331B6715D60065CD3B /* Flowthings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DBBDE3B1B6715D60065CD3B /* Flowthings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBBDE301B6715D60065CD3B /* Flowthings.framework */; };
 		8DBBDE541B6716300065CD3B /* Creds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE4C1B6716300065CD3B /* Creds.swift */; };
-		8DBBDE551B6716300065CD3B /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE4D1B6716300065CD3B /* Session.swift */; };
 		8DBBDE561B6716300065CD3B /* Drop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE4E1B6716300065CD3B /* Drop.swift */; };
 		8DBBDE571B6716300065CD3B /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE4F1B6716300065CD3B /* Flow.swift */; };
 		8DBBDE581B6716300065CD3B /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE501B6716300065CD3B /* Track.swift */; };
@@ -80,7 +79,6 @@
 		8DBBDE3A1B6715D60065CD3B /* FlowthingsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowthingsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBBDE411B6715D60065CD3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DBBDE4C1B6716300065CD3B /* Creds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Creds.swift; sourceTree = "<group>"; };
-		8DBBDE4D1B6716300065CD3B /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		8DBBDE4E1B6716300065CD3B /* Drop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drop.swift; sourceTree = "<group>"; };
 		8DBBDE4F1B6716300065CD3B /* Flow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		8DBBDE501B6716300065CD3B /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
@@ -198,7 +196,6 @@
 				8D0E035D1B72779200D44014 /* FTAPI.swift */,
 				8D572D561B750D8400D29297 /* FTAPIError.swift */,
 				8DBBDE4C1B6716300065CD3B /* Creds.swift */,
-				8DBBDE4D1B6716300065CD3B /* Session.swift */,
 				8DFA3A5F1B8E00AA00749D91 /* JSON.swift */,
 			);
 			name = Core;
@@ -389,7 +386,6 @@
 				8DBBDE561B6716300065CD3B /* Drop.swift in Sources */,
 				8D28A07D1B8D39CC00243B50 /* FTRead.swift in Sources */,
 				8D0E03661B72784700D44014 /* Share.swift in Sources */,
-				8DBBDE551B6716300065CD3B /* Session.swift in Sources */,
 				8D0E03641B72783E00D44014 /* Token.swift in Sources */,
 				8DD5FE5B1B7A705500CBCB4F /* Debug.swift in Sources */,
 				8DFA3A601B8E00AA00749D91 /* JSON.swift in Sources */,

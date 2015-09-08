@@ -13,7 +13,6 @@ public protocol FTCreate {
 
 extension FTCreate {
     
-    
     /**
     
     flowthings.io api.<service>.create method
