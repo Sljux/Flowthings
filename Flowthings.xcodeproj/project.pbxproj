@@ -353,7 +353,6 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftWebSocket.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftTask.framework",
 			);
 			outputPaths = (
