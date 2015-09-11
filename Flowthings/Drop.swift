@@ -27,7 +27,10 @@ extension Drop {
             
         let path = baseURL + flowID
             
-        let valid = Valid(checkFor: ["flow_id", "elems"], params: params)
+        let valid = Valid(checkFor: ["elems"], params: params)
+        
+        //Check inline
+        valid.check("flow_id", value: flowID)
         
         return valid.stream  {
             FTAPI.request(.POST, path: path, params: params)

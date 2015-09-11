@@ -9,7 +9,6 @@
 
 import XCTest
 import Flowthings
-import SwiftyJSON
 
 struct TestResult {
     
@@ -32,15 +31,32 @@ class BaseTests : XCTestCase {
         result.fhash = "fhash not set"
     }
     
-    let api = FlowthingsAPI(accountID: conf.accountID, tokenID: conf.tokenID)
+    let api = FTAPI(accountID: conf.accountID, tokenID: conf.tokenID)
 
     //Shorthands
-    func fail(reason: String){
+    func report(reason: String) -> String {
         self.result.failOn = reason
         self.reportResults(false)
-        XCTFail(reason)
+        return reason
     }
-    
+
+    func report(valid: Valid) -> Bool {
+        
+        if valid.isValid { return true }
+
+        var reason = ""
+        var comma = ""
+        for message in valid.getMessages(){
+            reason += comma
+            reason += message
+            comma = ", "
+        }
+        
+        self.result.failOn = reason
+        self.reportResults(false)
+        return false
+    }
+
     func pass(){
         reportResults(true)
     }
@@ -81,18 +97,16 @@ class BaseTests : XCTestCase {
         
         params["elems"] = elems
         
-        api.drop.createOnFlowID(
-            flowID: conf.unitTestsFlowID,
-            params: params,
-            success: {
+        api.drop.createOnFlowID(conf.unitTestsFlowID, params: params)
+            .success {
             json in
-                //Nothing here
-            },
-            failure: {
+                print("test reported")
+            }
+            .failure {
                 error in
                 print(error)
                 XCTFail("Could not report to flowthings")
-        })
+        }
     
     }
     
@@ -101,4 +115,11 @@ class BaseTests : XCTestCase {
         super.tearDown()
     }
 
+}
+
+
+class TestLast : XCTestCase {
+    
+    func testNothing(){}
+    
 }

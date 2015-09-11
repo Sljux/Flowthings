@@ -17,44 +17,56 @@ public struct StandardChecks {
     
     public var run : ValidChecks = [
         
+        "id" : [{
+            valid, IDValue in
+            
+            guard let IDValue = IDValue as? String else {
+                return valid.addError("id is not of type String")
+            }
+            
+            if IDValue.isShorterThen(8) {
+                valid.addError("id String: \(IDValue) seems too short")
+            }
+            
+            }],
+        
         "flow_id" : [{
             valid, flow_id in
-            
+
             guard let flowID = flow_id as? CheckString else {
                 return valid.addError("flow_id is not type: String")
             }
             
             if flowID.isShorterThen(5){
-                valid.addMessage("\"flow_id: " + flowID + "\" is too short")
-                valid.isValid = false
+                valid.addError("\"flow_id: " + flowID + "\" is too short")
             }
+            
             }],
         
         "path" : [{
             valid, path in
-            
+
             guard let path = path as? CheckString else {
-                valid.addMessage("path is not type: String")
-                valid.isValid = false
-                return
+                return valid.addError("path is not type: String")
+                
             }
             
             if path.isShorterThen(5){
-                valid.addMessage("\"path: " + path + "\" is too short")
-                valid.isValid = false
+                valid.addError("\"path: " + path + "\" is too short")
             }
             }],
+        
         "elems" : [{
             valid, elems in
-                        
+
             guard let e = elems as? ValidParams else {
                 return valid.addError("elems are not of type FlowParams alias: [String:AnyObject]")
             }
             
             let json = JSON(e)
             
-            guard json.count > 0 else {
-                return valid.addError("Sending empty elems")
+            if json.count <= 0 {
+                valid.addError("Sending empty elems")
             }
             
             }]

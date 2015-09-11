@@ -23,7 +23,9 @@ extension FTRead {
     */
     public func read(path path: String) -> FTStream {
         
-        let valid = Valid(checkFor: ["path":path])
+        let valid = Valid()
+        
+        valid.check("path", value: path)
         
         return valid.stream  {
             FTAPI.request(.GET, path: path)
