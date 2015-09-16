@@ -36,6 +36,7 @@
 		8DBBDE581B6716300065CD3B /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE501B6716300065CD3B /* Track.swift */; };
 		8DBBDE591B6716300065CD3B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE511B6716300065CD3B /* Group.swift */; };
 		8DBBDE5B1B6716300065CD3B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE531B6716300065CD3B /* Location.swift */; };
+		8DBDDF8A1BA8FD1600BDDBA2 /* FTDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBDDF891BA8FD1600BDDBA2 /* FTDelete.swift */; settings = {ASSET_TAGS = (); }; };
 		8DD5FE5B1B7A705500CBCB4F /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE5A1B7A705500CBCB4F /* Debug.swift */; };
 		8DD5FE681B7AA6ED00CBCB4F /* CheckString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE671B7AA6ED00CBCB4F /* CheckString.swift */; };
 		8DD5FE6D1B7ACE2200CBCB4F /* Checks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE6C1B7ACE2200CBCB4F /* Checks.swift */; };
@@ -85,6 +86,7 @@
 		8DBBDE511B6716300065CD3B /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		8DBBDE531B6716300065CD3B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		8DBC11151B72DDE00065FA37 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		8DBDDF891BA8FD1600BDDBA2 /* FTDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDelete.swift; sourceTree = "<group>"; };
 		8DD5FE5A1B7A705500CBCB4F /* Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Debug.swift; path = Flowthings/Debug.swift; sourceTree = "<group>"; };
 		8DD5FE671B7AA6ED00CBCB4F /* CheckString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckString.swift; sourceTree = "<group>"; };
 		8DD5FE6C1B7ACE2200CBCB4F /* Checks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checks.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				8D1C2F061B759C20003F6329 /* Base.swift */,
 				8D28A07A1B8D37B200243B50 /* FTCreate.swift */,
 				8D28A07C1B8D39CC00243B50 /* FTRead.swift */,
+				8DBDDF891BA8FD1600BDDBA2 /* FTDelete.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				8D0E03621B72782F00D44014 /* Identity.swift in Sources */,
 				8D1C2F071B759C20003F6329 /* Base.swift in Sources */,
 				8D0E036A1B7278B900D44014 /* Elem.swift in Sources */,
+				8DBDDF8A1BA8FD1600BDDBA2 /* FTDelete.swift in Sources */,
 				8DBBDE561B6716300065CD3B /* Drop.swift in Sources */,
 				8D28A07D1B8D39CC00243B50 /* FTRead.swift in Sources */,
 				8D0E03661B72784700D44014 /* Share.swift in Sources */,
