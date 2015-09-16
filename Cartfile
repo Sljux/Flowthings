@@ -2,7 +2,7 @@
 #github "tidwall/SwiftWebSocket"
 
 # Alamofire - net
-github "Alamofire/Alamofire" "swift-2.0"
+github "Alamofire/Alamofire" "2.0.0"
 
 #State machine, promise, cancel, retry, etc
 github "ReactKit/SwiftTask" "swift/2.0"
