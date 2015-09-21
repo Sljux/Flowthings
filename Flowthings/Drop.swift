@@ -6,7 +6,7 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
-public class Drop: FTRead, FTCreate {
+public class Drop: FTRead {
     
     public var baseURL = "/drop/"
     
@@ -15,6 +15,40 @@ public class Drop: FTRead, FTCreate {
 /** Drop Specific Methods */
 extension Drop {
     
+    
+    /**
+    
+    flowthings.io api.<service>.create method
+    
+    - parameter params:     ValidParams is typealias for [String:AnyObject], JSON standard swift format, has to have valid path and elems 
+    
+    elems
+    A map of data elements for the Drop. Values in the map may be of any data type that flowthings.io supports. If the type is not one that JSON supports, it must be supplied. See Drop Data Types for a list of types which must be specified in a {type:..., value:...} mapping.
+    
+    path
+    The path of the Flow where the Drop is to be written
+    
+    Optional:
+    
+    location
+    A location for the Drop. For more on specification options, see Location Data.
+    
+    fhash
+    Unique Drop hash value. System generated if Drop is created with fhash as a top-level property. See FHashes for further information.
+
+    
+    - returns: FTStream
+    */
+    public func create(params params: ValidParams) -> FTStream {
+        
+        let valid = Valid(checkFor: ["path", "elems"], params: params)
+        
+        return valid.stream  {
+            FTAPI.request(.POST, path: self.baseURL, params: params)
+        }
+        
+    }
+
     /**
     Alternative Drop Create using flow_id instead of path
     
@@ -27,7 +61,10 @@ extension Drop {
             
         let path = baseURL + flowID
             
-        let valid = Valid(checkFor: ["flow_id", "elems"], params: params)
+        let valid = Valid(checkFor: ["elems"], params: params)
+        
+        //Check inline
+        valid.check("flow_id", value: flowID)
         
         return valid.stream  {
             FTAPI.request(.POST, path: path, params: params)

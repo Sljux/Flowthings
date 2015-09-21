@@ -1,32 +1,32 @@
 //
-//  FTCreate.swift
+//  FTDelete.swift
 //  Flowthings
 //
-//  Created by Ceco on 8/26/15.
+//  Created by Ceco on 9/16/15.
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
-public protocol FTCreate {
+public protocol FTDelete {
     
     var baseURL : String { get }
 }
 
-extension FTCreate {
+extension FTDelete {
     
     /**
     
-    flowthings.io api.<service>.create method
+    flowthings.io api.<service>.delete method
     
     - parameter params:     ValidParams is typealias for [String:AnyObject], JSON standard swift format
     
     - returns: FTStream
     */
-    public func create(params params: ValidParams) -> FTStream {
+    public func delete(params params: ValidParams) -> FTStream {
         
-        let valid = Valid(checkFor: ["path"], params: params)
+        let valid = Valid(checkFor: ["path", "elems"], params: params)
         
         return valid.stream  {
-            FTAPI.request(.POST, path: self.baseURL, params: params)
+            FTAPI.request(.DELETE, path: self.baseURL, params: params)
         }
         
     }

@@ -55,9 +55,19 @@ public class Valid {
     
     public init (checkFor: [String:AnyObject]){
         
+        let checks = Checks()
+        self.checkFor = checks.params
+        self.checks = checks
+        
         for (param, value) in checkFor {
             check (param, value: value)
         }
+    }
+
+    public init (){
+        let checks = Checks()
+        self.checkFor = checks.params
+        self.checks = checks
     }
     
     public init(checks: Checks, params:ValidParams) {
@@ -84,10 +94,11 @@ public class Valid {
         
     }
     
+    //Shortcut
     public func addError(message: String) {
         
-        messages.append(message)
-        isValid = false
+        self.isValid = false
+        self.messages.append(message)
         
     }
     
@@ -173,7 +184,7 @@ public class Valid {
         }
     }
     
-    func check(param: String, value: AnyObject){
+    public func check(param: String, value: AnyObject){
         
         //Run standard added sub tests first
         if let tests = checks?.runStandard?[param] {
@@ -210,7 +221,6 @@ public class Valid {
         
         return FTStream { _, _, reject, _ in
             reject(.BadParams(messages: self.messages)) }
-        
     }
     
 }

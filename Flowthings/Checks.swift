@@ -29,7 +29,7 @@ public class Checks {
         runStandard = standardChecks
     }
     
-    convenience init(checkFor: [String]){
+    public convenience init(checkFor: [String]){
 
         self.init(standardChecks: StandardChecks().run)
 
@@ -39,6 +39,12 @@ public class Checks {
         
     }
 
+    public convenience init(){
+        
+        self.init(standardChecks: StandardChecks().run)
+                
+    }
+    
     init (param: String, tests: ValidTests,
         standardChecks: ValidChecks){
         
