@@ -1,0 +1,8 @@
+# Websocket - web sockets
+#github "tidwall/SwiftWebSocket"
+
+# Alamofire - net
+github "Alamofire/Alamofire"
+
+#State machine, promise, cancel, retry, etc
+github "ReactKit/SwiftTask" "swift/2.0"
