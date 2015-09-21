@@ -3,10 +3,10 @@
 
 Flowthings is an flowthings.io library written in Swift.
 
-## Requirements
+## Requirements v0.3.7
 
 - iOS 8.0+ / Mac OS X 10.9+ / watchOS 2
-- Xcode 7.0 beta 6+
+- Xcode 7.0+
 
 ## Installation
 
