@@ -25,7 +25,6 @@
 		8D5101991B7562F50043D778 /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5101981B7562F50043D778 /* TestConfig.swift */; };
 		8D572D551B7509C700D29297 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D572D541B7509C700D29297 /* Config.swift */; };
 		8D572D571B750D8400D29297 /* FTAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D572D561B750D8400D29297 /* FTAPIError.swift */; };
-		8D8468DC1B8E132D00FA15A6 /* SwiftTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8468DB1B8E132D00FA15A6 /* SwiftTask.framework */; };
 		8D89714E1B88FD5900CA2528 /* FTDropCreatePositive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D89714D1B88FD5900CA2528 /* FTDropCreatePositive.swift */; };
 		8D8971501B88FF1A00CA2528 /* FTDropCreateNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D89714F1B88FF1A00CA2528 /* FTDropCreateNegative.swift */; };
 		8DBBDE341B6715D60065CD3B /* Flowthings.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DBBDE331B6715D60065CD3B /* Flowthings.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -99,7 +98,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D28A0761B8D29D100243B50 /* Alamofire.framework in Frameworks */,
-				8D8468DC1B8E132D00FA15A6 /* SwiftTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

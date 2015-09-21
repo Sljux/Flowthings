@@ -3,15 +3,61 @@ All notable changes to this project will be documented in this file.
 `Alamofire` adheres to [Semantic Versioning](http://semver.org/).
 
 #### 2.x Releases
-
-- `2.0.x` Releases - [2.0.0-beta.1](#200-beta1) | [2.0.0-beta.2](#200-beta2) | [2.0.0-beta.3](#200-beta3) | [2.0.0-beta.4](#200-beta4)
+- `2.0.x` Releases - [2.0.0](#200) | [2.0.1](#201) | [2.0.2](#202)
+- `2.0.0` Betas - [2.0.0-beta.1](#200-beta1) | [2.0.0-beta.2](#200-beta2) | [2.0.0-beta.3](#200-beta3) | [2.0.0-beta.4](#200-beta4)
 
 #### 1.x Releases
-
 - `1.3.x` Releases - [1.3.0](#130) | [1.3.1](#131)
 - `1.2.x` Releases - [1.2.0](#120) | [1.2.1](#121) | [1.2.2](#122) | [1.2.3](#123)
 - `1.1.x` Releases - [1.1.0](#110) | [1.1.1](#111) | [1.1.2](#112) | [1.1.3](#113) | [1.1.4](#114) | [1.1.5](#115)
 - `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101)
+
+---
+
+## [2.0.2](https://github.com/Alamofire/Alamofire/releases/tag/2.0.2)
+Released on 2015-09-20. All issues associated with this milestone can be found using this
+[filter](https://github.com/Alamofire/Alamofire/issues?utf8=✓&q=milestone%3A2.0.2).
+
+#### Updated
+- The Embedded Framework documentation to include `git init` info.
+  - Updated by [Christian Noon](https://github.com/cnoon) in regards to Issue
+  [#782](https://github.com/Alamofire/Alamofire/issues/782).
+
+#### Fixed
+- Alamofire iOS framework target by adding Alamofire iOS Tests as Target Dependency.
+  - Fixed by [Nicky Gerritsen](https://github.com/nickygerritsen) in Pull Request
+  [#780](https://github.com/Alamofire/Alamofire/pull/780).
+- Percent encoding issue for long Chinese strings using URL parameter encoding.
+  - Fixed by [Christian Noon](https://github.com/cnoon) in regards to Issue
+  [#206](https://github.com/Alamofire/Alamofire/issues/206).
+
+## [2.0.1](https://github.com/Alamofire/Alamofire/releases/tag/2.0.1)
+Released on 2015-09-16. All issues associated with this milestone can be found using this 
+[filter](https://github.com/Alamofire/Alamofire/issues?utf8=✓&q=milestone%3A2.0.1).
+
+#### Updated
+- The CocoaPods installation instructions in the README.
+  - Updated by [Christian Noon](https://github.com/cnoon).
+- The Carthage installation instructions in the README.
+  - Updated by [Gustavo Barbosa](https://github.com/barbosa) in Pull Request
+  [#759](https://github.com/Alamofire/Alamofire/pull/759).
+
+#### Fixed
+- The link to the 2.0 migration guide in the README.
+  - Fixed by [Dwight Watson](https://github.com/dwightwatson) in Pull Request
+  [#750](https://github.com/Alamofire/Alamofire/pull/750).
+- Issue where NTLM authentication credentials were not used for authentication challenges.
+  - Fixed by [Christian Noon](https://github.com/cnoon) in regards to Issue
+  [#721](https://github.com/Alamofire/Alamofire/pull/721).
+
+## [2.0.0](https://github.com/Alamofire/Alamofire/releases/tag/2.0.0)
+Released on 2015-09-09. All issues associated with this milestone can be found using this 
+[filter](https://github.com/Alamofire/Alamofire/issues?utf8=✓&q=milestone%3A2.0.0).
+
+#### Added
+- A new `URLEncodedInURL` case to the `ParameterEncoding` for encoding in the URL.
+  - Added by [Christian Noon](https://github.com/cnoon) in Pull Request
+  [#742](https://github.com/Alamofire/Alamofire/pull/742).
 
 ---
 
@@ -20,7 +66,6 @@ Released on 2015-09-06. All issues associated with this milestone can be found u
 [filter](https://github.com/Alamofire/Alamofire/issues?utf8=✓&q=milestone%3A2.0.0-beta.4).
 
 #### Added
-
 - The `parameters` and `encoding` parameters to download APIs.
   - Added by [Christian Noon](https://github.com/cnoon) in regards to Issue
   [#719](https://github.com/Alamofire/Alamofire/issues/719).
@@ -42,7 +87,6 @@ Released on 2015-09-06. All issues associated with this milestone can be found u
   - Added by [Christian Noon](https://github.com/cnoon).
 
 #### Updated
-
 - Response serialization to prevent unnecessary call to response serializer.
   - Updated by [Julien Ducret](https://github.com/brocoo) in Pull Request
   [#716](https://github.com/Alamofire/Alamofire/pull/716).
@@ -65,12 +109,10 @@ Released on 2015-09-06. All issues associated with this milestone can be found u
   - Updated by [Christian Noon](https://github.com/cnoon).
 
 #### Removed
-
 - The AFNetworking sections from the FAQ in the README.
   - Removed by [Christian Noon](https://github.com/cnoon).
 
 #### Fixed
-
 - Issue on Windows where the wildcarded cert name in the test suite included asterisk.
   - Fixed by [Christian Noon](https://github.com/cnoon) in regards to Issue
   [#723](https://github.com/Alamofire/Alamofire/issues/723).
