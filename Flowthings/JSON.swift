@@ -58,6 +58,15 @@ public struct JSON {
         }
     }
     
+    public init(string: String) throws {
+        do {
+        	let data: NSData = string.dataUsingEncoding(NSUTF8StringEncoding)!
+            try self.init(data: data)
+        } catch {
+            throw JSONError.InvalidData(error: error)
+        }
+    }
+    
     /// Initalize JSON from AnyObject
     init(_ object: AnyObject) {
         self.parsedData = object
@@ -212,6 +221,20 @@ extension JSON {
     
     public var bool : Bool? {
         return self.parsedData as? Bool
+    }
+    
+}
+
+//MARK: - Conversion to String
+extension JSON {
+    
+    public func toString() throws -> String {
+        do {
+            let data = try NSJSONSerialization.dataWithJSONObject(self.parsedData, options: NSJSONWritingOptions(rawValue: 0))
+            return NSString(data: data, encoding: NSASCIIStringEncoding)! as String
+        } catch {
+        	throw JSONError.InvalidData(error: error)
+        }
     }
     
 }

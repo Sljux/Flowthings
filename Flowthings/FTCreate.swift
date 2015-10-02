@@ -9,21 +9,15 @@
 public protocol FTCreate {
     
     var baseURL : String { get }
+    var createRequiredParams : [String] { get }
+    
 }
 
 extension FTCreate {
     
-    /**
-    
-    flowthings.io api.<service>.create method
-    
-    - parameter params:     ValidParams is typealias for [String:AnyObject], JSON standard swift format
-    
-    - returns: FTStream
-    */
-    public func create(params params: ValidParams) -> FTStream {
+    public func create(params: ValidParams) -> FTStream {
         
-        let valid = Valid(checkFor: ["path"], params: params)
+        let valid = Valid(checkFor: createRequiredParams, params: params)
         
         return valid.stream  {
             FTAPI.request(.POST, path: self.baseURL, params: params)

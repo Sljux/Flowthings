@@ -6,19 +6,16 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
-struct Identity {
-    var baseURL : String { return "/identity/" }
+public class Identity : FTRead, FTFind, FTUpdate {
     
-    func read(
-        identityID: String,
-        success: (body: JSON)->(),
-        failure: (error: FTAPIError)->()){
-            
-        let path = baseURL + identityID
-            
-            FTAPI.request(.GET, path: path)
+    public var baseURL = "/identity/"
+    
+}
+
+extension Identity {
+    
+    public func read() -> FTStream {
+        return FTAPI.request(.GET, path: self.baseURL)
     }
     
-    //func find(){}
-    //func update(){}
 }

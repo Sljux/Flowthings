@@ -6,26 +6,9 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
-import Foundation
-
-
-struct Group {
+public class Group : FTCreate, FTRead, FTUpdate, FTDelete, FTFind {
     
-    var id : String?
-    // Group ID
+    public var baseURL = "/group/"
+    public var createRequiredParams = ["memberIds"]
     
-    var displayName : String?
-    // A descriptive name for the Group
-    
-    var description : String?
-    // Further information used to describe the Group
-    
-    var memberIds : [String]?
-    // A list of Identity IDs corresponding to the members of the Group.
-    
-    func create(){}
-    func read(){}
-    func find(){}
-    func update(){}
-    func delete(){}
 }

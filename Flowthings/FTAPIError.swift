@@ -13,11 +13,13 @@ public enum FTAPIError : ErrorType {
     case JSONIsNil
     case HeaderStatusIsMissing
     case UnsupportedMethod(FTMethod)
+    case JSONInvalid
  
     //Header Codes
     case BadRequest
     case Unauthorized
     case ServiceUnavailable
+    case MessageIdMissing
     
     case MessagesMissing
     case Errors(errors: [String])
@@ -29,12 +31,13 @@ public enum FTAPIError : ErrorType {
     
     //Anomalies
     case BodyIsMissing
-
     case UserCanceled
-    
     case UnknownError
-
-    case connectionError(String)
+    case ConnectionError(String)
+    case ResourseIdMissing
+    case SessionIdMissing
+    case LocationIsMissing
+    case TokenIsMissing
     
     static func errorCodeToString (code: Int) -> String {
     

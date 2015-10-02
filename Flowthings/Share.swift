@@ -6,11 +6,9 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
-import Foundation
-
-public class Share {
+public class Share : FTCreate, FTRead, FTDelete {
     
-//    func create(){}
-//    func read(){}
-//    func delete(){}
+    public var baseURL : String = "/share/"
+    public var createRequiredParams : [String] = ["paths", "issuedTo"]
+    
 }

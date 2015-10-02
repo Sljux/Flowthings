@@ -6,12 +6,9 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
-public struct Track {
+public struct Track : FTCreate, FTRead, FTUpdate, FTDelete {
     
-    var base = Base(baseURL : "/track/")
+    public var baseURL : String = "/track/"
+    public var createRequiredParams : [String] = ["source", "destination"]
     
-    func simulate (path: String, params: ValidParams) -> FTStream {
-            
-        return FTAPI.request(.PUT, path: path, params: params)
-    }
 }

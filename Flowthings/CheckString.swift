@@ -55,7 +55,6 @@ extension CheckString {
     }
     
     func isMatch(pattern: String) -> Bool {
-        
         let regex = try! NSRegularExpression(pattern: pattern,
             options: [.CaseInsensitive])
         
@@ -63,26 +62,22 @@ extension CheckString {
             range: NSMakeRange(0, utf16.count)) != nil
     }
     
-    func contains(s: String) -> Bool
-    {
-        return (self.rangeOfString(s) != nil) ? true : false
+    func contains(s: String) -> Bool {
+        return self.rangeOfString(s) != nil
     }
     
-    func replace(target: String, withString: String) -> String
-    {
+    func replace(target: String, withString: String) -> String {
         return self.stringByReplacingOccurrencesOfString(target, withString: withString, options: NSStringCompareOptions.LiteralSearch, range: nil)
     }
     
-    subscript (i: Int) -> Character
-        {
+    subscript (i: Int) -> Character {
         get {
             let index = startIndex.advancedBy(i)
             return self[index]
         }
     }
     
-    subscript (r: Range<Int>) -> String
-        {
+    subscript (r: Range<Int>) -> String {
         get {
             let startIndex = self.startIndex.advancedBy(r.startIndex)
             let endIndex = self.startIndex.advancedBy(r.endIndex - 1)
@@ -91,15 +86,13 @@ extension CheckString {
         }
     }
     
-    func subString(startIndex: Int, length: Int) -> String
-    {
+    func subString(startIndex: Int, length: Int) -> String {
         let start = self.startIndex.advancedBy(startIndex)
         let end = self.startIndex.advancedBy(startIndex + length)
         return self.substringWithRange(Range<String.Index>(start: start, end: end))
     }
     
-    func indexOf(target: String) -> Int{
-        
+    func indexOf(target: String) -> Int {
         let range = self.rangeOfString(target)
         if let range = range {
             return self.startIndex.distanceTo(range.startIndex)
@@ -108,8 +101,7 @@ extension CheckString {
         }
     }
     
-    func indexOf(target: String, startIndex: Int) -> Int
-    {
+    func indexOf(target: String, startIndex: Int) -> Int {
         let startRange = self.startIndex.advancedBy(startIndex)
         
         let range = self.rangeOfString(target, options: NSStringCompareOptions.LiteralSearch, range: Range<String.Index>(start: startRange, end: self.endIndex))
@@ -121,8 +113,7 @@ extension CheckString {
         }
     }
     
-    func lastIndexOf(target: String) -> Int
-    {
+    func lastIndexOf(target: String) -> Int {
         var index = -1
         var stepIndex = self.indexOf(target)
         while stepIndex > -1
@@ -138,12 +129,12 @@ extension CheckString {
     }
     
     private var vowels: [String] {
-        get{
+        get {
             return ["a", "e", "i", "o", "u"]
         }
     }
     
-    private var consonants: [String]{
+    private var consonants: [String] {
         get {
             return ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"]
         }

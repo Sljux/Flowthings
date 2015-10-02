@@ -6,12 +6,9 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
-import Foundation
-
-struct Token {
+public class Token : FTCreate, FTRead, FTDelete {
     
-    func create(){}
-    func read(){}
-    func delete(){}
-
+    public var baseURL = "/token/"
+    public var createRequiredParams : [String] = ["paths"]
+    
 }

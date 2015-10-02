@@ -25,11 +25,11 @@ public class Checks {
     }
 
 
-    init(standardChecks: ValidChecks){
+    init(standardChecks: ValidChecks) {
         runStandard = standardChecks
     }
     
-    public convenience init(checkFor: [String]){
+    public convenience init(checkFor: [String]) {
 
         self.init(standardChecks: StandardChecks().run)
 
@@ -39,14 +39,13 @@ public class Checks {
         
     }
 
-    public convenience init(){
+    public convenience init() {
         
         self.init(standardChecks: StandardChecks().run)
                 
     }
     
-    init (param: String, tests: ValidTests,
-        standardChecks: ValidChecks){
+    init (param: String, tests: ValidTests, standardChecks: ValidChecks) {
         
         self.run[param] = ValidTests()
         self.run[param] = tests
@@ -54,15 +53,13 @@ public class Checks {
         
     }
 
-    convenience init (param: String, tests: ValidTests){
+    convenience init (param: String, tests: ValidTests) {
         
-        self.init(param: param,
-            tests: tests,
-            standardChecks: StandardChecks().run)
+        self.init(param: param, tests: tests, standardChecks: StandardChecks().run)
         
     }
     
-    init (param: String, test: ValidTest){
+    init (param: String, test: ValidTest) {
         
         self.run[param] = ValidTests()
         self.run[param]? = [test]
@@ -81,7 +78,7 @@ public class Checks {
         - [`ValidTest`](ValidTest)
         - Valid
     */
-    public func add(param: String, test: ValidTest){
+    public func add(param: String, test: ValidTest) {
         
         if run[param] == nil {
             run[param] = []
@@ -90,7 +87,7 @@ public class Checks {
         run[param]?.append(test)
     }
 
-    public func add(param: String, tests: ValidTests){
+    public func add(param: String, tests: ValidTests) {
         
         if run[param] == nil {
             run[param] = []

@@ -1,8 +1,9 @@
+#Promises
+github "mxcl/PromiseKit" "37d5685ab427bd27f8d3d7322bf8dd51ebb44ea6"
+
 # Websocket - web sockets
-#github "tidwall/SwiftWebSocket"
+github "tidwall/SwiftWebSocket"
 
 # Alamofire - net
 github "Alamofire/Alamofire"
 
-#State machine, promise, cancel, retry, etc
-github "ReactKit/SwiftTask" "swift/2.0"

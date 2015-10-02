@@ -11,7 +11,7 @@ public struct Creds {
     let accountID : String?
     let tokenID : String?
     
-    init(accountID: String, tokenID: String){
+    init(accountID: String, tokenID: String) {
         self.accountID = accountID
         self.tokenID = tokenID
     }

@@ -1,2 +1,4 @@
 github "Alamofire/Alamofire" "2.0.2"
-github "ReactKit/SwiftTask" "bbff1f2ceda80dabc3f4cda92ed8506e21320ccc"
+github "mxcl/OMGHTTPURLRQ" "3.0.0"
+github "tidwall/SwiftWebSocket" "v2.1.1"
+github "mxcl/PromiseKit" "37d5685ab427bd27f8d3d7322bf8dd51ebb44ea6"

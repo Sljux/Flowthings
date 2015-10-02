@@ -11,7 +11,7 @@ struct Config {
     static var accountID: String? = ""
     static var tokenID: String? = ""
     
-    static let domain = "api.flowthings.io"
+    static let domain = "flowthings.io"
     static let apiVersion = "v0.1"
     static let secure = true
     
@@ -20,7 +20,7 @@ struct Config {
     
     - returns: Config object or kicks off assert 
     */
-    init(){
+    init() {
     
         //.gitignore hides Config.plist - to avoid commiting tokens
         if let path = NSBundle.mainBundle().pathForResource("Config", ofType: "plist") {
@@ -37,15 +37,14 @@ struct Config {
         assert(false, "Config.plist has to have accountID and tokenID for this init to work")
     }
 
-    init(accountID: String, tokenID: String){
-        
+    init(accountID: String, tokenID: String) {
         Config.accountID = accountID
         Config.tokenID = tokenID
     }
 
-    static func url(path: String) -> NSURL? {
+    static func url(path: String, type: URLType = .API) -> NSURL? {
         
-        guard   let accountID = Config.accountID,
+        guard let accountID = Config.accountID,
             let _ = Config.tokenID else {
                 print("Set creds first with Creds(accountID, tokenID)")
                 return nil
@@ -56,8 +55,11 @@ struct Config {
             url += "s"
         }
         
-        url += "://" + Config.domain + "/"
-        url += Config.apiVersion + "/" + accountID
+        url += "://" + type.rawValue + "." + Config.domain
+        
+        if type == .API {
+	        url += "/" + Config.apiVersion + "/" + accountID
+        }
         
         //fix helper in case path is not starting with /
         if "/" != path.characters.first! {

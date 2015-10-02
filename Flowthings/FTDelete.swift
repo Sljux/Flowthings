@@ -13,20 +13,13 @@ public protocol FTDelete {
 
 extension FTDelete {
     
-    /**
-    
-    flowthings.io api.<service>.delete method
-    
-    - parameter params:     ValidParams is typealias for [String:AnyObject], JSON standard swift format
-    
-    - returns: FTStream
-    */
-    public func delete(params params: ValidParams) -> FTStream {
+    public func delete(id: String) -> FTStream {
         
-        let valid = Valid(checkFor: ["path", "elems"], params: params)
+        let valid = Valid()
+        valid.check("id", value: id)
         
         return valid.stream  {
-            FTAPI.request(.DELETE, path: self.baseURL, params: params)
+            FTAPI.request(.DELETE, path: self.baseURL + id)
         }
         
     }

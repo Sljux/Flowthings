@@ -7,18 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C25B3E61BB4187D0020A3AC /* WSFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C25B3E51BB4187D0020A3AC /* WSFlow.swift */; };
+		2C25B3E81BB418D50020A3AC /* FTWSSubscribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C25B3E71BB418D50020A3AC /* FTWSSubscribe.swift */; };
+		2C287BD71BBEAC1600C5DC14 /* FTFlowFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C287BD61BBEAC1600C5DC14 /* FTFlowFind.swift */; settings = {ASSET_TAGS = (); }; };
+		2C287BD91BBEAC3500C5DC14 /* FTFlowFindPositive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C287BD81BBEAC3500C5DC14 /* FTFlowFindPositive.swift */; settings = {ASSET_TAGS = (); }; };
+		2C287BDE1BBEC1EA00C5DC14 /* FTTokenIntegral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C287BDD1BBEC1EA00C5DC14 /* FTTokenIntegral.swift */; settings = {ASSET_TAGS = (); }; };
+		2C287BE01BBEC7AB00C5DC14 /* MQTT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C287BDF1BBEC7AB00C5DC14 /* MQTT.swift */; settings = {ASSET_TAGS = (); }; };
+		2C287BE21BBECA5D00C5DC14 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C287BE11BBECA5D00C5DC14 /* Device.swift */; settings = {ASSET_TAGS = (); }; };
+		2C287BE41BBECB3900C5DC14 /* ApiTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C287BE31BBECB3900C5DC14 /* ApiTask.swift */; settings = {ASSET_TAGS = (); }; };
+		2C287BE61BBECC6600C5DC14 /* RSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C287BE51BBECC6600C5DC14 /* RSS.swift */; settings = {ASSET_TAGS = (); }; };
+		2C5EE0131BB2BE1400485A72 /* FTWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5EE0121BB2BE1400485A72 /* FTWebSocket.swift */; };
+		2C5EE0161BB2C36500485A72 /* FTWebSocketConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5EE0151BB2C36500485A72 /* FTWebSocketConnect.swift */; };
+		2C5EE0181BB2C58F00485A72 /* SwiftWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5EE0171BB2C58F00485A72 /* SwiftWebSocket.framework */; };
+		2C5EE01C1BB2CFF700485A72 /* WSConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5EE01B1BB2CFF700485A72 /* WSConnection.swift */; };
+		2C5EE01E1BB2D84F00485A72 /* FTWebSocketSubscribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5EE01D1BB2D84F00485A72 /* FTWebSocketSubscribe.swift */; };
+		2C66D83F1BBD39CD00EA3506 /* FTDropAggregate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D83E1BBD39CD00EA3506 /* FTDropAggregate.swift */; settings = {ASSET_TAGS = (); }; };
+		2C66D8411BBD39ED00EA3506 /* FTDropAggregatePositive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D8401BBD39ED00EA3506 /* FTDropAggregatePositive.swift */; settings = {ASSET_TAGS = (); }; };
+		2C66D8431BBD3D8B00EA3506 /* FTDropAggregateNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D8421BBD3D8B00EA3506 /* FTDropAggregateNegative.swift */; settings = {ASSET_TAGS = (); }; };
+		2C66D8461BBD3FFE00EA3506 /* FTDropDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D8451BBD3FFE00EA3506 /* FTDropDelete.swift */; settings = {ASSET_TAGS = (); }; };
+		2C66D8481BBD40F600EA3506 /* FTDropDeletePositive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D8471BBD40F600EA3506 /* FTDropDeletePositive.swift */; settings = {ASSET_TAGS = (); }; };
+		2C66D84A1BBD436600EA3506 /* FTDropDeleteNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D8491BBD436600EA3506 /* FTDropDeleteNegative.swift */; settings = {ASSET_TAGS = (); }; };
+		2C66D84F1BBD470900EA3506 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D84E1BBD470900EA3506 /* BaseTest.swift */; settings = {ASSET_TAGS = (); }; };
+		2C66D8511BBD47E900EA3506 /* FTFlowCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D8501BBD47E900EA3506 /* FTFlowCreate.swift */; settings = {ASSET_TAGS = (); }; };
+		2C66D8531BBD482600EA3506 /* FTFlowCreateNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D8521BBD482600EA3506 /* FTFlowCreateNegative.swift */; settings = {ASSET_TAGS = (); }; };
+		2C66D8551BBD49DA00EA3506 /* FTFlowIntegral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D8541BBD49DA00EA3506 /* FTFlowIntegral.swift */; settings = {ASSET_TAGS = (); }; };
+		2C66D8581BBD794C00EA3506 /* FTTrackIntegral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D8571BBD794C00EA3506 /* FTTrackIntegral.swift */; settings = {ASSET_TAGS = (); }; };
+		2C66D85B1BBD7E8900EA3506 /* FTIdentityIntegral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D85A1BBD7E8900EA3506 /* FTIdentityIntegral.swift */; settings = {ASSET_TAGS = (); }; };
+		2C66D85D1BBD7FC300EA3506 /* FTIdentityPositive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D85C1BBD7FC300EA3506 /* FTIdentityPositive.swift */; settings = {ASSET_TAGS = (); }; };
+		2CB354DC1BBD0F1B00CDD31C /* FTDropFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB354DB1BBD0F1B00CDD31C /* FTDropFind.swift */; settings = {ASSET_TAGS = (); }; };
+		2CB354DE1BBD0F5A00CDD31C /* FTDropFindPositive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB354DD1BBD0F5A00CDD31C /* FTDropFindPositive.swift */; settings = {ASSET_TAGS = (); }; };
+		2CB354E01BBD12A500CDD31C /* FTDropFindNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB354DF1BBD12A500CDD31C /* FTDropFindNegative.swift */; settings = {ASSET_TAGS = (); }; };
+		2CB354E31BBD142200CDD31C /* FTDropUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB354E21BBD142200CDD31C /* FTDropUpdate.swift */; settings = {ASSET_TAGS = (); }; };
+		2CB354E51BBD145C00CDD31C /* FTDropUpdatePositive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB354E41BBD145C00CDD31C /* FTDropUpdatePositive.swift */; settings = {ASSET_TAGS = (); }; };
+		2CB354E71BBD1CF400CDD31C /* FTDropUpdateNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB354E61BBD1CF400CDD31C /* FTDropUpdateNegative.swift */; settings = {ASSET_TAGS = (); }; };
+		2CC2B33D1BB958FA00179DB0 /* WSTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC2B33C1BB958FA00179DB0 /* WSTrack.swift */; };
+		2CC2B33F1BB95A6200179DB0 /* FTWSCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC2B33E1BB95A6200179DB0 /* FTWSCreate.swift */; };
+		2CC2B3411BB95ACC00179DB0 /* FTWSRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC2B3401BB95ACC00179DB0 /* FTWSRead.swift */; };
+		2CC2B3431BB95AFB00179DB0 /* FTWSUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC2B3421BB95AFB00179DB0 /* FTWSUpdate.swift */; };
+		2CC2B3451BB95B3100179DB0 /* FTWSDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC2B3441BB95B3100179DB0 /* FTWSDelete.swift */; };
+		2CC2B3471BB95B8000179DB0 /* FTWSDropCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC2B3461BB95B8000179DB0 /* FTWSDropCreate.swift */; };
+		2CC2B3491BB95C6000179DB0 /* WSDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC2B3481BB95C6000179DB0 /* WSDrop.swift */; };
+		2CC2B34B1BB95DFB00179DB0 /* FTWebSocketFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC2B34A1BB95DFB00179DB0 /* FTWebSocketFlow.swift */; };
+		2CC2B34D1BB9699D00179DB0 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC2B34C1BB9699D00179DB0 /* PromiseKit.framework */; };
+		2CD034751BBC08930047D3B2 /* FTUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD034741BBC08930047D3B2 /* FTUpdate.swift */; settings = {ASSET_TAGS = (); }; };
+		2CD034771BBC0A760047D3B2 /* FTFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD034761BBC0A760047D3B2 /* FTFind.swift */; settings = {ASSET_TAGS = (); }; };
+		2CD0347B1BBC19250047D3B2 /* FTDropRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0347A1BBC19250047D3B2 /* FTDropRead.swift */; settings = {ASSET_TAGS = (); }; };
+		2CD0347D1BBC198B0047D3B2 /* FTDropReadPositive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0347C1BBC198B0047D3B2 /* FTDropReadPositive.swift */; settings = {ASSET_TAGS = (); }; };
+		2CD0347F1BBC1DBF0047D3B2 /* FTDropReadNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0347E1BBC1DBF0047D3B2 /* FTDropReadNegative.swift */; settings = {ASSET_TAGS = (); }; };
+		2CE82B961BBAA7820080922E /* FTWebSocketTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE82B951BBAA7820080922E /* FTWebSocketTrack.swift */; };
 		8D086E201B79123E006B39F6 /* Valid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D086E1F1B79123E006B39F6 /* Valid.swift */; };
-		8D0B19B21B88CF0500D17EB8 /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B19B11B88CF0500D17EB8 /* BaseTests.swift */; };
 		8D0E035E1B72779200D44014 /* FTAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E035D1B72779200D44014 /* FTAPI.swift */; };
 		8D0E03621B72782F00D44014 /* Identity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03611B72782F00D44014 /* Identity.swift */; };
 		8D0E03641B72783E00D44014 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03631B72783E00D44014 /* Token.swift */; };
 		8D0E03661B72784700D44014 /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03651B72784700D44014 /* Share.swift */; };
 		8D0E036A1B7278B900D44014 /* Elem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03691B7278B900D44014 /* Elem.swift */; };
-		8D1C2F071B759C20003F6329 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1C2F061B759C20003F6329 /* Base.swift */; };
-		8D1D96231B9CF83700D6AEE0 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D96221B9CF83700D6AEE0 /* Example.swift */; settings = {ASSET_TAGS = (); }; };
+		8D1D96231B9CF83700D6AEE0 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D96221B9CF83700D6AEE0 /* Example.swift */; };
 		8D28A0761B8D29D100243B50 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC11151B72DDE00065FA37 /* Alamofire.framework */; };
-		8D28A07B1B8D37B200243B50 /* FTCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28A07A1B8D37B200243B50 /* FTCreate.swift */; settings = {ASSET_TAGS = (); }; };
-		8D28A07D1B8D39CC00243B50 /* FTRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28A07C1B8D39CC00243B50 /* FTRead.swift */; settings = {ASSET_TAGS = (); }; };
+		8D28A07B1B8D37B200243B50 /* FTCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28A07A1B8D37B200243B50 /* FTCreate.swift */; };
+		8D28A07D1B8D39CC00243B50 /* FTRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28A07C1B8D39CC00243B50 /* FTRead.swift */; };
 		8D438D701B84D8B300FD70C1 /* StandardChecks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D438D6F1B84D8B300FD70C1 /* StandardChecks.swift */; };
 		8D4BEDB11B8A46000032AC5A /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BEDB01B8A46000032AC5A /* Alamofire.swift */; };
 		8D5101971B755F0C0043D778 /* FTDropCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5101961B755F0C0043D778 /* FTDropCreate.swift */; };
@@ -35,11 +81,11 @@
 		8DBBDE581B6716300065CD3B /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE501B6716300065CD3B /* Track.swift */; };
 		8DBBDE591B6716300065CD3B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE511B6716300065CD3B /* Group.swift */; };
 		8DBBDE5B1B6716300065CD3B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE531B6716300065CD3B /* Location.swift */; };
-		8DBDDF8A1BA8FD1600BDDBA2 /* FTDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBDDF891BA8FD1600BDDBA2 /* FTDelete.swift */; settings = {ASSET_TAGS = (); }; };
+		8DBDDF8A1BA8FD1600BDDBA2 /* FTDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBDDF891BA8FD1600BDDBA2 /* FTDelete.swift */; };
 		8DD5FE5B1B7A705500CBCB4F /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE5A1B7A705500CBCB4F /* Debug.swift */; };
 		8DD5FE681B7AA6ED00CBCB4F /* CheckString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE671B7AA6ED00CBCB4F /* CheckString.swift */; };
 		8DD5FE6D1B7ACE2200CBCB4F /* Checks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE6C1B7ACE2200CBCB4F /* Checks.swift */; };
-		8DFA3A601B8E00AA00749D91 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFA3A5F1B8E00AA00749D91 /* JSON.swift */; settings = {ASSET_TAGS = (); }; };
+		8DFA3A601B8E00AA00749D91 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFA3A5F1B8E00AA00749D91 /* JSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,14 +99,60 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C25B3E51BB4187D0020A3AC /* WSFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSFlow.swift; sourceTree = "<group>"; };
+		2C25B3E71BB418D50020A3AC /* FTWSSubscribe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWSSubscribe.swift; sourceTree = "<group>"; };
+		2C287BD61BBEAC1600C5DC14 /* FTFlowFind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTFlowFind.swift; sourceTree = "<group>"; };
+		2C287BD81BBEAC3500C5DC14 /* FTFlowFindPositive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTFlowFindPositive.swift; sourceTree = "<group>"; };
+		2C287BDD1BBEC1EA00C5DC14 /* FTTokenIntegral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTTokenIntegral.swift; sourceTree = "<group>"; };
+		2C287BDF1BBEC7AB00C5DC14 /* MQTT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTT.swift; sourceTree = "<group>"; };
+		2C287BE11BBECA5D00C5DC14 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		2C287BE31BBECB3900C5DC14 /* ApiTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTask.swift; sourceTree = "<group>"; };
+		2C287BE51BBECC6600C5DC14 /* RSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSS.swift; sourceTree = "<group>"; };
+		2C5EE0121BB2BE1400485A72 /* FTWebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWebSocket.swift; sourceTree = "<group>"; };
+		2C5EE0151BB2C36500485A72 /* FTWebSocketConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWebSocketConnect.swift; sourceTree = "<group>"; };
+		2C5EE0171BB2C58F00485A72 /* SwiftWebSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftWebSocket.framework; path = Carthage/Build/iOS/SwiftWebSocket.framework; sourceTree = "<group>"; };
+		2C5EE01B1BB2CFF700485A72 /* WSConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSConnection.swift; sourceTree = "<group>"; };
+		2C5EE01D1BB2D84F00485A72 /* FTWebSocketSubscribe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWebSocketSubscribe.swift; sourceTree = "<group>"; };
+		2C66D83E1BBD39CD00EA3506 /* FTDropAggregate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropAggregate.swift; sourceTree = "<group>"; };
+		2C66D8401BBD39ED00EA3506 /* FTDropAggregatePositive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropAggregatePositive.swift; sourceTree = "<group>"; };
+		2C66D8421BBD3D8B00EA3506 /* FTDropAggregateNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropAggregateNegative.swift; sourceTree = "<group>"; };
+		2C66D8451BBD3FFE00EA3506 /* FTDropDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropDelete.swift; sourceTree = "<group>"; };
+		2C66D8471BBD40F600EA3506 /* FTDropDeletePositive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropDeletePositive.swift; sourceTree = "<group>"; };
+		2C66D8491BBD436600EA3506 /* FTDropDeleteNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropDeleteNegative.swift; sourceTree = "<group>"; };
+		2C66D84E1BBD470900EA3506 /* BaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
+		2C66D8501BBD47E900EA3506 /* FTFlowCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTFlowCreate.swift; sourceTree = "<group>"; };
+		2C66D8521BBD482600EA3506 /* FTFlowCreateNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTFlowCreateNegative.swift; sourceTree = "<group>"; };
+		2C66D8541BBD49DA00EA3506 /* FTFlowIntegral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTFlowIntegral.swift; sourceTree = "<group>"; };
+		2C66D8571BBD794C00EA3506 /* FTTrackIntegral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTTrackIntegral.swift; sourceTree = "<group>"; };
+		2C66D85A1BBD7E8900EA3506 /* FTIdentityIntegral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTIdentityIntegral.swift; sourceTree = "<group>"; };
+		2C66D85C1BBD7FC300EA3506 /* FTIdentityPositive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTIdentityPositive.swift; sourceTree = "<group>"; };
+		2CB354DB1BBD0F1B00CDD31C /* FTDropFind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropFind.swift; sourceTree = "<group>"; };
+		2CB354DD1BBD0F5A00CDD31C /* FTDropFindPositive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropFindPositive.swift; sourceTree = "<group>"; };
+		2CB354DF1BBD12A500CDD31C /* FTDropFindNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropFindNegative.swift; sourceTree = "<group>"; };
+		2CB354E21BBD142200CDD31C /* FTDropUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropUpdate.swift; sourceTree = "<group>"; };
+		2CB354E41BBD145C00CDD31C /* FTDropUpdatePositive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropUpdatePositive.swift; sourceTree = "<group>"; };
+		2CB354E61BBD1CF400CDD31C /* FTDropUpdateNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropUpdateNegative.swift; sourceTree = "<group>"; };
+		2CC2B33C1BB958FA00179DB0 /* WSTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrack.swift; sourceTree = "<group>"; };
+		2CC2B33E1BB95A6200179DB0 /* FTWSCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWSCreate.swift; sourceTree = "<group>"; };
+		2CC2B3401BB95ACC00179DB0 /* FTWSRead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWSRead.swift; sourceTree = "<group>"; };
+		2CC2B3421BB95AFB00179DB0 /* FTWSUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWSUpdate.swift; sourceTree = "<group>"; };
+		2CC2B3441BB95B3100179DB0 /* FTWSDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWSDelete.swift; sourceTree = "<group>"; };
+		2CC2B3461BB95B8000179DB0 /* FTWSDropCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWSDropCreate.swift; sourceTree = "<group>"; };
+		2CC2B3481BB95C6000179DB0 /* WSDrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSDrop.swift; sourceTree = "<group>"; };
+		2CC2B34A1BB95DFB00179DB0 /* FTWebSocketFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWebSocketFlow.swift; sourceTree = "<group>"; };
+		2CC2B34C1BB9699D00179DB0 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		2CD034741BBC08930047D3B2 /* FTUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTUpdate.swift; sourceTree = "<group>"; };
+		2CD034761BBC0A760047D3B2 /* FTFind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTFind.swift; sourceTree = "<group>"; };
+		2CD0347A1BBC19250047D3B2 /* FTDropRead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropRead.swift; sourceTree = "<group>"; };
+		2CD0347C1BBC198B0047D3B2 /* FTDropReadPositive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropReadPositive.swift; sourceTree = "<group>"; };
+		2CD0347E1BBC1DBF0047D3B2 /* FTDropReadNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropReadNegative.swift; sourceTree = "<group>"; };
+		2CE82B951BBAA7820080922E /* FTWebSocketTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWebSocketTrack.swift; sourceTree = "<group>"; };
 		8D086E1F1B79123E006B39F6 /* Valid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Valid.swift; sourceTree = "<group>"; };
-		8D0B19B11B88CF0500D17EB8 /* BaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTests.swift; sourceTree = "<group>"; };
 		8D0E035D1B72779200D44014 /* FTAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTAPI.swift; sourceTree = "<group>"; };
 		8D0E03611B72782F00D44014 /* Identity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identity.swift; sourceTree = "<group>"; };
 		8D0E03631B72783E00D44014 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		8D0E03651B72784700D44014 /* Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
 		8D0E03691B7278B900D44014 /* Elem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elem.swift; sourceTree = "<group>"; };
-		8D1C2F061B759C20003F6329 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		8D1D96221B9CF83700D6AEE0 /* Example.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		8D28A07A1B8D37B200243B50 /* FTCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTCreate.swift; sourceTree = "<group>"; };
 		8D28A07C1B8D39CC00243B50 /* FTRead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTRead.swift; sourceTree = "<group>"; };
@@ -105,6 +197,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CC2B34D1BB9699D00179DB0 /* PromiseKit.framework in Frameworks */,
+				2C5EE0181BB2C58F00485A72 /* SwiftWebSocket.framework in Frameworks */,
 				8DBBDE3B1B6715D60065CD3B /* Flowthings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,33 +206,169 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C287BD51BBEABA000C5DC14 /* Flow.find */ = {
+			isa = PBXGroup;
+			children = (
+				2C287BD61BBEAC1600C5DC14 /* FTFlowFind.swift */,
+				2C287BD81BBEAC3500C5DC14 /* FTFlowFindPositive.swift */,
+			);
+			name = Flow.find;
+			sourceTree = "<group>";
+		};
+		2C287BDC1BBEC1D300C5DC14 /* Token.tests */ = {
+			isa = PBXGroup;
+			children = (
+				2C287BDD1BBEC1EA00C5DC14 /* FTTokenIntegral.swift */,
+			);
+			name = Token.tests;
+			sourceTree = "<group>";
+		};
+		2C5EE0141BB2C33C00485A72 /* WS */ = {
+			isa = PBXGroup;
+			children = (
+				2C5EE0151BB2C36500485A72 /* FTWebSocketConnect.swift */,
+				2C5EE01D1BB2D84F00485A72 /* FTWebSocketSubscribe.swift */,
+				2CC2B34A1BB95DFB00179DB0 /* FTWebSocketFlow.swift */,
+				2CE82B951BBAA7820080922E /* FTWebSocketTrack.swift */,
+			);
+			name = WS;
+			sourceTree = "<group>";
+		};
+		2C66D83D1BBD398600EA3506 /* Drop.aggregate */ = {
+			isa = PBXGroup;
+			children = (
+				2C66D83E1BBD39CD00EA3506 /* FTDropAggregate.swift */,
+				2C66D8401BBD39ED00EA3506 /* FTDropAggregatePositive.swift */,
+				2C66D8421BBD3D8B00EA3506 /* FTDropAggregateNegative.swift */,
+			);
+			name = Drop.aggregate;
+			sourceTree = "<group>";
+		};
+		2C66D8441BBD3FD500EA3506 /* Drop.delete */ = {
+			isa = PBXGroup;
+			children = (
+				2C66D8451BBD3FFE00EA3506 /* FTDropDelete.swift */,
+				2C66D8471BBD40F600EA3506 /* FTDropDeletePositive.swift */,
+				2C66D8491BBD436600EA3506 /* FTDropDeleteNegative.swift */,
+			);
+			name = Drop.delete;
+			sourceTree = "<group>";
+		};
+		2C66D84B1BBD46B000EA3506 /* Drop.tests */ = {
+			isa = PBXGroup;
+			children = (
+				8D961A181B88F50F0005899E /* Drop.create */,
+				2CD034791BBC17750047D3B2 /* Drop.read */,
+				2CB354DA1BBD0EDE00CDD31C /* Drop.find */,
+				2CB354E11BBD13DC00CDD31C /* Drop.update */,
+				2C66D8441BBD3FD500EA3506 /* Drop.delete */,
+				2C66D83D1BBD398600EA3506 /* Drop.aggregate */,
+			);
+			name = Drop.tests;
+			sourceTree = "<group>";
+		};
+		2C66D84C1BBD46BE00EA3506 /* Flow.tests */ = {
+			isa = PBXGroup;
+			children = (
+				2C66D8541BBD49DA00EA3506 /* FTFlowIntegral.swift */,
+				2C66D84D1BBD46EA00EA3506 /* Flow.create */,
+				2C287BD51BBEABA000C5DC14 /* Flow.find */,
+			);
+			name = Flow.tests;
+			sourceTree = "<group>";
+		};
+		2C66D84D1BBD46EA00EA3506 /* Flow.create */ = {
+			isa = PBXGroup;
+			children = (
+				2C66D8501BBD47E900EA3506 /* FTFlowCreate.swift */,
+				2C66D8521BBD482600EA3506 /* FTFlowCreateNegative.swift */,
+			);
+			name = Flow.create;
+			sourceTree = "<group>";
+		};
+		2C66D8561BBD793400EA3506 /* Track.tests */ = {
+			isa = PBXGroup;
+			children = (
+				2C66D8571BBD794C00EA3506 /* FTTrackIntegral.swift */,
+			);
+			name = Track.tests;
+			sourceTree = "<group>";
+		};
+		2C66D8591BBD7E3E00EA3506 /* Identity.tests */ = {
+			isa = PBXGroup;
+			children = (
+				2C66D85A1BBD7E8900EA3506 /* FTIdentityIntegral.swift */,
+				2C66D85C1BBD7FC300EA3506 /* FTIdentityPositive.swift */,
+			);
+			name = Identity.tests;
+			sourceTree = "<group>";
+		};
+		2CB354DA1BBD0EDE00CDD31C /* Drop.find */ = {
+			isa = PBXGroup;
+			children = (
+				2CB354DB1BBD0F1B00CDD31C /* FTDropFind.swift */,
+				2CB354DD1BBD0F5A00CDD31C /* FTDropFindPositive.swift */,
+				2CB354DF1BBD12A500CDD31C /* FTDropFindNegative.swift */,
+			);
+			name = Drop.find;
+			sourceTree = "<group>";
+		};
+		2CB354E11BBD13DC00CDD31C /* Drop.update */ = {
+			isa = PBXGroup;
+			children = (
+				2CB354E21BBD142200CDD31C /* FTDropUpdate.swift */,
+				2CB354E41BBD145C00CDD31C /* FTDropUpdatePositive.swift */,
+				2CB354E61BBD1CF400CDD31C /* FTDropUpdateNegative.swift */,
+			);
+			name = Drop.update;
+			sourceTree = "<group>";
+		};
+		2CD034791BBC17750047D3B2 /* Drop.read */ = {
+			isa = PBXGroup;
+			children = (
+				2CD0347A1BBC19250047D3B2 /* FTDropRead.swift */,
+				2CD0347C1BBC198B0047D3B2 /* FTDropReadPositive.swift */,
+				2CD0347E1BBC1DBF0047D3B2 /* FTDropReadNegative.swift */,
+			);
+			name = Drop.read;
+			sourceTree = "<group>";
+		};
 		8D28A07E1B8D39D700243B50 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				8D1C2F061B759C20003F6329 /* Base.swift */,
 				8D28A07A1B8D37B200243B50 /* FTCreate.swift */,
 				8D28A07C1B8D39CC00243B50 /* FTRead.swift */,
+				2CD034761BBC0A760047D3B2 /* FTFind.swift */,
+				2CD034741BBC08930047D3B2 /* FTUpdate.swift */,
 				8DBDDF891BA8FD1600BDDBA2 /* FTDelete.swift */,
+				2C25B3E71BB418D50020A3AC /* FTWSSubscribe.swift */,
+				2CC2B33E1BB95A6200179DB0 /* FTWSCreate.swift */,
+				2CC2B3401BB95ACC00179DB0 /* FTWSRead.swift */,
+				2CC2B3421BB95AFB00179DB0 /* FTWSUpdate.swift */,
+				2CC2B3441BB95B3100179DB0 /* FTWSDelete.swift */,
+				2CC2B3461BB95B8000179DB0 /* FTWSDropCreate.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
 		};
-		8D961A181B88F50F0005899E /* Drop.create.tests */ = {
+		8D961A181B88F50F0005899E /* Drop.create */ = {
 			isa = PBXGroup;
 			children = (
 				8D5101961B755F0C0043D778 /* FTDropCreate.swift */,
 				8D89714D1B88FD5900CA2528 /* FTDropCreatePositive.swift */,
 				8D89714F1B88FF1A00CA2528 /* FTDropCreateNegative.swift */,
 			);
-			name = Drop.create.tests;
+			name = Drop.create;
 			sourceTree = "<group>";
 		};
 		8DBBDE261B6715D60065CD3B = {
 			isa = PBXGroup;
 			children = (
-				8DD5FE5A1B7A705500CBCB4F /* Debug.swift */,
+				2CC2B34C1BB9699D00179DB0 /* PromiseKit.framework */,
+				2C5EE0171BB2C58F00485A72 /* SwiftWebSocket.framework */,
 				8D8468DB1B8E132D00FA15A6 /* SwiftTask.framework */,
 				8DBC11151B72DDE00065FA37 /* Alamofire.framework */,
+				8DD5FE5A1B7A705500CBCB4F /* Debug.swift */,
 				8DBBDE321B6715D60065CD3B /* Flowthings */,
 				8DBBDE3E1B6715D60065CD3B /* FlowthingsTests */,
 				8DBBDE311B6715D60065CD3B /* Products */,
@@ -170,11 +400,16 @@
 		8DBBDE3E1B6715D60065CD3B /* FlowthingsTests */ = {
 			isa = PBXGroup;
 			children = (
-				8D5101981B7562F50043D778 /* TestConfig.swift */,
-				8D0B19B11B88CF0500D17EB8 /* BaseTests.swift */,
-				8D961A181B88F50F0005899E /* Drop.create.tests */,
+				2C66D84B1BBD46B000EA3506 /* Drop.tests */,
+				2C66D84C1BBD46BE00EA3506 /* Flow.tests */,
+				2C66D8561BBD793400EA3506 /* Track.tests */,
+				2C66D8591BBD7E3E00EA3506 /* Identity.tests */,
+				2C287BDC1BBEC1D300C5DC14 /* Token.tests */,
+				2C5EE0141BB2C33C00485A72 /* WS */,
 				8DBBDE411B6715D60065CD3B /* Info.plist */,
 				8D4BEDB01B8A46000032AC5A /* Alamofire.swift */,
+				2C66D84E1BBD470900EA3506 /* BaseTest.swift */,
+				8D5101981B7562F50043D778 /* TestConfig.swift */,
 			);
 			path = FlowthingsTests;
 			sourceTree = "<group>";
@@ -196,6 +431,7 @@
 			children = (
 				8D0E035D1B72779200D44014 /* FTAPI.swift */,
 				8D572D561B750D8400D29297 /* FTAPIError.swift */,
+				2C5EE0121BB2BE1400485A72 /* FTWebSocket.swift */,
 				8DBBDE4C1B6716300065CD3B /* Creds.swift */,
 				8DFA3A5F1B8E00AA00749D91 /* JSON.swift */,
 			);
@@ -213,7 +449,15 @@
 				8DBBDE501B6716300065CD3B /* Track.swift */,
 				8D0E03691B7278B900D44014 /* Elem.swift */,
 				8DBBDE511B6716300065CD3B /* Group.swift */,
+				2C287BDF1BBEC7AB00C5DC14 /* MQTT.swift */,
+				2C287BE11BBECA5D00C5DC14 /* Device.swift */,
+				2C287BE31BBECB3900C5DC14 /* ApiTask.swift */,
+				2C287BE51BBECC6600C5DC14 /* RSS.swift */,
 				8DBBDE531B6716300065CD3B /* Location.swift */,
+				2C5EE01B1BB2CFF700485A72 /* WSConnection.swift */,
+				2C25B3E51BB4187D0020A3AC /* WSFlow.swift */,
+				2CC2B33C1BB958FA00179DB0 /* WSTrack.swift */,
+				2CC2B3481BB95C6000179DB0 /* WSDrop.swift */,
 			);
 			name = Flow;
 			sourceTree = "<group>";
@@ -291,7 +535,7 @@
 				TargetAttributes = {
 					8DBBDE2F1B6715D60065CD3B = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 648PE3P6D2;
+						DevelopmentTeam = JV4AJKUT4A;
 					};
 					8DBBDE391B6715D60065CD3B = {
 						CreatedOnToolsVersion = 7.0;
@@ -355,6 +599,8 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftTask.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftWebSocket.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
 			);
 			outputPaths = (
 			);
@@ -372,16 +618,29 @@
 				8D572D571B750D8400D29297 /* FTAPIError.swift in Sources */,
 				8D438D701B84D8B300FD70C1 /* StandardChecks.swift in Sources */,
 				8DD5FE6D1B7ACE2200CBCB4F /* Checks.swift in Sources */,
+				2CD034751BBC08930047D3B2 /* FTUpdate.swift in Sources */,
+				2C287BE61BBECC6600C5DC14 /* RSS.swift in Sources */,
+				2CC2B33F1BB95A6200179DB0 /* FTWSCreate.swift in Sources */,
 				8D28A07B1B8D37B200243B50 /* FTCreate.swift in Sources */,
+				2CC2B3411BB95ACC00179DB0 /* FTWSRead.swift in Sources */,
+				2CC2B3491BB95C6000179DB0 /* WSDrop.swift in Sources */,
 				8D1D96231B9CF83700D6AEE0 /* Example.swift in Sources */,
 				8DBBDE591B6716300065CD3B /* Group.swift in Sources */,
+				2CC2B3451BB95B3100179DB0 /* FTWSDelete.swift in Sources */,
+				2C287BE01BBEC7AB00C5DC14 /* MQTT.swift in Sources */,
 				8DD5FE681B7AA6ED00CBCB4F /* CheckString.swift in Sources */,
+				2C287BE21BBECA5D00C5DC14 /* Device.swift in Sources */,
 				8DBBDE571B6716300065CD3B /* Flow.swift in Sources */,
 				8DBBDE541B6716300065CD3B /* Creds.swift in Sources */,
+				2C25B3E61BB4187D0020A3AC /* WSFlow.swift in Sources */,
 				8D0E035E1B72779200D44014 /* FTAPI.swift in Sources */,
 				8DBBDE5B1B6716300065CD3B /* Location.swift in Sources */,
 				8D0E03621B72782F00D44014 /* Identity.swift in Sources */,
-				8D1C2F071B759C20003F6329 /* Base.swift in Sources */,
+				2C25B3E81BB418D50020A3AC /* FTWSSubscribe.swift in Sources */,
+				2CC2B3431BB95AFB00179DB0 /* FTWSUpdate.swift in Sources */,
+				2C5EE01C1BB2CFF700485A72 /* WSConnection.swift in Sources */,
+				2CC2B3471BB95B8000179DB0 /* FTWSDropCreate.swift in Sources */,
+				2CD034771BBC0A760047D3B2 /* FTFind.swift in Sources */,
 				8D0E036A1B7278B900D44014 /* Elem.swift in Sources */,
 				8DBDDF8A1BA8FD1600BDDBA2 /* FTDelete.swift in Sources */,
 				8DBBDE561B6716300065CD3B /* Drop.swift in Sources */,
@@ -389,10 +648,13 @@
 				8D0E03661B72784700D44014 /* Share.swift in Sources */,
 				8D0E03641B72783E00D44014 /* Token.swift in Sources */,
 				8DD5FE5B1B7A705500CBCB4F /* Debug.swift in Sources */,
+				2C287BE41BBECB3900C5DC14 /* ApiTask.swift in Sources */,
 				8DFA3A601B8E00AA00749D91 /* JSON.swift in Sources */,
+				2CC2B33D1BB958FA00179DB0 /* WSTrack.swift in Sources */,
 				8D086E201B79123E006B39F6 /* Valid.swift in Sources */,
 				8D572D551B7509C700D29297 /* Config.swift in Sources */,
 				8DBBDE581B6716300065CD3B /* Track.swift in Sources */,
+				2C5EE0131BB2BE1400485A72 /* FTWebSocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,12 +662,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD0347B1BBC19250047D3B2 /* FTDropRead.swift in Sources */,
+				2C66D85B1BBD7E8900EA3506 /* FTIdentityIntegral.swift in Sources */,
+				2C5EE01E1BB2D84F00485A72 /* FTWebSocketSubscribe.swift in Sources */,
+				2C66D84A1BBD436600EA3506 /* FTDropDeleteNegative.swift in Sources */,
+				2C66D8431BBD3D8B00EA3506 /* FTDropAggregateNegative.swift in Sources */,
+				2C66D85D1BBD7FC300EA3506 /* FTIdentityPositive.swift in Sources */,
+				2CE82B961BBAA7820080922E /* FTWebSocketTrack.swift in Sources */,
+				2C287BD91BBEAC3500C5DC14 /* FTFlowFindPositive.swift in Sources */,
 				8D4BEDB11B8A46000032AC5A /* Alamofire.swift in Sources */,
+				2C5EE0161BB2C36500485A72 /* FTWebSocketConnect.swift in Sources */,
+				2C66D8511BBD47E900EA3506 /* FTFlowCreate.swift in Sources */,
+				2CD0347D1BBC198B0047D3B2 /* FTDropReadPositive.swift in Sources */,
+				2C66D8481BBD40F600EA3506 /* FTDropDeletePositive.swift in Sources */,
+				2C66D8461BBD3FFE00EA3506 /* FTDropDelete.swift in Sources */,
+				2C66D8531BBD482600EA3506 /* FTFlowCreateNegative.swift in Sources */,
+				2C66D84F1BBD470900EA3506 /* BaseTest.swift in Sources */,
+				2CB354DE1BBD0F5A00CDD31C /* FTDropFindPositive.swift in Sources */,
+				2CB354E51BBD145C00CDD31C /* FTDropUpdatePositive.swift in Sources */,
+				2C66D8551BBD49DA00EA3506 /* FTFlowIntegral.swift in Sources */,
+				2CB354DC1BBD0F1B00CDD31C /* FTDropFind.swift in Sources */,
+				2C66D8411BBD39ED00EA3506 /* FTDropAggregatePositive.swift in Sources */,
+				2CB354E01BBD12A500CDD31C /* FTDropFindNegative.swift in Sources */,
+				2CB354E71BBD1CF400CDD31C /* FTDropUpdateNegative.swift in Sources */,
+				2C66D83F1BBD39CD00EA3506 /* FTDropAggregate.swift in Sources */,
 				8D89714E1B88FD5900CA2528 /* FTDropCreatePositive.swift in Sources */,
-				8D0B19B21B88CF0500D17EB8 /* BaseTests.swift in Sources */,
 				8D5101971B755F0C0043D778 /* FTDropCreate.swift in Sources */,
 				8D5101991B7562F50043D778 /* TestConfig.swift in Sources */,
+				2CD0347F1BBC1DBF0047D3B2 /* FTDropReadNegative.swift in Sources */,
+				2CC2B34B1BB95DFB00179DB0 /* FTWebSocketFlow.swift in Sources */,
 				8D8971501B88FF1A00CA2528 /* FTDropCreateNegative.swift in Sources */,
+				2C66D8581BBD794C00EA3506 /* FTTrackIntegral.swift in Sources */,
+				2C287BDE1BBEC1EA00C5DC14 /* FTTokenIntegral.swift in Sources */,
+				2C287BD71BBEAC1600C5DC14 /* FTFlowFind.swift in Sources */,
+				2CB354E31BBD142200CDD31C /* FTDropUpdate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +804,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -527,6 +818,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.cityos.Flowthings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -538,6 +830,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -552,6 +845,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = io.cityos.Flowthings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};

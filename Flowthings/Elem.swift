@@ -20,12 +20,10 @@ struct Elem {
 typealias dt = DropDataType
 
 enum DropDataType {
-    
     case Boolean(Bool)
     case Date(Int)
     case DropRef(JSON)
     case Email(String)
-    
     case Float(Double)
     case FlowRef(String)
     case ID(String)

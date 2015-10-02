@@ -6,6 +6,7 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
+import PromiseKit
 
 struct Checks_Plus_Additional {
     
@@ -47,7 +48,6 @@ struct Checks_Plus_Additional {
             return FTAPI.request(.POST, path: "somePath", params: params)
         }
         
-        return FTStream { _, _, reject, _ in
-            reject(.BadParams(messages: check.messages)) }
+        return Promise(error: Error.BadParams(messages: check.messages))
     }
 }

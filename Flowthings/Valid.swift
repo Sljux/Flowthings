@@ -6,6 +6,8 @@
 //  Copyright © 2015 cityos. All rights reserved.
 //
 
+import PromiseKit
+
 public typealias ValidTest = ((Valid, AnyObject) -> Void)
 public typealias ValidTests = [ValidTest]
 public typealias ValidChecks = [String:ValidTests]
@@ -46,14 +48,14 @@ public class Valid {
     
     public var tests : [String:[() -> ()]] = [:]
     
-    public convenience init (checkFor: [String], params:ValidParams){
+    public convenience init (checkFor: [String], params:ValidParams) {
         
         let checks = Checks(checkFor: checkFor)
         self.init(checks: checks, params: params)
         
     }
     
-    public init (checkFor: [String:AnyObject]){
+    public init (checkFor: [String:AnyObject]) {
         
         let checks = Checks()
         self.checkFor = checks.params
@@ -64,7 +66,7 @@ public class Valid {
         }
     }
 
-    public init (){
+    public init () {
         let checks = Checks()
         self.checkFor = checks.params
         self.checks = checks
@@ -184,7 +186,7 @@ public class Valid {
         }
     }
     
-    public func check(param: String, value: AnyObject){
+    public func check(param: String, value: AnyObject) {
         
         //Run standard added sub tests first
         if let tests = checks?.runStandard?[param] {
@@ -213,14 +215,8 @@ public class Valid {
         }
     }
     
-    public func stream(action: ()->FTStream ) ->FTStream {
-        
-        if isValid  {
-            return action()
-        }
-        
-        return FTStream { _, _, reject, _ in
-            reject(.BadParams(messages: self.messages)) }
+    public func stream(action: () -> FTStream ) -> FTStream {
+        return isValid ? action() : Promise(error: Error.BadParams(messages: self.messages))
     }
     
 }

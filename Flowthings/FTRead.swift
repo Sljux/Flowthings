@@ -14,23 +14,14 @@ public protocol FTRead {
 
 extension FTRead {
     
-    /** 
-        FTRead is Protocol func extension bringing in read 
-    
-        - parameter path:    url (String)
-    
-        - returns: FTStream
-    */
-    public func read(path path: String) -> FTStream {
+    public func read(id: String) -> FTStream {
         
         let valid = Valid()
-        
-        valid.check("path", value: path)
+        valid.check("id", value: id)
         
         return valid.stream  {
-            FTAPI.request(.GET, path: path)
+            FTAPI.request(.GET, path: self.baseURL + id)
         }
     }
     
 }
-
