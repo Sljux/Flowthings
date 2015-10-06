@@ -11,9 +11,7 @@ import PromiseKit
 import SwiftWebSocket
 @testable import Flowthings
 
-class FTWebSocketSubscribe: XCTestCase {
-    
-    let api = FTAPI(accountID: conf.accountID, tokenID: conf.tokenID)
+class FTWebSocketSubscribe: BaseTest {
     
     let flowId = "f55b991805bb7092cc972da55"
     let flowId2 = "f55d896f168056d2c5b94b7f5"

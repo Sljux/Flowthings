@@ -9,17 +9,7 @@
 import XCTest
 @testable import Flowthings
 
-class FTWebSocketConnect: XCTestCase {
-    
-    let api = FTAPI(accountID: conf.accountID, tokenID: conf.tokenID)
-    
-    override func setUp() {
-        super.setUp()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-    }
+class FTWebSocketConnect: BaseTest {
     
     func testConnect() {
         let expectation = expectationWithDescription("Connect WebSocket")

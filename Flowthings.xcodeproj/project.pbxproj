@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1972351BC3A7DC00098B96 /* FTDeviceCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1972301BC3A7DC00098B96 /* FTDeviceCreate.swift */; settings = {ASSET_TAGS = (); }; };
+		2C1972361BC3A7DC00098B96 /* FTDeviceCreateNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1972311BC3A7DC00098B96 /* FTDeviceCreateNegative.swift */; settings = {ASSET_TAGS = (); }; };
+		2C1972371BC3A7DC00098B96 /* FTDeviceFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1972321BC3A7DC00098B96 /* FTDeviceFind.swift */; settings = {ASSET_TAGS = (); }; };
+		2C1972381BC3A7DC00098B96 /* FTDeviceFindPositive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1972331BC3A7DC00098B96 /* FTDeviceFindPositive.swift */; settings = {ASSET_TAGS = (); }; };
+		2C1972391BC3A7DC00098B96 /* FTDeviceIntegral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1972341BC3A7DC00098B96 /* FTDeviceIntegral.swift */; settings = {ASSET_TAGS = (); }; };
+		2C1972401BC3AE2700098B96 /* FTApiTaskCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C19723D1BC3AE2700098B96 /* FTApiTaskCreate.swift */; settings = {ASSET_TAGS = (); }; };
+		2C1972411BC3AE2700098B96 /* FTApiTaskIntegral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C19723E1BC3AE2700098B96 /* FTApiTaskIntegral.swift */; settings = {ASSET_TAGS = (); }; };
+		2C1972421BC3AE2700098B96 /* FTApiTaskCreateNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C19723F1BC3AE2700098B96 /* FTApiTaskCreateNegative.swift */; settings = {ASSET_TAGS = (); }; };
+		2C1972481BC3BA9300098B96 /* FTRSSCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1972451BC3BA9300098B96 /* FTRSSCreate.swift */; settings = {ASSET_TAGS = (); }; };
+		2C1972491BC3BA9300098B96 /* FTRSSCreateNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1972461BC3BA9300098B96 /* FTRSSCreateNegative.swift */; settings = {ASSET_TAGS = (); }; };
+		2C19724A1BC3BA9300098B96 /* FTRSSIntegral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1972471BC3BA9300098B96 /* FTRSSIntegral.swift */; settings = {ASSET_TAGS = (); }; };
 		2C25B3E61BB4187D0020A3AC /* WSFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C25B3E51BB4187D0020A3AC /* WSFlow.swift */; };
 		2C25B3E81BB418D50020A3AC /* FTWSSubscribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C25B3E71BB418D50020A3AC /* FTWSSubscribe.swift */; };
 		2C287BD71BBEAC1600C5DC14 /* FTFlowFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C287BD61BBEAC1600C5DC14 /* FTFlowFind.swift */; settings = {ASSET_TAGS = (); }; };
@@ -21,6 +32,15 @@
 		2C5EE0181BB2C58F00485A72 /* SwiftWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5EE0171BB2C58F00485A72 /* SwiftWebSocket.framework */; };
 		2C5EE01C1BB2CFF700485A72 /* WSConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5EE01B1BB2CFF700485A72 /* WSConnection.swift */; };
 		2C5EE01E1BB2D84F00485A72 /* FTWebSocketSubscribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5EE01D1BB2D84F00485A72 /* FTWebSocketSubscribe.swift */; };
+		2C6516C41BC2B63300A0EDB8 /* FTShareDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6516C31BC2B63300A0EDB8 /* FTShareDelete.swift */; settings = {ASSET_TAGS = (); }; };
+		2C6516C61BC2B64B00A0EDB8 /* FTShareDeleteNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6516C51BC2B64B00A0EDB8 /* FTShareDeleteNegative.swift */; settings = {ASSET_TAGS = (); }; };
+		2C6516CF1BC2B9F800A0EDB8 /* FTGroupCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6516C81BC2B9F800A0EDB8 /* FTGroupCreate.swift */; settings = {ASSET_TAGS = (); }; };
+		2C6516D01BC2B9F800A0EDB8 /* FTGroupCreateNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6516C91BC2B9F800A0EDB8 /* FTGroupCreateNegative.swift */; settings = {ASSET_TAGS = (); }; };
+		2C6516D11BC2B9F800A0EDB8 /* FTGroupDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6516CA1BC2B9F800A0EDB8 /* FTGroupDelete.swift */; settings = {ASSET_TAGS = (); }; };
+		2C6516D21BC2B9F800A0EDB8 /* FTGroupDeleteNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6516CB1BC2B9F800A0EDB8 /* FTGroupDeleteNegative.swift */; settings = {ASSET_TAGS = (); }; };
+		2C6516D31BC2B9F800A0EDB8 /* FTGroupIntegral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6516CC1BC2B9F800A0EDB8 /* FTGroupIntegral.swift */; settings = {ASSET_TAGS = (); }; };
+		2C6516D41BC2B9F800A0EDB8 /* FTGroupRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6516CD1BC2B9F800A0EDB8 /* FTGroupRead.swift */; settings = {ASSET_TAGS = (); }; };
+		2C6516D51BC2B9F800A0EDB8 /* FTGroupReadNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6516CE1BC2B9F800A0EDB8 /* FTGroupReadNegative.swift */; settings = {ASSET_TAGS = (); }; };
 		2C66D83F1BBD39CD00EA3506 /* FTDropAggregate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D83E1BBD39CD00EA3506 /* FTDropAggregate.swift */; settings = {ASSET_TAGS = (); }; };
 		2C66D8411BBD39ED00EA3506 /* FTDropAggregatePositive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D8401BBD39ED00EA3506 /* FTDropAggregatePositive.swift */; settings = {ASSET_TAGS = (); }; };
 		2C66D8431BBD3D8B00EA3506 /* FTDropAggregateNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D8421BBD3D8B00EA3506 /* FTDropAggregateNegative.swift */; settings = {ASSET_TAGS = (); }; };
@@ -33,7 +53,15 @@
 		2C66D8551BBD49DA00EA3506 /* FTFlowIntegral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D8541BBD49DA00EA3506 /* FTFlowIntegral.swift */; settings = {ASSET_TAGS = (); }; };
 		2C66D8581BBD794C00EA3506 /* FTTrackIntegral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D8571BBD794C00EA3506 /* FTTrackIntegral.swift */; settings = {ASSET_TAGS = (); }; };
 		2C66D85B1BBD7E8900EA3506 /* FTIdentityIntegral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D85A1BBD7E8900EA3506 /* FTIdentityIntegral.swift */; settings = {ASSET_TAGS = (); }; };
-		2C66D85D1BBD7FC300EA3506 /* FTIdentityPositive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D85C1BBD7FC300EA3506 /* FTIdentityPositive.swift */; settings = {ASSET_TAGS = (); }; };
+		2C8C2AFB1BC2C1A400228676 /* FTGroupFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C2AFA1BC2C1A400228676 /* FTGroupFind.swift */; settings = {ASSET_TAGS = (); }; };
+		2C8C2AFD1BC2C1BA00228676 /* FTGroupFindPositive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C2AFC1BC2C1BA00228676 /* FTGroupFindPositive.swift */; settings = {ASSET_TAGS = (); }; };
+		2C8C2B061BC2CEFF00228676 /* FTMQTTCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C2AFF1BC2CEFF00228676 /* FTMQTTCreate.swift */; settings = {ASSET_TAGS = (); }; };
+		2C8C2B071BC2CEFF00228676 /* FTMQTTCreateNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C2B001BC2CEFF00228676 /* FTMQTTCreateNegative.swift */; settings = {ASSET_TAGS = (); }; };
+		2C8C2B081BC2CEFF00228676 /* FTMQTTDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C2B011BC2CEFF00228676 /* FTMQTTDelete.swift */; settings = {ASSET_TAGS = (); }; };
+		2C8C2B091BC2CEFF00228676 /* FTMQTTDeleteNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C2B021BC2CEFF00228676 /* FTMQTTDeleteNegative.swift */; settings = {ASSET_TAGS = (); }; };
+		2C8C2B0A1BC2CEFF00228676 /* FTMQTTIntegral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C2B031BC2CEFF00228676 /* FTMQTTIntegral.swift */; settings = {ASSET_TAGS = (); }; };
+		2C8C2B0B1BC2CEFF00228676 /* FTMQTTRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C2B041BC2CEFF00228676 /* FTMQTTRead.swift */; settings = {ASSET_TAGS = (); }; };
+		2C8C2B0C1BC2CEFF00228676 /* FTMQTTReadNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C2B051BC2CEFF00228676 /* FTMQTTReadNegative.swift */; settings = {ASSET_TAGS = (); }; };
 		2CB354DC1BBD0F1B00CDD31C /* FTDropFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB354DB1BBD0F1B00CDD31C /* FTDropFind.swift */; settings = {ASSET_TAGS = (); }; };
 		2CB354DE1BBD0F5A00CDD31C /* FTDropFindPositive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB354DD1BBD0F5A00CDD31C /* FTDropFindPositive.swift */; settings = {ASSET_TAGS = (); }; };
 		2CB354E01BBD12A500CDD31C /* FTDropFindNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB354DF1BBD12A500CDD31C /* FTDropFindNegative.swift */; settings = {ASSET_TAGS = (); }; };
@@ -49,6 +77,12 @@
 		2CC2B3491BB95C6000179DB0 /* WSDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC2B3481BB95C6000179DB0 /* WSDrop.swift */; };
 		2CC2B34B1BB95DFB00179DB0 /* FTWebSocketFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC2B34A1BB95DFB00179DB0 /* FTWebSocketFlow.swift */; };
 		2CC2B34D1BB9699D00179DB0 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC2B34C1BB9699D00179DB0 /* PromiseKit.framework */; };
+		2CCF2A741BC2860F00CD1CB5 /* FTValid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF2A731BC2860F00CD1CB5 /* FTValid.swift */; settings = {ASSET_TAGS = (); }; };
+		2CCF2A771BC2A33D00CD1CB5 /* FTShareIntegral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF2A761BC2A33D00CD1CB5 /* FTShareIntegral.swift */; settings = {ASSET_TAGS = (); }; };
+		2CCF2A7A1BC2AB4B00CD1CB5 /* FTShareCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF2A791BC2AB4B00CD1CB5 /* FTShareCreate.swift */; settings = {ASSET_TAGS = (); }; };
+		2CCF2A7C1BC2ACFF00CD1CB5 /* FTShareCreateNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF2A7B1BC2ACFF00CD1CB5 /* FTShareCreateNegative.swift */; settings = {ASSET_TAGS = (); }; };
+		2CCF2A7F1BC2B0E600CD1CB5 /* FTShareRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF2A7E1BC2B0E600CD1CB5 /* FTShareRead.swift */; settings = {ASSET_TAGS = (); }; };
+		2CCF2A831BC2B11500CD1CB5 /* FTShareReadNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF2A821BC2B11500CD1CB5 /* FTShareReadNegative.swift */; settings = {ASSET_TAGS = (); }; };
 		2CD034751BBC08930047D3B2 /* FTUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD034741BBC08930047D3B2 /* FTUpdate.swift */; settings = {ASSET_TAGS = (); }; };
 		2CD034771BBC0A760047D3B2 /* FTFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD034761BBC0A760047D3B2 /* FTFind.swift */; settings = {ASSET_TAGS = (); }; };
 		2CD0347B1BBC19250047D3B2 /* FTDropRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0347A1BBC19250047D3B2 /* FTDropRead.swift */; settings = {ASSET_TAGS = (); }; };
@@ -60,13 +94,10 @@
 		8D0E03621B72782F00D44014 /* Identity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03611B72782F00D44014 /* Identity.swift */; };
 		8D0E03641B72783E00D44014 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03631B72783E00D44014 /* Token.swift */; };
 		8D0E03661B72784700D44014 /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03651B72784700D44014 /* Share.swift */; };
-		8D0E036A1B7278B900D44014 /* Elem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E03691B7278B900D44014 /* Elem.swift */; };
-		8D1D96231B9CF83700D6AEE0 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D96221B9CF83700D6AEE0 /* Example.swift */; };
 		8D28A0761B8D29D100243B50 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC11151B72DDE00065FA37 /* Alamofire.framework */; };
 		8D28A07B1B8D37B200243B50 /* FTCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28A07A1B8D37B200243B50 /* FTCreate.swift */; };
 		8D28A07D1B8D39CC00243B50 /* FTRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28A07C1B8D39CC00243B50 /* FTRead.swift */; };
 		8D438D701B84D8B300FD70C1 /* StandardChecks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D438D6F1B84D8B300FD70C1 /* StandardChecks.swift */; };
-		8D4BEDB11B8A46000032AC5A /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BEDB01B8A46000032AC5A /* Alamofire.swift */; };
 		8D5101971B755F0C0043D778 /* FTDropCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5101961B755F0C0043D778 /* FTDropCreate.swift */; };
 		8D5101991B7562F50043D778 /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5101981B7562F50043D778 /* TestConfig.swift */; };
 		8D572D551B7509C700D29297 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D572D541B7509C700D29297 /* Config.swift */; };
@@ -82,7 +113,6 @@
 		8DBBDE591B6716300065CD3B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE511B6716300065CD3B /* Group.swift */; };
 		8DBBDE5B1B6716300065CD3B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBDE531B6716300065CD3B /* Location.swift */; };
 		8DBDDF8A1BA8FD1600BDDBA2 /* FTDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBDDF891BA8FD1600BDDBA2 /* FTDelete.swift */; };
-		8DD5FE5B1B7A705500CBCB4F /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE5A1B7A705500CBCB4F /* Debug.swift */; };
 		8DD5FE681B7AA6ED00CBCB4F /* CheckString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE671B7AA6ED00CBCB4F /* CheckString.swift */; };
 		8DD5FE6D1B7ACE2200CBCB4F /* Checks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5FE6C1B7ACE2200CBCB4F /* Checks.swift */; };
 		8DFA3A601B8E00AA00749D91 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFA3A5F1B8E00AA00749D91 /* JSON.swift */; };
@@ -99,6 +129,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C1972301BC3A7DC00098B96 /* FTDeviceCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDeviceCreate.swift; sourceTree = "<group>"; };
+		2C1972311BC3A7DC00098B96 /* FTDeviceCreateNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDeviceCreateNegative.swift; sourceTree = "<group>"; };
+		2C1972321BC3A7DC00098B96 /* FTDeviceFind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDeviceFind.swift; sourceTree = "<group>"; };
+		2C1972331BC3A7DC00098B96 /* FTDeviceFindPositive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDeviceFindPositive.swift; sourceTree = "<group>"; };
+		2C1972341BC3A7DC00098B96 /* FTDeviceIntegral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDeviceIntegral.swift; sourceTree = "<group>"; };
+		2C19723D1BC3AE2700098B96 /* FTApiTaskCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTApiTaskCreate.swift; sourceTree = "<group>"; };
+		2C19723E1BC3AE2700098B96 /* FTApiTaskIntegral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTApiTaskIntegral.swift; sourceTree = "<group>"; };
+		2C19723F1BC3AE2700098B96 /* FTApiTaskCreateNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTApiTaskCreateNegative.swift; sourceTree = "<group>"; };
+		2C1972451BC3BA9300098B96 /* FTRSSCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTRSSCreate.swift; sourceTree = "<group>"; };
+		2C1972461BC3BA9300098B96 /* FTRSSCreateNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTRSSCreateNegative.swift; sourceTree = "<group>"; };
+		2C1972471BC3BA9300098B96 /* FTRSSIntegral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTRSSIntegral.swift; sourceTree = "<group>"; };
 		2C25B3E51BB4187D0020A3AC /* WSFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSFlow.swift; sourceTree = "<group>"; };
 		2C25B3E71BB418D50020A3AC /* FTWSSubscribe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWSSubscribe.swift; sourceTree = "<group>"; };
 		2C287BD61BBEAC1600C5DC14 /* FTFlowFind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTFlowFind.swift; sourceTree = "<group>"; };
@@ -113,6 +154,15 @@
 		2C5EE0171BB2C58F00485A72 /* SwiftWebSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftWebSocket.framework; path = Carthage/Build/iOS/SwiftWebSocket.framework; sourceTree = "<group>"; };
 		2C5EE01B1BB2CFF700485A72 /* WSConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSConnection.swift; sourceTree = "<group>"; };
 		2C5EE01D1BB2D84F00485A72 /* FTWebSocketSubscribe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWebSocketSubscribe.swift; sourceTree = "<group>"; };
+		2C6516C31BC2B63300A0EDB8 /* FTShareDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTShareDelete.swift; sourceTree = "<group>"; };
+		2C6516C51BC2B64B00A0EDB8 /* FTShareDeleteNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTShareDeleteNegative.swift; sourceTree = "<group>"; };
+		2C6516C81BC2B9F800A0EDB8 /* FTGroupCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTGroupCreate.swift; sourceTree = "<group>"; };
+		2C6516C91BC2B9F800A0EDB8 /* FTGroupCreateNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTGroupCreateNegative.swift; sourceTree = "<group>"; };
+		2C6516CA1BC2B9F800A0EDB8 /* FTGroupDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTGroupDelete.swift; sourceTree = "<group>"; };
+		2C6516CB1BC2B9F800A0EDB8 /* FTGroupDeleteNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTGroupDeleteNegative.swift; sourceTree = "<group>"; };
+		2C6516CC1BC2B9F800A0EDB8 /* FTGroupIntegral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTGroupIntegral.swift; sourceTree = "<group>"; };
+		2C6516CD1BC2B9F800A0EDB8 /* FTGroupRead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTGroupRead.swift; sourceTree = "<group>"; };
+		2C6516CE1BC2B9F800A0EDB8 /* FTGroupReadNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTGroupReadNegative.swift; sourceTree = "<group>"; };
 		2C66D83E1BBD39CD00EA3506 /* FTDropAggregate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropAggregate.swift; sourceTree = "<group>"; };
 		2C66D8401BBD39ED00EA3506 /* FTDropAggregatePositive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropAggregatePositive.swift; sourceTree = "<group>"; };
 		2C66D8421BBD3D8B00EA3506 /* FTDropAggregateNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropAggregateNegative.swift; sourceTree = "<group>"; };
@@ -125,7 +175,15 @@
 		2C66D8541BBD49DA00EA3506 /* FTFlowIntegral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTFlowIntegral.swift; sourceTree = "<group>"; };
 		2C66D8571BBD794C00EA3506 /* FTTrackIntegral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTTrackIntegral.swift; sourceTree = "<group>"; };
 		2C66D85A1BBD7E8900EA3506 /* FTIdentityIntegral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTIdentityIntegral.swift; sourceTree = "<group>"; };
-		2C66D85C1BBD7FC300EA3506 /* FTIdentityPositive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTIdentityPositive.swift; sourceTree = "<group>"; };
+		2C8C2AFA1BC2C1A400228676 /* FTGroupFind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTGroupFind.swift; sourceTree = "<group>"; };
+		2C8C2AFC1BC2C1BA00228676 /* FTGroupFindPositive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTGroupFindPositive.swift; sourceTree = "<group>"; };
+		2C8C2AFF1BC2CEFF00228676 /* FTMQTTCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTMQTTCreate.swift; sourceTree = "<group>"; };
+		2C8C2B001BC2CEFF00228676 /* FTMQTTCreateNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTMQTTCreateNegative.swift; sourceTree = "<group>"; };
+		2C8C2B011BC2CEFF00228676 /* FTMQTTDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTMQTTDelete.swift; sourceTree = "<group>"; };
+		2C8C2B021BC2CEFF00228676 /* FTMQTTDeleteNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTMQTTDeleteNegative.swift; sourceTree = "<group>"; };
+		2C8C2B031BC2CEFF00228676 /* FTMQTTIntegral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTMQTTIntegral.swift; sourceTree = "<group>"; };
+		2C8C2B041BC2CEFF00228676 /* FTMQTTRead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTMQTTRead.swift; sourceTree = "<group>"; };
+		2C8C2B051BC2CEFF00228676 /* FTMQTTReadNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTMQTTReadNegative.swift; sourceTree = "<group>"; };
 		2CB354DB1BBD0F1B00CDD31C /* FTDropFind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropFind.swift; sourceTree = "<group>"; };
 		2CB354DD1BBD0F5A00CDD31C /* FTDropFindPositive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropFindPositive.swift; sourceTree = "<group>"; };
 		2CB354DF1BBD12A500CDD31C /* FTDropFindNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropFindNegative.swift; sourceTree = "<group>"; };
@@ -141,6 +199,12 @@
 		2CC2B3481BB95C6000179DB0 /* WSDrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSDrop.swift; sourceTree = "<group>"; };
 		2CC2B34A1BB95DFB00179DB0 /* FTWebSocketFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWebSocketFlow.swift; sourceTree = "<group>"; };
 		2CC2B34C1BB9699D00179DB0 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		2CCF2A731BC2860F00CD1CB5 /* FTValid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTValid.swift; sourceTree = "<group>"; };
+		2CCF2A761BC2A33D00CD1CB5 /* FTShareIntegral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTShareIntegral.swift; sourceTree = "<group>"; };
+		2CCF2A791BC2AB4B00CD1CB5 /* FTShareCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTShareCreate.swift; sourceTree = "<group>"; };
+		2CCF2A7B1BC2ACFF00CD1CB5 /* FTShareCreateNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTShareCreateNegative.swift; sourceTree = "<group>"; };
+		2CCF2A7E1BC2B0E600CD1CB5 /* FTShareRead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTShareRead.swift; sourceTree = "<group>"; };
+		2CCF2A821BC2B11500CD1CB5 /* FTShareReadNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTShareReadNegative.swift; sourceTree = "<group>"; };
 		2CD034741BBC08930047D3B2 /* FTUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTUpdate.swift; sourceTree = "<group>"; };
 		2CD034761BBC0A760047D3B2 /* FTFind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTFind.swift; sourceTree = "<group>"; };
 		2CD0347A1BBC19250047D3B2 /* FTDropRead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropRead.swift; sourceTree = "<group>"; };
@@ -152,12 +216,9 @@
 		8D0E03611B72782F00D44014 /* Identity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identity.swift; sourceTree = "<group>"; };
 		8D0E03631B72783E00D44014 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		8D0E03651B72784700D44014 /* Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
-		8D0E03691B7278B900D44014 /* Elem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elem.swift; sourceTree = "<group>"; };
-		8D1D96221B9CF83700D6AEE0 /* Example.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		8D28A07A1B8D37B200243B50 /* FTCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTCreate.swift; sourceTree = "<group>"; };
 		8D28A07C1B8D39CC00243B50 /* FTRead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTRead.swift; sourceTree = "<group>"; };
 		8D438D6F1B84D8B300FD70C1 /* StandardChecks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardChecks.swift; sourceTree = "<group>"; };
-		8D4BEDB01B8A46000032AC5A /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		8D5101961B755F0C0043D778 /* FTDropCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDropCreate.swift; sourceTree = "<group>"; };
 		8D5101981B7562F50043D778 /* TestConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestConfig.swift; sourceTree = "<group>"; };
 		8D572D541B7509C700D29297 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -178,7 +239,6 @@
 		8DBBDE531B6716300065CD3B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		8DBC11151B72DDE00065FA37 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		8DBDDF891BA8FD1600BDDBA2 /* FTDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDelete.swift; sourceTree = "<group>"; };
-		8DD5FE5A1B7A705500CBCB4F /* Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Debug.swift; path = Flowthings/Debug.swift; sourceTree = "<group>"; };
 		8DD5FE671B7AA6ED00CBCB4F /* CheckString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckString.swift; sourceTree = "<group>"; };
 		8DD5FE6C1B7ACE2200CBCB4F /* Checks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checks.swift; sourceTree = "<group>"; };
 		8DFA3A5F1B8E00AA00749D91 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
@@ -206,6 +266,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C19722F1BC3A7C500098B96 /* Device.tests */ = {
+			isa = PBXGroup;
+			children = (
+				2C1972341BC3A7DC00098B96 /* FTDeviceIntegral.swift */,
+				2C19723A1BC3A7E200098B96 /* Device.create */,
+				2C19723B1BC3A7EB00098B96 /* Device.find */,
+			);
+			name = Device.tests;
+			sourceTree = "<group>";
+		};
+		2C19723A1BC3A7E200098B96 /* Device.create */ = {
+			isa = PBXGroup;
+			children = (
+				2C1972301BC3A7DC00098B96 /* FTDeviceCreate.swift */,
+				2C1972311BC3A7DC00098B96 /* FTDeviceCreateNegative.swift */,
+			);
+			name = Device.create;
+			sourceTree = "<group>";
+		};
+		2C19723B1BC3A7EB00098B96 /* Device.find */ = {
+			isa = PBXGroup;
+			children = (
+				2C1972321BC3A7DC00098B96 /* FTDeviceFind.swift */,
+				2C1972331BC3A7DC00098B96 /* FTDeviceFindPositive.swift */,
+			);
+			name = Device.find;
+			sourceTree = "<group>";
+		};
+		2C19723C1BC3AE1300098B96 /* ApiTask.tests */ = {
+			isa = PBXGroup;
+			children = (
+				2C19723E1BC3AE2700098B96 /* FTApiTaskIntegral.swift */,
+				2C1972431BC3AE3500098B96 /* ApiTask.create */,
+			);
+			name = ApiTask.tests;
+			sourceTree = "<group>";
+		};
+		2C1972431BC3AE3500098B96 /* ApiTask.create */ = {
+			isa = PBXGroup;
+			children = (
+				2C19723D1BC3AE2700098B96 /* FTApiTaskCreate.swift */,
+				2C19723F1BC3AE2700098B96 /* FTApiTaskCreateNegative.swift */,
+			);
+			name = ApiTask.create;
+			sourceTree = "<group>";
+		};
+		2C1972441BC3BA8400098B96 /* RSS.tests */ = {
+			isa = PBXGroup;
+			children = (
+				2C1972471BC3BA9300098B96 /* FTRSSIntegral.swift */,
+				2C19724B1BC3BA9900098B96 /* RSS.create */,
+			);
+			name = RSS.tests;
+			sourceTree = "<group>";
+		};
+		2C19724B1BC3BA9900098B96 /* RSS.create */ = {
+			isa = PBXGroup;
+			children = (
+				2C1972451BC3BA9300098B96 /* FTRSSCreate.swift */,
+				2C1972461BC3BA9300098B96 /* FTRSSCreateNegative.swift */,
+			);
+			name = RSS.create;
+			sourceTree = "<group>";
+		};
 		2C287BD51BBEABA000C5DC14 /* Flow.find */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,7 +347,7 @@
 			name = Token.tests;
 			sourceTree = "<group>";
 		};
-		2C5EE0141BB2C33C00485A72 /* WS */ = {
+		2C5EE0141BB2C33C00485A72 /* WS.tests */ = {
 			isa = PBXGroup;
 			children = (
 				2C5EE0151BB2C36500485A72 /* FTWebSocketConnect.swift */,
@@ -231,7 +355,55 @@
 				2CC2B34A1BB95DFB00179DB0 /* FTWebSocketFlow.swift */,
 				2CE82B951BBAA7820080922E /* FTWebSocketTrack.swift */,
 			);
-			name = WS;
+			name = WS.tests;
+			sourceTree = "<group>";
+		};
+		2C6516C21BC2B5DA00A0EDB8 /* Share.delete */ = {
+			isa = PBXGroup;
+			children = (
+				2C6516C31BC2B63300A0EDB8 /* FTShareDelete.swift */,
+				2C6516C51BC2B64B00A0EDB8 /* FTShareDeleteNegative.swift */,
+			);
+			name = Share.delete;
+			sourceTree = "<group>";
+		};
+		2C6516C71BC2B9E200A0EDB8 /* Group.tests */ = {
+			isa = PBXGroup;
+			children = (
+				2C6516CC1BC2B9F800A0EDB8 /* FTGroupIntegral.swift */,
+				2C6516D61BC2BA4E00A0EDB8 /* Group.create */,
+				2C6516D81BC2BA6700A0EDB8 /* Group.read */,
+				2C6516D71BC2BA5B00A0EDB8 /* Group.delete */,
+				2C8C2AF91BC2C15A00228676 /* Group.find */,
+			);
+			name = Group.tests;
+			sourceTree = "<group>";
+		};
+		2C6516D61BC2BA4E00A0EDB8 /* Group.create */ = {
+			isa = PBXGroup;
+			children = (
+				2C6516C81BC2B9F800A0EDB8 /* FTGroupCreate.swift */,
+				2C6516C91BC2B9F800A0EDB8 /* FTGroupCreateNegative.swift */,
+			);
+			name = Group.create;
+			sourceTree = "<group>";
+		};
+		2C6516D71BC2BA5B00A0EDB8 /* Group.delete */ = {
+			isa = PBXGroup;
+			children = (
+				2C6516CA1BC2B9F800A0EDB8 /* FTGroupDelete.swift */,
+				2C6516CB1BC2B9F800A0EDB8 /* FTGroupDeleteNegative.swift */,
+			);
+			name = Group.delete;
+			sourceTree = "<group>";
+		};
+		2C6516D81BC2BA6700A0EDB8 /* Group.read */ = {
+			isa = PBXGroup;
+			children = (
+				2C6516CD1BC2B9F800A0EDB8 /* FTGroupRead.swift */,
+				2C6516CE1BC2B9F800A0EDB8 /* FTGroupReadNegative.swift */,
+			);
+			name = Group.read;
 			sourceTree = "<group>";
 		};
 		2C66D83D1BBD398600EA3506 /* Drop.aggregate */ = {
@@ -298,9 +470,55 @@
 			isa = PBXGroup;
 			children = (
 				2C66D85A1BBD7E8900EA3506 /* FTIdentityIntegral.swift */,
-				2C66D85C1BBD7FC300EA3506 /* FTIdentityPositive.swift */,
 			);
 			name = Identity.tests;
+			sourceTree = "<group>";
+		};
+		2C8C2AF91BC2C15A00228676 /* Group.find */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C2AFA1BC2C1A400228676 /* FTGroupFind.swift */,
+				2C8C2AFC1BC2C1BA00228676 /* FTGroupFindPositive.swift */,
+			);
+			name = Group.find;
+			sourceTree = "<group>";
+		};
+		2C8C2AFE1BC2CEEE00228676 /* MQTT.tests */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C2B031BC2CEFF00228676 /* FTMQTTIntegral.swift */,
+				2C8C2B0D1BC2CF0C00228676 /* MQTT.create */,
+				2C8C2B0F1BC2CF2100228676 /* MQTT.read */,
+				2C8C2B0E1BC2CF1800228676 /* MQTT.delete */,
+			);
+			name = MQTT.tests;
+			sourceTree = "<group>";
+		};
+		2C8C2B0D1BC2CF0C00228676 /* MQTT.create */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C2AFF1BC2CEFF00228676 /* FTMQTTCreate.swift */,
+				2C8C2B001BC2CEFF00228676 /* FTMQTTCreateNegative.swift */,
+			);
+			name = MQTT.create;
+			sourceTree = "<group>";
+		};
+		2C8C2B0E1BC2CF1800228676 /* MQTT.delete */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C2B011BC2CEFF00228676 /* FTMQTTDelete.swift */,
+				2C8C2B021BC2CEFF00228676 /* FTMQTTDeleteNegative.swift */,
+			);
+			name = MQTT.delete;
+			sourceTree = "<group>";
+		};
+		2C8C2B0F1BC2CF2100228676 /* MQTT.read */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C2B041BC2CEFF00228676 /* FTMQTTRead.swift */,
+				2C8C2B051BC2CEFF00228676 /* FTMQTTReadNegative.swift */,
+			);
+			name = MQTT.read;
 			sourceTree = "<group>";
 		};
 		2CB354DA1BBD0EDE00CDD31C /* Drop.find */ = {
@@ -321,6 +539,43 @@
 				2CB354E61BBD1CF400CDD31C /* FTDropUpdateNegative.swift */,
 			);
 			name = Drop.update;
+			sourceTree = "<group>";
+		};
+		2CCF2A721BC285F900CD1CB5 /* Valid.tests */ = {
+			isa = PBXGroup;
+			children = (
+				2CCF2A731BC2860F00CD1CB5 /* FTValid.swift */,
+			);
+			name = Valid.tests;
+			sourceTree = "<group>";
+		};
+		2CCF2A751BC2A31F00CD1CB5 /* Share.tests */ = {
+			isa = PBXGroup;
+			children = (
+				2CCF2A761BC2A33D00CD1CB5 /* FTShareIntegral.swift */,
+				2CCF2A781BC2AB3000CD1CB5 /* Share.create */,
+				2CCF2A7D1BC2B0BA00CD1CB5 /* Share.read */,
+				2C6516C21BC2B5DA00A0EDB8 /* Share.delete */,
+			);
+			name = Share.tests;
+			sourceTree = "<group>";
+		};
+		2CCF2A781BC2AB3000CD1CB5 /* Share.create */ = {
+			isa = PBXGroup;
+			children = (
+				2CCF2A791BC2AB4B00CD1CB5 /* FTShareCreate.swift */,
+				2CCF2A7B1BC2ACFF00CD1CB5 /* FTShareCreateNegative.swift */,
+			);
+			name = Share.create;
+			sourceTree = "<group>";
+		};
+		2CCF2A7D1BC2B0BA00CD1CB5 /* Share.read */ = {
+			isa = PBXGroup;
+			children = (
+				2CCF2A7E1BC2B0E600CD1CB5 /* FTShareRead.swift */,
+				2CCF2A821BC2B11500CD1CB5 /* FTShareReadNegative.swift */,
+			);
+			name = Share.read;
 			sourceTree = "<group>";
 		};
 		2CD034791BBC17750047D3B2 /* Drop.read */ = {
@@ -368,7 +623,6 @@
 				2C5EE0171BB2C58F00485A72 /* SwiftWebSocket.framework */,
 				8D8468DB1B8E132D00FA15A6 /* SwiftTask.framework */,
 				8DBC11151B72DDE00065FA37 /* Alamofire.framework */,
-				8DD5FE5A1B7A705500CBCB4F /* Debug.swift */,
 				8DBBDE321B6715D60065CD3B /* Flowthings */,
 				8DBBDE3E1B6715D60065CD3B /* FlowthingsTests */,
 				8DBBDE311B6715D60065CD3B /* Products */,
@@ -400,14 +654,20 @@
 		8DBBDE3E1B6715D60065CD3B /* FlowthingsTests */ = {
 			isa = PBXGroup;
 			children = (
+				2CCF2A721BC285F900CD1CB5 /* Valid.tests */,
 				2C66D84B1BBD46B000EA3506 /* Drop.tests */,
 				2C66D84C1BBD46BE00EA3506 /* Flow.tests */,
 				2C66D8561BBD793400EA3506 /* Track.tests */,
 				2C66D8591BBD7E3E00EA3506 /* Identity.tests */,
 				2C287BDC1BBEC1D300C5DC14 /* Token.tests */,
-				2C5EE0141BB2C33C00485A72 /* WS */,
+				2CCF2A751BC2A31F00CD1CB5 /* Share.tests */,
+				2C6516C71BC2B9E200A0EDB8 /* Group.tests */,
+				2C8C2AFE1BC2CEEE00228676 /* MQTT.tests */,
+				2C19722F1BC3A7C500098B96 /* Device.tests */,
+				2C19723C1BC3AE1300098B96 /* ApiTask.tests */,
+				2C1972441BC3BA8400098B96 /* RSS.tests */,
+				2C5EE0141BB2C33C00485A72 /* WS.tests */,
 				8DBBDE411B6715D60065CD3B /* Info.plist */,
-				8D4BEDB01B8A46000032AC5A /* Alamofire.swift */,
 				2C66D84E1BBD470900EA3506 /* BaseTest.swift */,
 				8D5101981B7562F50043D778 /* TestConfig.swift */,
 			);
@@ -421,7 +681,6 @@
 				8DD5FE671B7AA6ED00CBCB4F /* CheckString.swift */,
 				8D086E1F1B79123E006B39F6 /* Valid.swift */,
 				8D438D6F1B84D8B300FD70C1 /* StandardChecks.swift */,
-				8D1D96221B9CF83700D6AEE0 /* Example.swift */,
 			);
 			name = Validations;
 			sourceTree = "<group>";
@@ -445,9 +704,8 @@
 				8DBBDE4F1B6716300065CD3B /* Flow.swift */,
 				8D0E03611B72782F00D44014 /* Identity.swift */,
 				8D0E03631B72783E00D44014 /* Token.swift */,
-				8D0E03651B72784700D44014 /* Share.swift */,
 				8DBBDE501B6716300065CD3B /* Track.swift */,
-				8D0E03691B7278B900D44014 /* Elem.swift */,
+				8D0E03651B72784700D44014 /* Share.swift */,
 				8DBBDE511B6716300065CD3B /* Group.swift */,
 				2C287BDF1BBEC7AB00C5DC14 /* MQTT.swift */,
 				2C287BE11BBECA5D00C5DC14 /* Device.swift */,
@@ -624,7 +882,6 @@
 				8D28A07B1B8D37B200243B50 /* FTCreate.swift in Sources */,
 				2CC2B3411BB95ACC00179DB0 /* FTWSRead.swift in Sources */,
 				2CC2B3491BB95C6000179DB0 /* WSDrop.swift in Sources */,
-				8D1D96231B9CF83700D6AEE0 /* Example.swift in Sources */,
 				8DBBDE591B6716300065CD3B /* Group.swift in Sources */,
 				2CC2B3451BB95B3100179DB0 /* FTWSDelete.swift in Sources */,
 				2C287BE01BBEC7AB00C5DC14 /* MQTT.swift in Sources */,
@@ -641,13 +898,11 @@
 				2C5EE01C1BB2CFF700485A72 /* WSConnection.swift in Sources */,
 				2CC2B3471BB95B8000179DB0 /* FTWSDropCreate.swift in Sources */,
 				2CD034771BBC0A760047D3B2 /* FTFind.swift in Sources */,
-				8D0E036A1B7278B900D44014 /* Elem.swift in Sources */,
 				8DBDDF8A1BA8FD1600BDDBA2 /* FTDelete.swift in Sources */,
 				8DBBDE561B6716300065CD3B /* Drop.swift in Sources */,
 				8D28A07D1B8D39CC00243B50 /* FTRead.swift in Sources */,
 				8D0E03661B72784700D44014 /* Share.swift in Sources */,
 				8D0E03641B72783E00D44014 /* Token.swift in Sources */,
-				8DD5FE5B1B7A705500CBCB4F /* Debug.swift in Sources */,
 				2C287BE41BBECB3900C5DC14 /* ApiTask.swift in Sources */,
 				8DFA3A601B8E00AA00749D91 /* JSON.swift in Sources */,
 				2CC2B33D1BB958FA00179DB0 /* WSTrack.swift in Sources */,
@@ -665,37 +920,70 @@
 				2CD0347B1BBC19250047D3B2 /* FTDropRead.swift in Sources */,
 				2C66D85B1BBD7E8900EA3506 /* FTIdentityIntegral.swift in Sources */,
 				2C5EE01E1BB2D84F00485A72 /* FTWebSocketSubscribe.swift in Sources */,
+				2C6516C41BC2B63300A0EDB8 /* FTShareDelete.swift in Sources */,
 				2C66D84A1BBD436600EA3506 /* FTDropDeleteNegative.swift in Sources */,
 				2C66D8431BBD3D8B00EA3506 /* FTDropAggregateNegative.swift in Sources */,
-				2C66D85D1BBD7FC300EA3506 /* FTIdentityPositive.swift in Sources */,
+				2C8C2AFB1BC2C1A400228676 /* FTGroupFind.swift in Sources */,
+				2C1972351BC3A7DC00098B96 /* FTDeviceCreate.swift in Sources */,
+				2C8C2AFD1BC2C1BA00228676 /* FTGroupFindPositive.swift in Sources */,
 				2CE82B961BBAA7820080922E /* FTWebSocketTrack.swift in Sources */,
 				2C287BD91BBEAC3500C5DC14 /* FTFlowFindPositive.swift in Sources */,
-				8D4BEDB11B8A46000032AC5A /* Alamofire.swift in Sources */,
+				2C1972481BC3BA9300098B96 /* FTRSSCreate.swift in Sources */,
+				2CCF2A7F1BC2B0E600CD1CB5 /* FTShareRead.swift in Sources */,
 				2C5EE0161BB2C36500485A72 /* FTWebSocketConnect.swift in Sources */,
 				2C66D8511BBD47E900EA3506 /* FTFlowCreate.swift in Sources */,
+				2C1972411BC3AE2700098B96 /* FTApiTaskIntegral.swift in Sources */,
+				2C6516C61BC2B64B00A0EDB8 /* FTShareDeleteNegative.swift in Sources */,
+				2C8C2B091BC2CEFF00228676 /* FTMQTTDeleteNegative.swift in Sources */,
 				2CD0347D1BBC198B0047D3B2 /* FTDropReadPositive.swift in Sources */,
 				2C66D8481BBD40F600EA3506 /* FTDropDeletePositive.swift in Sources */,
 				2C66D8461BBD3FFE00EA3506 /* FTDropDelete.swift in Sources */,
+				2C8C2B0C1BC2CEFF00228676 /* FTMQTTReadNegative.swift in Sources */,
 				2C66D8531BBD482600EA3506 /* FTFlowCreateNegative.swift in Sources */,
 				2C66D84F1BBD470900EA3506 /* BaseTest.swift in Sources */,
+				2C6516D51BC2B9F800A0EDB8 /* FTGroupReadNegative.swift in Sources */,
+				2C1972401BC3AE2700098B96 /* FTApiTaskCreate.swift in Sources */,
 				2CB354DE1BBD0F5A00CDD31C /* FTDropFindPositive.swift in Sources */,
 				2CB354E51BBD145C00CDD31C /* FTDropUpdatePositive.swift in Sources */,
 				2C66D8551BBD49DA00EA3506 /* FTFlowIntegral.swift in Sources */,
+				2C6516D31BC2B9F800A0EDB8 /* FTGroupIntegral.swift in Sources */,
+				2C8C2B081BC2CEFF00228676 /* FTMQTTDelete.swift in Sources */,
 				2CB354DC1BBD0F1B00CDD31C /* FTDropFind.swift in Sources */,
+				2C8C2B0A1BC2CEFF00228676 /* FTMQTTIntegral.swift in Sources */,
+				2CCF2A7A1BC2AB4B00CD1CB5 /* FTShareCreate.swift in Sources */,
 				2C66D8411BBD39ED00EA3506 /* FTDropAggregatePositive.swift in Sources */,
+				2C1972361BC3A7DC00098B96 /* FTDeviceCreateNegative.swift in Sources */,
+				2C8C2B071BC2CEFF00228676 /* FTMQTTCreateNegative.swift in Sources */,
+				2C1972391BC3A7DC00098B96 /* FTDeviceIntegral.swift in Sources */,
 				2CB354E01BBD12A500CDD31C /* FTDropFindNegative.swift in Sources */,
 				2CB354E71BBD1CF400CDD31C /* FTDropUpdateNegative.swift in Sources */,
 				2C66D83F1BBD39CD00EA3506 /* FTDropAggregate.swift in Sources */,
+				2C6516D01BC2B9F800A0EDB8 /* FTGroupCreateNegative.swift in Sources */,
 				8D89714E1B88FD5900CA2528 /* FTDropCreatePositive.swift in Sources */,
 				8D5101971B755F0C0043D778 /* FTDropCreate.swift in Sources */,
+				2C6516D21BC2B9F800A0EDB8 /* FTGroupDeleteNegative.swift in Sources */,
+				2C1972421BC3AE2700098B96 /* FTApiTaskCreateNegative.swift in Sources */,
+				2C6516CF1BC2B9F800A0EDB8 /* FTGroupCreate.swift in Sources */,
 				8D5101991B7562F50043D778 /* TestConfig.swift in Sources */,
+				2C6516D11BC2B9F800A0EDB8 /* FTGroupDelete.swift in Sources */,
+				2CCF2A741BC2860F00CD1CB5 /* FTValid.swift in Sources */,
 				2CD0347F1BBC1DBF0047D3B2 /* FTDropReadNegative.swift in Sources */,
+				2CCF2A7C1BC2ACFF00CD1CB5 /* FTShareCreateNegative.swift in Sources */,
+				2CCF2A831BC2B11500CD1CB5 /* FTShareReadNegative.swift in Sources */,
+				2C1972371BC3A7DC00098B96 /* FTDeviceFind.swift in Sources */,
 				2CC2B34B1BB95DFB00179DB0 /* FTWebSocketFlow.swift in Sources */,
 				8D8971501B88FF1A00CA2528 /* FTDropCreateNegative.swift in Sources */,
+				2CCF2A771BC2A33D00CD1CB5 /* FTShareIntegral.swift in Sources */,
+				2C1972491BC3BA9300098B96 /* FTRSSCreateNegative.swift in Sources */,
 				2C66D8581BBD794C00EA3506 /* FTTrackIntegral.swift in Sources */,
 				2C287BDE1BBEC1EA00C5DC14 /* FTTokenIntegral.swift in Sources */,
 				2C287BD71BBEAC1600C5DC14 /* FTFlowFind.swift in Sources */,
+				2C19724A1BC3BA9300098B96 /* FTRSSIntegral.swift in Sources */,
+				2C1972381BC3A7DC00098B96 /* FTDeviceFindPositive.swift in Sources */,
 				2CB354E31BBD142200CDD31C /* FTDropUpdate.swift in Sources */,
+				2C6516D41BC2B9F800A0EDB8 /* FTGroupRead.swift in Sources */,
+				2C8C2B061BC2CEFF00228676 /* FTMQTTCreate.swift in Sources */,
+				2C8C2B0B1BC2CEFF00228676 /* FTMQTTRead.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

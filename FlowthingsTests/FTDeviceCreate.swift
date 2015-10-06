@@ -1,5 +1,5 @@
 //
-//  FTIdentityPositive.swift
+//  FTFlowCreate.swift
 //  Flowthings
 //
 //  Created by Ceco on 01/10/2015.
@@ -9,8 +9,4 @@
 import XCTest
 @testable import Flowthings
 
-extension FTIdentityIntegral {
-    
-    
-    
-}
+class FTDeviceCreate: BaseTest {}

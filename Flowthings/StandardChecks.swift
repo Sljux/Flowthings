@@ -1,4 +1,4 @@
-//
+ //
 //  StandardChecks.swift
 //  Flowthings
 //
@@ -19,8 +19,8 @@ public struct StandardChecks {
         
         "id" : [{ valid, IDValue in
             
-            guard let IDValue = IDValue as? String else {
-                return valid.addError("id is not of type String")
+            guard let IDValue = StandardChecks.checkTypes(valid, path: "id", value: IDValue, type: String.self) else {
+                return
             }
             
             if IDValue.isShorterThen(8) {
@@ -31,8 +31,8 @@ public struct StandardChecks {
         
         "flow_id" : [{ valid, flow_id in
 
-            guard let flowID = flow_id as? CheckString else {
-                return valid.addError("flow_id is not of type: String")
+            guard let flowID = StandardChecks.checkTypes(valid, path: "flow_id", value: flow_id, type: String.self) else {
+                return
             }
             
             if flowID.isShorterThen(5) {
@@ -43,9 +43,8 @@ public struct StandardChecks {
         
         "path" : [{ valid, path in
 
-            guard let path = path as? CheckString else {
-                return valid.addError("path is not of type: String")
-                
+            guard let path = StandardChecks.checkTypes(valid, path: "path", value: path, type: String.self) else {
+                return
             }
             
             if path.isShorterThen(5) {
@@ -55,8 +54,8 @@ public struct StandardChecks {
         
         "elems" : [{ valid, elems in
 
-            guard let e = elems as? ValidParams else {
-                return valid.addError("elems are not of type ValidParams alias: [String:AnyObject]")
+            guard let e = StandardChecks.checkTypes(valid, path: "elems", value: elems, type: ValidParams.self) else {
+                return
             }
             
             let json = JSON(e)
@@ -69,83 +68,85 @@ public struct StandardChecks {
         
         "source" : [{ valid, source in
             
-            guard let source = source as? CheckString else {
-                return valid.addError("source is not of type: String")
+            guard let _ = StandardChecks.checkTypes(valid, path: "source", value: source, type: String.self) else {
+                return
             }
             
         }],
         
         "destination" : [{ valid, destination in
             
-            guard let destination = destination as? CheckString else {
-                return valid.addError("destination is not of type: String")
+            guard let _ = StandardChecks.checkTypes(valid, path: "destination", value: destination, type: String.self) else {
+                return
             }
             
         }],
         
         "groupBy" : [{ valid, groupBy in
             
-            guard let groupBy = groupBy as? [String] else {
-                return valid.addError("groupBy is of not type: [String]")
+            guard let _ = StandardChecks.checkTypes(valid, path: "groupBy", value: groupBy, type: [String].self) else {
+                return
             }
+            
         }],
         
         "output" : [{ valid, output in
             
-            guard let output = output as? [String] else {
-                return valid.addError("output is of not type: [String]")
+            guard let _ = StandardChecks.checkTypes(valid, path: "output", value: output, type: [String].self) else {
+                return
             }
+            
         }],
         
         "paths" : [{ valid, paths in
             
-            guard let _ = paths as? ValidParams else {
-                return valid.addError("paths are not of type ValidParams alias: [String:AnyObject]")
+            guard let _ = StandardChecks.checkTypes(valid, path: "paths", value: paths, type: ValidParams.self) else {
+                return
             }
+            
         }],
         
         "memberIds" : [{ valid, memberIds in
             
-            guard let memberIds = memberIds as? [String] else {
-                return valid.addError("memberIds are not of type [String]")
+            guard let _ = StandardChecks.checkTypes(valid, path: "memberIds", value: memberIds, type: [String].self) else {
+                return
             }
             
         }],
         
         "js" : [{ valid, js in
             
-            guard let js = js as? String else {
-                return valid.addError("js is not of type String")
+            guard let _ = StandardChecks.checkTypes(valid, path: "js", value: js, type: String.self) else {
+                return
             }
             
-            }],
+        }],
         
         "url" : [{ valid, url in
             
-            guard let url = url as? String else {
-                return valid.addError("url is not of type String")
+            guard let _ = StandardChecks.checkTypes(valid, path: "url", value: url, type: String.self) else {
+                return
             }
             
         }],
         
         "issuedTo" : [{ valid, issuedTo in
             
-            guard let issuedTo = issuedTo as? String else {
-                return valid.addError("issuedTo is not of type String")
+            guard let _ = StandardChecks.checkTypes(valid, path: "issuedTo", value: issuedTo, type: String.self) else {
+                return
             }
             
         }]
     ]
 
-    mutating func update(more:ValidChecks) {
-        for (key,value) in more {
-            run[key] = value
+    static private func checkTypes<T>(valid: Valid, path: String, value: AnyObject, type: T.Type) -> T? {
+        
+        if value is T {
+            return value as? T
+        } else {
+            valid.addError("\(path) is not of type \(T.self)")
+            return nil
         }
+        
     }
 }
-
-//func += <KeyType, ValueType> (inout left: Dictionary<KeyType, ValueType>, right: Dictionary<KeyType, ValueType>) {
-//    for (k, v) in right {
-//        left.updateValue(v, forKey: k)
-//    }
-//}

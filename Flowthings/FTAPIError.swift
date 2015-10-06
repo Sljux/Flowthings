@@ -38,6 +38,7 @@ public enum FTAPIError : ErrorType {
     case SessionIdMissing
     case LocationIsMissing
     case TokenIsMissing
+    case BodyParamIsMissing(String)
     
     static func errorCodeToString (code: Int) -> String {
     
